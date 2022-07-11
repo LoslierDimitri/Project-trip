@@ -54,7 +54,7 @@ $error = "";
                 <div><?= $user['nom'] ?> <?= $user['prenom'] ?><br>
                 <?= $user['age'] ?> ans<br>
                 <?= $user['adresse'] ?><br>
-                <?= $user['mail'] ?><br>
+                <?= $user['email'] ?><br>
                 <?= $user['telephone'] ?><br><br>
                 <!-- <a href="edit-fruit.php?id=<?= $fruit['id'] ?>">Modifier</a>
                 <a href="delete-fruit.php?id=<?= $fruit['id'] ?>">Supprimer</a> -->
