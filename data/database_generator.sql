@@ -12,6 +12,7 @@ CREATE TABLE `users` (
   `email` varchar(255) COLLATE utf8mb4_bin NOT NULL,
   `telephone` varchar(20) COLLATE utf8mb4_bin NOT NULL,
   `pays` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `adresse` varchar(255) COLLATE utf8mb4_bin NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 SELECT * FROM users;

@@ -1,34 +1,4 @@
-<?php
-
-$pdo = require_once './data/database.php';
-
-$stmt = $pdo->prepare('SELECT * FROM users');
-$stmt->execute();
-$users = $stmt->fetchAll();
-
-$title = "Culin'air";
-$error = "";
-
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//     $us = $_POST['name'];
-
-//     if (!$fruit) {
-//         $error = 'Champ à renseigner';
-//     }
-
-
-//     if (!$error) {
-//         $stmtCreate = $pdo->prepare('INSERT INTO product VALUES (DEFAULT, :name, :userid)');
-//         $stmtCreate->bindValue(':name', $fruit);
-//         $stmtCreate->bindValue(':userid', 1);
-//         $stmtCreate->execute();
-
-//         header('Location: ' . $_SERVER['PHP_SELF']);
-//     }
-// }
-
-
-?>
+<?php include_once './backend/index.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
