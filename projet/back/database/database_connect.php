@@ -34,15 +34,34 @@ insert into projet_trip.users (type, nom, prenom, age, sexe, pseudo, mot_de_pass
 insert into projet_trip.users (type, nom, prenom, age, sexe, pseudo, mot_de_passe, email, telephone, pays, adresse) values ("a", "delta_nom", "delta_prenom", 40, "f", "delta_pseudo", "delta_mdp", "delta@com", "0123456789", "canada", "delta_addresse");
 
 SELECT * FROM users;
+
+--------------------------------------
+how tu use this file
+
+require "database_connect.php";
+require "../database/database_connect.php";
+
+connection = database_connect(); -> return the database connection
 */
 
+function database_connect() {
+$database_name = "mysql:host=localhost;dbname=projet_trip";
+
+    echo "connect to database: [" . $database_name . "]... <br>";
 try {
     $pdo = new PDO('mysql:host=localhost;dbname=projet_trip', 'root', 'root',[
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    
 ]);
+if ($pdo != null) {
+    echo "database connected <br>";
     return $pdo;
+}
+    
 } catch (PDOException $e) {
     echo 'Erreur : ' . $e->getMessage();
+}
+return;
 }
 ?>
