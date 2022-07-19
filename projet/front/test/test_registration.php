@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require ("form_registration.php");
+    require ("../form/form_registration.php");
 
     registration();
 

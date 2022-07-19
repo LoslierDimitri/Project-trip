@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require ("form_modification.php");
+    require ("../form/form_modification.php");
 
     modification();
 }

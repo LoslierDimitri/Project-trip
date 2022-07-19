@@ -20,7 +20,7 @@ function api_call($string, $name) {
 //$service_api = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
 $service_api = $string;
 
-$data_path = "../data/" . $name . ".json";
+$data_path = "../../back/data/" . $name . ".json";
 
 echo "call to api: [" , $service_api , "]... <br>";
 
@@ -46,6 +46,7 @@ $service_url     = $service_api;
 if (file_put_contents($data_path, $curl_response)) {
     echo "JSON file created successfully <br>";
     echo "JSON file sent to: [", $data_path, "] <br>";
+    echo "call to api: [" , $service_api , "] done <br>";
 }
 else {
     echo "Error on JSON file <br>";

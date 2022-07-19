@@ -1,7 +1,7 @@
 <?php
-require ("database_connect.php");
-require ("database_disconnect.php");
-require ("database_request.php");
+require ("../../back/database/database_connect.php");
+require ("../../back/database/database_disconnect.php");
+require ("../../back/database/database_request.php");
 
 $connection = database_connect();
 
