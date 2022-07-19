@@ -26,11 +26,12 @@ how tu use this request
 $value = dadabase_select(<connection>, <string selected attribute>)
 */
 function database_select($connection, $select) {
+    echo "request select... <br>";
     if ($connection != null) {
     $stmt = $connection->prepare("select " . $select . " from users");
     $stmt->execute();
     $result = $stmt->fetchAll();
-
+    echo "request select done <br>";
     return $result;
     }
     return "error to database request select <br>";
@@ -44,6 +45,7 @@ how tu use this request
 dadabase_insert(<connection>, <string for each data type>)
 */
 function database_insert($connection, $type, $nom, $prenom, $age, $sexe, $pseudo, $mot_de_passe, $email, $telephone, $pays, $adresse) {
+    echo "request insert... <br>";
     if ($connection != null) {
         //$stmt = $connection->prepare("insert into projet_trip.users (type, nom, prenom, age, sexe, pseudo, mot_de_passe, email, telephone, pays, adresse) values ( " . $type . ", " . $nom . ", " . $prenom . ", " . $age . ", " . $sexe . ", " . $pseudo . ", " . $mot_de_passe . ", " . $email . ", " . $telephone . ", " . $pays . ", " . $adresse . " )");
         $stmt = $connection->prepare('insert into projet_trip.users (type, nom, prenom, age, sexe, pseudo, mot_de_passe, email, telephone, pays, adresse) values (:type, :nom, :prenom, :age, :sexe, :pseudo, :mot_de_passe, :email, :telephone, :pays, :adresse)');
@@ -66,6 +68,7 @@ function database_insert($connection, $type, $nom, $prenom, $age, $sexe, $pseudo
         else {
         echo "error to database request insert <br>";
         }
+        echo "request insert done <br>";
 }
 
 /*
@@ -76,16 +79,18 @@ how tu use this request
 dadabase_update(<connection>, <string selected attribute>, <string new value>, <int id of the user>)
 */
 function database_update($connection, $name, $value, $id) {
+    echo "request update... <br>";
     if ($connection != null) {
         $stmt = $connection->prepare("update users set ".$name."=:".$name." where id=:id");
         $stmt->bindValue(":".$name."", $value);
         $stmt->bindValue(":id", $id);
         $stmt->execute();
-        $result = $stmt->fetchAll();
     
-        //return $result;
         }
+        else {
         echo "error to database request update <br>";
+        }
+        echo "request update done <br>";
 }
 
 ?>

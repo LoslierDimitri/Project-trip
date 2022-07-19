@@ -7,4 +7,6 @@ se connecte
 
 ne retourne rien
 */
+
+session_start();
 ?>

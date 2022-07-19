@@ -7,4 +7,9 @@ forme une liste de resultat sous le bon format
 
 retourne la liste de resultat
 */
+
+function result_format() {
+    
+}
+
 ?>
