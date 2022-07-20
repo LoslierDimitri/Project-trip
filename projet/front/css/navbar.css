@@ -50,6 +50,12 @@
     font-size: 1.4rem;
 }
 
+.nav-link:hover {
+    background-color: #0FABDF;
+    color: white;
+    transition: all 1s;
+}
+
 .container-login-logout {
     display: flex;
     flex-direction: column;
