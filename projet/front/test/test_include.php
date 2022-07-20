@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (isset($_SESSION['pseudo']) && isset($_SESSION["mot_de_passe"])){
     echo "<br><br><br>";

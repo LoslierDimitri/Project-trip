@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     connection();
     echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
     echo "connected with mot_do_passe: [" . $_SESSION['mot_de_passe'] . "] <br>";
-    header ("Location: test_connection_connected.php");
+    header ("Location: test_function.php");
     
 }
 ?>

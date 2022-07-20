@@ -101,11 +101,12 @@ how tu use this request
 
 dadabase_update(<connection>, <string selected attribute>, <string new value>, <int id of the user>)
 */
-function database_update($connection, $name, $value) {
+function database_update($connection, $name, $value, $where, $element) {
     echo "request update... <br>";
     if ($connection != null) {
-        $stmt = $connection->prepare("update users set ".$name."=:".$name."");
+        $stmt = $connection->prepare("update users set ".$name."=:".$name." where " . $where . " = :element");
         $stmt->bindValue(":".$name."", $value);
+        $stmt->bindValue(':element', $element);
         $stmt->execute();
     
         }
