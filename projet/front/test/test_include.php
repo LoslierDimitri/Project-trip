@@ -25,5 +25,7 @@ else {
     echo('<a href="test_modification.php">test_modification</a> <br>');
     echo('<a href="test_registration.php">test_registration</a> <br>');
 
+    echo "<br><br><br>";
+
 ?>
 

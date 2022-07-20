@@ -1,4 +1,8 @@
 <?php
+include ("test_include.php");
+?>
+
+<?php
 
 
 
@@ -40,6 +44,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </html>
 
-<?php
-include ("test_include.php");
-?>

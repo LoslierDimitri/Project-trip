@@ -1,4 +1,8 @@
 <?php
+include ("test_include.php");
+?>
+
+<?php
 // session_start();
 // echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
 // echo "connected with mot_do_passe: [" . $_SESSION['mot_de_passe'] . "] <br>";
@@ -37,6 +41,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </html>
 
-<?php
-include ("test_include.php");
-?>

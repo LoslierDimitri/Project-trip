@@ -1,4 +1,8 @@
 <?php
+include ("test_include.php");
+?>
+
+<?php
 // On démarre la session
 session_start ();
 
@@ -12,6 +16,3 @@ session_destroy ();
 header ('location: test_connection.php');
 ?>
 
-<?php
-include ("test_include.php");
-?>

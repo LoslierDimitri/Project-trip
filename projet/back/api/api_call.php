@@ -47,6 +47,10 @@ if (file_put_contents($data_path, $curl_response)) {
     echo "JSON file created successfully <br>";
     echo "JSON file sent to: [", $data_path, "] <br>";
     echo "call to api: [" , $service_api , "] done <br>";
+
+    echo "<pre>";
+    print_r($json_objekat);
+    echo "</pre>";
 }
 else {
     echo "Error on JSON file <br>";

@@ -1,4 +1,8 @@
 <?php
+include ("test_include.php");
+?>
+
+<?php
 require ("../../back/database/database_connect.php");
 require ("../../back/database/database_disconnect.php");
 require ("../../back/database/database_request.php");
@@ -18,6 +22,3 @@ $connection = database_disconnect();
 
 ?>
 
-<?php
-include ("test_include.php");
-?>
