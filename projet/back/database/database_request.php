@@ -29,6 +29,29 @@ function database_select($connection, $select) {
     echo "request select... <br>";
     if ($connection != null) {
     $stmt = $connection->prepare("select " . $select . " from users");
+    //$stmt->bindValue(':select', $select);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+    echo "request select done <br>";
+    return $result;
+    }
+    return "error to database request select <br>";
+}
+
+/*
+request select where
+--------------------------------------
+how tu use this request
+
+$value = dadabase_select(<connection>, <string selected attribute>, <select column>, <value>)
+*/
+function database_select_where($connection, $select, $where, $element) {
+    echo "request select... <br>";
+    if ($connection != null) {
+    $stmt = $connection->prepare("select " . $select . " from users where " . $where . " = :element");
+/*/$stmt->bindValue(':select', $select);
+    $stmt->bindValue(':where', $where);*/
+    $stmt->bindValue(':element', $element);
     $stmt->execute();
     $result = $stmt->fetchAll();
     echo "request select done <br>";
@@ -78,12 +101,11 @@ how tu use this request
 
 dadabase_update(<connection>, <string selected attribute>, <string new value>, <int id of the user>)
 */
-function database_update($connection, $name, $value, $id) {
+function database_update($connection, $name, $value) {
     echo "request update... <br>";
     if ($connection != null) {
-        $stmt = $connection->prepare("update users set ".$name."=:".$name." where id=:id");
+        $stmt = $connection->prepare("update users set ".$name."=:".$name."");
         $stmt->bindValue(":".$name."", $value);
-        $stmt->bindValue(":id", $id);
         $stmt->execute();
     
         }

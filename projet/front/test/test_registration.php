@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require ("../form/form_registration.php");
+    require ("../../back/form/form_registration.php");
 
     registration();
 
@@ -49,3 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </body>
 
 </html>
+
+<?php
+include ("test_include.php");
+?>

@@ -7,9 +7,9 @@ se connecte
 ne retourne rien
 */
 
-require ("../database/database_connect.php");
-require ("../database/database_disconnect.php");
-require ("../database/database_request.php");
+require ("../../back/database/database_connect.php");
+require ("../../back/database/database_disconnect.php");
+require ("../../back/database/database_request.php");
 
 function registration() {
 $connection = database_connect();
@@ -69,7 +69,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (!$error) {
-        database_insert($connection, $type, $inscription_name, $inscription_prenom, $inscription_age, $inscription_sexe, $inscription_pseudo, $inscription_mot_de_passe, $inscription_email, $inscription_telephone, $inscription_pays, $inscription_adresse);
+        $inscription_pseudo_test = database_select_where($connection, "pseudo", "pseudo", $inscription_pseudo);
+        
+        $inscription_pseudo_test = $inscription_pseudo_test[0]["pseudo"];
+         echo $inscription_pseudo . " " . $inscription_pseudo_test;
+
+
+        if ($inscription_pseudo != $inscription_pseudo_test) {
+            database_insert($connection, $type, $inscription_name, $inscription_prenom, $inscription_age, $inscription_sexe, $inscription_pseudo, $inscription_mot_de_passe, $inscription_email, $inscription_telephone, $inscription_pays, $inscription_adresse);
+        }
+        // die();
     }
 }
 

@@ -17,3 +17,7 @@ $connection = database_disconnect();
 
 
 ?>
+
+<?php
+include ("test_include.php");
+?>

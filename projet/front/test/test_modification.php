@@ -1,6 +1,10 @@
 <?php
+// session_start();
+// echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
+// echo "connected with mot_do_passe: [" . $_SESSION['mot_de_passe'] . "] <br>";
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require ("../form/form_modification.php");
+    require ("../../back/form/form_modification.php");
 
     modification();
 }
@@ -32,3 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </body>
 
 </html>
+
+<?php
+include ("test_include.php");
+?>
