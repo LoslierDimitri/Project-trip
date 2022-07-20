@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Mali-Regular;
+    src: url(../source/fonts/Mali-Regular.ttf);
+}
+
+@font-face {
+    font-family: Mali-SB;
+    src: url(../source/fonts/Mali-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Signika-Regular;
+    src: url(../source/fonts/Signika-Regular.ttf);
+}
+
+@font-face {
+    font-family: Signika-SB;
+    src: url(../source/fonts/Signika-SemiBold.ttf);
+}
+
+.navbar {
+    padding: 0;
+}
+
+.container-fluid {
+    background-color: rgba(15, 171, 223, 0.1);
+    padding: 20px 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.navbar-brand {
+    width: 200px;
+    margin-left: 20px;
+    margin-top: -20px;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.nav-link {
+    color: #0FABDF;
+    font-family: Signika-SB;
+    font-size: 1.4rem;
+}
+
+.container-login-logout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.logo-login-logout {
+    width: 50px;
+}
+
+.text-login-logout {
+    width: 200px;
+    text-align: center;
+    font-family: Signika-Regular;
+}
