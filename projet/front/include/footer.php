@@ -1,28 +1,49 @@
-<footer>
+<?php
+echo "<style>";
+        include ("../css/footer.css");
+        echo "</style>";
+    ?>
+
+<footer class="text-white text-center text-lg-start">
+  <!-- Grid container -->
+  <div class="container pt-2 pb-0">
+    <!--Grid row-->
     <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-4 mt-3 d-flex justify-content-center px-0 py-5">
-            <div class="foot-links">
-                <ul>
-                    <a href=""><li>Nous contacter</li></a>
-                    <a href=""><li>Mentions Légales</li></a>
-                    <a href=""><li>Plan du site</li></a>
-                </ul>
-            </div>
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 col-sm-12 pt-5">
+            <ul>
+                <a href=""><li>Nous contacter</li></a>
+                <a href=""><li>Mentions légales</li></a>
+                <a href=""><li>Le concept</li></a>
+            </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="links col-lg-4 col-md-12 col-sm-12 pt-5">
+        <p>50 rue Ferdinand Buisson <br>33130 Bègles <br>05 57 01 02 03</p>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="links col-lg-4 col-md-12 col-sm-12 pt-5">
+        <h3>Suivez-nous :</h3>
+        <div class="logo_reseaux">
+        <a href=""><img src="../source/svg/Facebook.svg" alt=""></a>
+        <a href=""><img src="../source/svg/Instagram.svg" alt=""></a>
+        <a href=""><img src="../source/svg/Twitter.svg" alt=""></a>
         </div>
-            <div class="col-sm-12 col-md-4 col-lg-4 mt-3 d-flex justify-content-center px-0 py-5">
-                <div class="adresse">
-                    <p>50 rue Ferdinand Buisson <br> 33130 Bègles <br> 05 57 01 02 03</p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4 col-lg-4 mt-3 d-flex justify-content-center px-0 py-5">
-                <div class="reseaux">
-                    <h3>Suivez-nous</h3>
-                    <div class="logo-reseaux d-flex justify-content-center">
-                        <img src="../source/png/Facebook.png" alt="">
-                        <img src="../source/png/Instagram.png" alt="">
-                        <img src="../source/png/Twitter.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="copyright text-center p-3">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
 </footer>

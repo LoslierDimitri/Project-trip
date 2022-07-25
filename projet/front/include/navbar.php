@@ -1,3 +1,10 @@
+<?php
+echo "<style>";
+        include ("../css/navbar.css");
+        echo "</style>";
+    ?>
+
+
 <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="../source/svg/Logo.svg" alt=""></a>

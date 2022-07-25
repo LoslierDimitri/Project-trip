@@ -18,35 +18,34 @@
     src: url(../source/fonts/Signika-SemiBold.ttf);
 }
 
+.copyright {
+    background-color: #0FABDF;
+}
+
 footer {
-    background-color: rgba(15, 171, 223, 0.1);
-    width: 100%;
-    height: 20vh;
+    background-color: rgba(15, 171, 223, 0.2);
 }
 
-.foot-links a {
-    text-decoration: none;
-    list-style: none;
+a {
     font-family: Signika-SB;
+    list-style-type: none;
+    text-decoration: none;
     color: #0FABDF;
-    font-size: 1.2rem;
 }
 
-.adresse p {
-    text-decoration: none;
-    list-style: none;
-    font-family: Signika-SB;
-    color: #0FABDF;
-    font-size: 1.2rem;
-}
-
-.reseaux h3 {
-    text-decoration: none;
-    list-style: none;
+.links {
     font-family: Signika-SB;
     color: #0FABDF;
 }
 
-.logo-reseaux img {
+ul {
+    padding-left: 0;
+}
+
+.logo_reseaux {
+    display: flex;
+}
+
+.logo_reseaux a {
     width: 30px;
 }

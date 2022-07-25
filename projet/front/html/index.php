@@ -18,19 +18,11 @@
     ?>
 
     
-
-
-
-
-
-
-
-
-
-
+    
     <?php
-        include("../include/footer.php");
+        include("../include/footer.php");  
     ?>
+    
 
 
     <script src="../js/script.js"></script>
