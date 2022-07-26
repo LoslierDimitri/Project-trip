@@ -17,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindValue(':pseudo', $connexion_pseudo);
         $stmt->execute();
         $passwordcheck = $stmt->fetch();
-        // $connexion_mot_de_passe = password_hash($passwordNotHashed, PASSWORD_DEFAULT);
         if (password_verify($connexion_mot_de_passe, $passwordcheck['mot_de_passe'])) {
             $_SESSION['user']=$connexion_pseudo;
             header('Location: /project-trip');

@@ -23,7 +23,7 @@ function connection() {
 
         $request_mot_de_passe = $request_mot_de_passe[0]["mot_de_passe"];
 
-        if ($request_mot_de_passe == $connexion_mot_de_passe) {
+        if (password_verify($connexion_mot_de_passe, $request_mot_de_passe)) {
             session_start ();
             $_SESSION['pseudo'] = $_POST['connexion_pseudo'];
             $_SESSION['mot_de_passe'] = $_POST['connexion_mot_de_passe'];
