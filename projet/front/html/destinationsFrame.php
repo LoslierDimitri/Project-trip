@@ -18,7 +18,7 @@
     ?>
 
         <section class="recherche_avancée">
-            <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
+           
             
 
         </section>
