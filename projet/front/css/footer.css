@@ -1,0 +1,51 @@
+@font-face {
+    font-family: Mali-Regular;
+    src: url(../source/fonts/Mali-Regular.ttf);
+}
+
+@font-face {
+    font-family: Mali-SB;
+    src: url(../source/fonts/Mali-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Signika-Regular;
+    src: url(../source/fonts/Signika-Regular.ttf);
+}
+
+@font-face {
+    font-family: Signika-SB;
+    src: url(../source/fonts/Signika-SemiBold.ttf);
+}
+
+.copyright {
+    background-color: #0FABDF;
+}
+
+footer {
+    background-color: rgba(15, 171, 223, 0.2);
+}
+
+a {
+    font-family: Signika-SB;
+    list-style-type: none;
+    text-decoration: none;
+    color: #0FABDF;
+}
+
+.links {
+    font-family: Signika-SB;
+    color: #0FABDF;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.logo_reseaux {
+    display: flex;
+}
+
+.logo_reseaux a {
+    width: 30px;
+}
