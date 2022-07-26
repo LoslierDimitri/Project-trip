@@ -5,8 +5,12 @@ appel a database_request.php avec un select
 traitement des information de data.json et resultat de select
 forme une liste de resultat sous le bon format
 
-retourne la liste de resultat
+retourne la liste de resultat dans un fichier json
 */
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 function result_format() {
     
