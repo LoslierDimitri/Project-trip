@@ -15,6 +15,12 @@ require "../api/api_call.php";
 api_call(<string url to api>, <string name of the file created>);
 */
 
+/*
+https://rapidapi.com/apidojo/api/travel-advisor/
+https://rapidapi.com/ptwebsolution/api/worldwide-restaurants/
+https://rapidapi.com/ruben-jimenez-lancho-ruben-jimenez-lancho-default/api/flytrips/
+*/
+
 function api_call($string, $name) {
 //$service_api = "https://www.boredapi.com/api/activity/";
 //$service_api = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";

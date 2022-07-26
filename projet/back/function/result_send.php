@@ -10,12 +10,10 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-require ("result_format.php");
-
-$result = result_format();
-
 function result_send() {
 
+    die();
+    header ("Location: ../../front/test/test_function_result.php");
 }
 
 ?>
