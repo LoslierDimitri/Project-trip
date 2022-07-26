@@ -4,34 +4,36 @@ echo "<style>";
         echo "</style>";
     ?>
 
-<footer class="text-white text-center text-lg-start">
+<footer class="text-white text-lg-center">
   <!-- Grid container -->
   <div class="container pt-2 pb-0">
     <!--Grid row-->
     <div class="row">
       <!--Grid column-->
-      <div class="col-lg-4 col-md-12 col-sm-12 pt-5">
+      <div class="links col-lg-4 col-md-12 col-sm-12 mt-4 mb-3">
+        <div class="text-center">
             <ul>
                 <a href=""><li>Nous contacter</li></a>
                 <a href=""><li>Mentions légales</li></a>
                 <a href=""><li>Le concept</li></a>
             </ul>
+          </div>
       </div>
       <!--Grid column-->
 
       <!--Grid column-->
-      <div class="links col-lg-4 col-md-12 col-sm-12 pt-5">
-        <p>50 rue Ferdinand Buisson <br>33130 Bègles <br>05 57 01 02 03</p>
+      <div class="adress col-lg-4 col-md-12 col-sm-12 mt-4 mb-3">
+        <p class="text-center">50 rue Ferdinand Buisson <br>33130 Bègles <br>05 57 01 02 03</p>
       </div>
       <!--Grid column-->
 
       <!--Grid column-->
-      <div class="links col-lg-4 col-md-12 col-sm-12 pt-5">
-        <h3>Suivez-nous :</h3>
-        <div class="logo_reseaux">
-        <a href=""><img src="../source/svg/Facebook.svg" alt=""></a>
-        <a href=""><img src="../source/svg/Instagram.svg" alt=""></a>
-        <a href=""><img src="../source/svg/Twitter.svg" alt=""></a>
+      <div class="links col-lg-4 col-md-12 col-sm-12 mt-4 mb-3">
+        <h3 class="text-center">Suivez-nous :</h3>
+        <div class="logo_reseaux flex justify-content-center">
+            <a href=""><img src="../source/svg/Facebook.svg" alt=""></a>
+            <a href=""><img src="../source/svg/Instagram.svg" alt=""></a>
+            <a href=""><img src="../source/svg/Twitter.svg" alt=""></a>
         </div>
       </div>
       <!--Grid column-->
@@ -41,9 +43,8 @@ echo "<style>";
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="copyright text-center p-3">
-    © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  <div class="copyright text-center">
+  <p class="text-white">© - Culin'Air 2022. Tous droits réservés</p>
   </div>
   <!-- Copyright -->
 </footer>
