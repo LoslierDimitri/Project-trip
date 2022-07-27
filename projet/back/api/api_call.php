@@ -68,7 +68,7 @@ function api_call($string, $name)
     }
 }
 
-function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule)
+function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
 {
     //call api location_id
     $curl = curl_init();
@@ -132,13 +132,22 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
     $data_path_hotel = "../../back/data/api_call_travel_advisor_hotel.json";
     //echo "call to api: [", $service_api, "][hotel]... <br>";
 
+    //number of night
+    $date_1 = strtotime($voyage_date_aller);
+    $date_2 = strtotime($voyage_date_retour);
+    $diff_minutes = round(abs($date_1 - $date_2) / 60, 2) . " minutes";
+    //echo $diff_minutes;
+    $number_of_night =(int)$diff_minutes/60/24;
+    $number_of_night = $number_of_night - 1;
+    //echo $number_of_night . "days";
+
     //call api
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
 
     curl_setopt_array($curl, [
-        CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/hotels/list?location_id=" . $location_id . "&adults=" . $voyage_nombre_personne_adulte . "&rooms=1&nights=2&offset=0&currency=USD&order=asc&limit=30&sort=recommended&lang=en_US",
+        CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/hotels/list?location_id=" . $location_id . "&adults=" . $voyage_nombre_personne_adulte . "&rooms=" . $voyage_nombre_chambre . "&nights=" . $number_of_night . "&offset=0&currency=USD&order=asc&limit=30&sort=recommended&lang=en_US",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_ENCODING => "",
