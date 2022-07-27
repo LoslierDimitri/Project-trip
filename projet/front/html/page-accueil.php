@@ -26,23 +26,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
     <?php
-        include("../include/navbar.php");
+    include("../include/navbar.php");
     ?>
 
 
-        <section class="recherche_avancee">
-            <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
-            
-            <label for="voyage_formule">formule</label>
-               <select id="voyage_formule" name="voyage_formule">
-                   <option value="voyage_formule_gastronomique">gastronomique</option>
-                   <option value="voyage_formule_touristique">touristique</option>
-               <select><br>
-            <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
+    <section class="recherche_avancee">
+        <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
 
-                <input type="text" name="type_search" value="france" hidden>
+        <label for="voyage_formule">formule</label>
+        <select id="voyage_formule" name="voyage_formule">
+            <option value="voyage_formule_gastronomique">gastronomique</option>
+            <option value="voyage_formule_touristique">touristique</option>
+            <select><br>
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
 
-                <!-- <label for="voyage_region">region</label>
+                    <input type="text" name="type_search" value="france" hidden>
+
+                    <!-- <label for="voyage_region">region</label>
                 <select id="voyage_region" name="voyage_region">
                     <option value="bretagne">bretagne</option>
                     <option value="corse">corse</option>
@@ -51,42 +51,98 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                  <select><br> -->
 
 
-            <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-4 mt-3 mb-3 d-flex justify-content-around">
+                            <div class="column">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                        <input type="text" name="voyage_lieu_depart" id="voyage_lieu_depart" placeholder="depart">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                        <input type="text" name="voyage_lieu_arrive" id="voyage_lieu_arrive" placeholder="arrive">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 mt-3 mb-3 d-flex justify-content-around">
+                            <div class="column">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                        <input type="date" name="voyage_date_aller" id="voyage_date_aller" placeholder="date aller">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                        <input type="date" name="voyage_date_retour" id="voyage_date_retour" placeholder="date retour">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-4 mt-3 mb-3 d-flex justify-content-around">
+                            <div class="column">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                        <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="nombre d'adulte">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 mb-3 d-flex justify-content-around">
+                                        <input type="number" name="voyage_nombre_personne_enfant" id="voyage_nombre_personne_enfant" placeholder="nombre d'enfant">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                        <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre" placeholder="nombre chambre">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4 mt-3 mb-3 d-flex justify-content-around">
                 <input type="text" name="voyage_lieu_depart" id="voyage_lieu_depart" placeholder="depart">
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+            <div class="col-sm-12 col-md-12 col-lg-4 mt-3 mb-3 d-flex justify-content-around">
                 <input type="text" name="voyage_lieu_arrive" id="voyage_lieu_arrive" placeholder="arrive">
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4 mt-3 mb-3 d-flex justify-content-around">
                 <input type="date" name="voyage_date_aller" id="voyage_date_aller" placeholder="date aller">
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+            <div class="col-sm-12 col-md-12 col-lg-4 mt-3 mb-3 d-flex justify-content-around">
                 <input type="date" name="voyage_date_retour" id="voyage_date_retour" placeholder="date retour">
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
-                <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="personne adulte">
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
-                <input type="number" name="voyage_nombre_personne_enfant" id="voyage_nombre_personne_enfant" placeholder="personne enfant">
-            </div>
-
-                <div class="col-lg-12 d-flex justify-content-center">
-                    <button type="submit">Envoyer</button><br>
-                </div>
         </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4 mt-3 mb-3 d-flex justify-content-around">
+                <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="nombre de personne">
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 mt-3 mb-3 d-flex justify-content-around">
+                <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre" placeholder="nombre chambre"><br>
+            </div>
+        </div> -->
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <button type="submit">Envoyer</button><br>
+                    </div>
+                    </div>
 
-            </form>
+                </form>
 
-        </section>
+    </section>
 
 
 
-    
+
     <?php
-        include("../include/footer.php");  
+    include("../include/footer.php");
     ?>
-    
+
 
 
     <script src="../js/script.js"></script>
