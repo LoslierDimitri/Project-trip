@@ -33,12 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <section class="recherche_avancee">
         <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
 
-        <label for="voyage_formule">formule</label>
-        <select id="voyage_formule" name="voyage_formule">
-            <option value="voyage_formule_gastronomique">gastronomique</option>
-            <option value="voyage_formule_touristique">touristique</option>
-            <select><br>
-                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
+        <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
+            <div class="formule">
+            <label for="voyage_formule">Formules</label>
+            <select id="voyage_formule" name="voyage_formule">
+                <option value="voyage_formule_gastronomique">Gastronomique</option>
+                <option value="voyage_formule_touristique">Touristique</option>
+                <select><br>
+            </div>
 
                     <input type="text" name="type_search" value="france" hidden>
 
@@ -58,13 +60,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="column">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                        <input type="text" name="voyage_lieu_depart" id="voyage_lieu_depart" placeholder="depart">
-
+                                        <input type="text" name="voyage_lieu_depart" id="voyage_lieu_depart" placeholder="Depart">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                        <input type="text" name="voyage_lieu_arrive" id="voyage_lieu_arrive" placeholder="arrive">
+                                        <input type="text" name="voyage_lieu_arrive" id="voyage_lieu_arrive" placeholder="Arrivée">
                                     </div>
                                 </div>
                             </div>
@@ -87,12 +88,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="column">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                        <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="nombre d'adulte">
+                                        <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="Nombre d'adulte">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                        <input type="number" name="voyage_nombre_personne_enfant" id="voyage_nombre_personne_enfant" placeholder="nombre d'enfant">
+                                        <input type="number" name="voyage_nombre_personne_enfant" id="voyage_nombre_personne_enfant" placeholder="Nombre d'enfant">
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +102,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="column">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre" placeholder="nombre chambre">                                    </div>
+                                    <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre" placeholder="Nombre de chambre">                                    
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -110,12 +112,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
                     <div class="col-lg-12 pb-3 d-flex justify-content-center">
-                        <button type="submit">Envoyer</button><br>
+                        <button type="submit"> <img src="./projet/front/source/svg/Picto rechercher2.svg" alt=""> Trouvez</button><br>
                     </div>
                     </div>
 
                 </form>
 
+    </section>
+
+    <section>
+        <div class="map">
+
+            <img class="carte_france" src="./projet/front/source/svg/Sans titre - 1.svg" alt="">
+        </div>
     </section>
 
 
