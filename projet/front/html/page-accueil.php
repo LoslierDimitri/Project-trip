@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
     <?php
-        include("./projet/front/include/navbar.php");
+    include("./projet/front/include/navbar.php");
     ?>
 
 
@@ -35,16 +35,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
             <div class="formule">
-            <label for="voyage_formule">Formules</label>
-            <select id="voyage_formule" name="voyage_formule">
-                <option value="voyage_formule_gastronomique">Gastronomique</option>
-                <option value="voyage_formule_touristique">Touristique</option>
-                <select><br>
+                <label for="voyage_formule">Formules</label>
+                <select id="voyage_formule" name="voyage_formule">
+                    <option value="voyage_formule_gastronomique">Gastronomique</option>
+                    <option value="voyage_formule_touristique">Touristique</option>
+                    <select><br>
             </div>
 
-                    <input type="text" name="type_search" value="france" hidden>
+            <input type="text" name="type_search" value="france" hidden>
 
-                    <!-- <label for="voyage_region">region</label>
+            <!-- <label for="voyage_region">region</label>
                 <select id="voyage_region" name="voyage_region">
                     <option value="bretagne">bretagne</option>
                     <option value="corse">corse</option>
@@ -53,85 +53,108 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                  <select><br> -->
 
 
-                    <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
-                    </div>
-                        <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
-                            <div class="column">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                        <input type="text" name="voyage_lieu_depart" id="voyage_lieu_depart" placeholder="Depart">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                        <input type="text" name="voyage_lieu_arrive" id="voyage_lieu_arrive" placeholder="Arrivée">
-                                    </div>
-                                </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+                    <div class="column">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                <input type="text" name="voyage_lieu_depart" id="voyage_lieu_depart" placeholder="Depart">
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
-                            <div class="column">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                        <input type="date" name="voyage_date_aller" id="voyage_date_aller" placeholder="date aller">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                        <input type="date" name="voyage_date_retour" id="voyage_date_retour" placeholder="date retour">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
-                            <div class="column">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                        <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="Nombre d'adulte">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                        <input type="number" name="voyage_nombre_personne_enfant" id="voyage_nombre_personne_enfant" placeholder="Nombre d'enfant">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
-                            <div class="column">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre" placeholder="Nombre de chambre">                                    
-                                    </div>
-                                </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                <input type="text" name="voyage_lieu_arrive" id="voyage_lieu_arrive" placeholder="Arrivée">
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+                    <div class="column">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                <input type="date" name="voyage_date_aller" id="voyage_date_aller" placeholder="date aller">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                <input type="date" name="voyage_date_retour" id="voyage_date_retour" placeholder="date retour">
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+                    <div class="column">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="Nombre d'adulte">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                <input type="number" name="voyage_nombre_personne_enfant" id="voyage_nombre_personne_enfant" placeholder="Nombre d'enfant">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+                    <div class="column">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
+                                <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre" placeholder="Nombre de chambre">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
+            </div>
 
-                    <div class="col-lg-12 pb-3 d-flex justify-content-center">
-                        <button type="submit"> <img src="./projet/front/source/svg/Picto rechercher2.svg" alt=""> Trouvez</button><br>
-                    </div>
-                    </div>
+            <div class="col-lg-12 pb-3 d-flex justify-content-center">
+                <button type="submit"> <img src="./projet/front/source/svg/Picto rechercher2.svg" alt=""> Trouvez</button><br>
+            </div>
+            </div>
 
-                </form>
+        </form>
 
     </section>
 
     <section>
         <div class="map">
-
-            <img class="carte_france" src="./projet/front/source/svg/Sans titre - 1.svg" alt="">
+            <h2>Recherche par région</h2>
+            <h3>Nouvelle Aquitaine</h3>
+            <div class="row w-100">
+                <div class="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center mt-5">
+                    <img class="carte_france" src="./projet/front/source/svg/Sans titre - 1.svg" alt="">
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6 mt-5">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-3">
+                            <img class="fromage_chevre" src="./projet/front/source/png/chevre_image.png" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-3">
+                            <h6>Le fromage de chèvre</h6>
+                            <p>Fromage emblématique de la région Poitou Charentes</p>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-3">
+                            <img class="fromage_chevre" src="./projet/front/source/png/chevre_image.png" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-3">
+                            <img class="fromage_chevre" src="./projet/front/source/png/chevre_image.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </section>
 
 
 
 
     <?php
-        include("./projet/front/include/footer.php");  
+    include("./projet/front/include/footer.php");
     ?>
 
 
