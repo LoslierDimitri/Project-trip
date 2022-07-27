@@ -20,6 +20,7 @@ function search($search_type, $voyage_region, $voyage_lieu_depart, $voyage_lieu_
     require ("../../back/database/database_request.php");
 
     //recherche api
+    api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule);
 
     //recherche bdd
     if (isset($_SESSION['pseudo']) && isset($_SESSION["mot_de_passe"])) {
