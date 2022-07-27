@@ -137,7 +137,7 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
     $date_2 = strtotime($voyage_date_retour);
     $diff_minutes = round(abs($date_1 - $date_2) / 60, 2) . " minutes";
     //echo $diff_minutes;
-    $number_of_night =(int)$diff_minutes/60/24;
+    $number_of_night = (int)$diff_minutes / 60 / 24;
     $number_of_night = $number_of_night - 1;
     //echo $number_of_night . "days";
 
@@ -146,8 +146,14 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
 
+    if ($voyage_formule == "voyage_formule_gastronomique") {
+        $sort = "recommended";
+    }else {
+        $sort = "price";
+    }
+
     curl_setopt_array($curl, [
-        CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/hotels/list?location_id=" . $location_id . "&adults=" . $voyage_nombre_personne_adulte . "&rooms=" . $voyage_nombre_chambre . "&nights=" . $number_of_night . "&offset=0&currency=USD&order=asc&limit=30&sort=recommended&lang=en_US",
+        CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/hotels/list?location_id=" . $location_id . "&adults=" . $voyage_nombre_personne_adulte . "&rooms=" . $voyage_nombre_chambre . "&nights=" . $number_of_night . "&offset=0&currency=USD&order=asc&limit=30&sort=" . $sort . "&lang=en_US",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_ENCODING => "",
@@ -182,6 +188,43 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
         // echo "</pre>";
     } else {
         echo "Error on JSON file <br>";
+    }
+
+    $file = file_get_contents("../../back/data/api_call_travel_advisor_hotel.json");
+    $file_decode = json_decode($file);
+    $file_array = (array) $file_decode;
+
+    for ($i = 0; $i < 5; $i++) {
+        $result_hotel_nom = $file_decode->data[$i]->name;
+        $result_hotel_adresse = "";
+        $result_hotel_prix = $file_decode->data[$i]->price;
+        $result_hotel_score = $file_decode->data[$i]->rating;
+        $result_hotel_autour = (array)$file_decode->data[$i]->neighborhood_info;
+        $result_hotel_autour_location_id = array();
+        $result_hotel_autour_nom = array();
+        for ($j = 0; $j < count($result_hotel_autour); $j++) {
+            array_push($result_hotel_autour_location_id, $result_hotel_autour[$j]->location_id);
+            array_push($result_hotel_autour_nom, $result_hotel_autour[$j]->name);
+        }
+        $result_hotel_option = "";
+        // echo "recap: <br>";
+        // echo "hotel nom: [" . $result_hotel_nom . "]<br>";
+        // echo "hotel adresse: [" . $result_hotel_adresse . "]<br>";
+        // echo "hotel prix: [" . $result_hotel_prix . "]<br>";
+        // echo "hotel score: [" . $result_hotel_score . "]<br>";
+        // // echo "<pre>";
+        // // var_dump(print_r($result_hotel_autour));
+        // // echo "</pre><br>";
+        // for ($j = 0; $j < count($result_hotel_autour); $j++) {
+        //     echo "hotel autour[" . $j . "]: id: [" . $result_hotel_autour_location_id[$j] ."]<br>";
+        //     echo "hotel autour[" . $j . "]: nom: [" . $result_hotel_autour_nom[$j] ."]<br>";
+        // }
+        // //print_r("hotel autour: [" . $result_hotel_autour . "]<br>");
+        // echo "hotel option: [" . $result_hotel_option . "]<br>";
+        // echo "----------------------<br>";
+        // echo "----------------------<br>";
+        // echo "----------------------<br>";
+        // echo "----------------------<br>";
     }
     //---------------------------------------------------------
     /*
