@@ -14,7 +14,7 @@
 <body>
 
     <?php
-        include("../include/navbar.php");
+        include("./projet/front/include/navbar.php");
     ?>
 
         <section class="recherche_avancée">
@@ -27,7 +27,7 @@
 
     
     <?php
-        include("../include/footer.php");  
+        include("./projet/front/include/footer.php");  
     ?>
     
 
