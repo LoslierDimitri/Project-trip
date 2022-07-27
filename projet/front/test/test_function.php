@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require ("../../back/function/result_search.php");
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        search($_POST["type_search"], $_POST["voyage_region"], $_POST["voyage_lieu_depart"], $_POST["voyage_lieu_arrive"], $_POST["voyage_date_aller"], $_POST["voyage_date_retour"], $_POST["voyage_nombre_personne_adulte"], $_POST["voyage_nombre_personne_enfant"], $_POST["voyage_formule"]);
+        search($_POST["type_search"], $_POST["voyage_region"], $_POST["voyage_lieu_depart"], $_POST["voyage_lieu_arrive"], $_POST["voyage_date_aller"], $_POST["voyage_date_retour"], $_POST["voyage_nombre_personne_adulte"], $_POST["voyage_nombre_personne_enfant"], $_POST["voyage_formule"], $_POST["voyage_nombre_chambre"]);
     }
 }
 ?>
@@ -51,7 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="date" name="voyage_date_retour" id="voyage_date_retour" placeholder="date retour"><br>
             <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="personne adulte">
             <input type="number" name="voyage_nombre_personne_enfant" id="voyage_nombre_personne_enfant" placeholder="personne enfant"><br>
-            
+            <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre" placeholder="nombre chambre"><br>
+
             <label for="voyage_formule">formule</label>
             <select id="voyage_formule" name="voyage_formule">
                 <option value="voyage_formule_gastronomique">gastronomique</option>
@@ -79,6 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="date" name="voyage_date_retour" id="voyage_date_retour" placeholder="date retour"><br>
             <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="personne adulte">
             <input type="number" name="voyage_nombre_personne_enfant" id="voyage_nombre_personne_enfant" placeholder="personne enfant"><br>
+            <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre" placeholder="nombre chambre"><br>
             
             <label for="voyage_formule">formule</label>
             <select id="voyage_formule" name="voyage_formule">

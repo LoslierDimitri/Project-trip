@@ -68,76 +68,15 @@ function api_call($string, $name)
     }
 }
 
-function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule){
+function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule)
+{
     //call api location_id
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
 
-curl_setopt_array($curl, [
-	CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/locations/search?query=" . $voyage_lieu_arrive . "&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US",
-	CURLOPT_RETURNTRANSFER => true,
-	CURLOPT_FOLLOWLOCATION => true,
-	CURLOPT_ENCODING => "",
-	CURLOPT_MAXREDIRS => 10,
-	CURLOPT_TIMEOUT => 30,
-	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	CURLOPT_CUSTOMREQUEST => "GET",
-	CURLOPT_HTTPHEADER => [
-		"X-RapidAPI-Host: travel-advisor.p.rapidapi.com",
-		"X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a"
-	],
-]);
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-	echo "cURL Error #:" . $err;
-}
-
-$json_objekat = json_decode($response);
-$data_path_location_id = "../../back/data/api_call_travel_advisor_location_id.json";
-if (file_put_contents($data_path_location_id, $response)) {
-    echo "JSON file created successfully <br>";
-    echo "JSON file sent to: [", $data_path_location_id, "] <br>";
-    //echo "call to api: [", $service_api, "] done <br>";
-    
-    // echo "<pre>";
-    // print_r($json_objekat);
-    // echo "</pre>";
-} else {
-    echo "Error on JSON file <br>";
-}
-
-$test_location_id = file_get_contents("C:\Apache24\htdocs\Project-trip\projet\back\data\api_call_travel_advisor_location_id.json"); 
-    $test_location_id_data = json_decode($test_location_id);
-    //print_r($test_location_id_data);
-
-    $test_location_id_data_array = (array) $test_location_id_data->data[0];
-    //echo "location_id: " . $test_location_id_data_array['result_object']->location_id;
-    $location_id = $test_location_id_data_array['result_object']->location_id;
-    echo "location_id: " . $location_id;
-
-// echo "<pre>";
-// print_r($json_objekat);
-// echo "</pre>";
-//---------------------------------------------------------
-
-    //call api hotel
-    //$service_api = $string;
-    $data_path_hotel = "../../back/data/api_call_travel_advisor_hotel.json";
-    //echo "call to api: [", $service_api, "][hotel]... <br>";
-
-    //call api
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-
     curl_setopt_array($curl, [
-        CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/hotels/list?location_id=293919&adults=1&rooms=1&nights=2&offset=0&currency=USD&order=asc&limit=30&sort=recommended&lang=en_US",
+        CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/locations/search?query=" . $voyage_lieu_arrive . "&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_ENCODING => "",
@@ -150,31 +89,93 @@ $test_location_id = file_get_contents("C:\Apache24\htdocs\Project-trip\projet\ba
             "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a"
         ],
     ]);
-    
+
     $response = curl_exec($curl);
     $err = curl_error($curl);
-    
+
     curl_close($curl);
-    
+
     if ($err) {
         echo "cURL Error #:" . $err;
     }
 
-$json_objekat = json_decode($response);
-
-    if (file_put_contents($data_path_hotel, $response)) {
+    $json_objekat = json_decode($response);
+    $data_path_location_id = "../../back/data/api_call_travel_advisor_location_id.json";
+    if (file_put_contents($data_path_location_id, $response)) {
         echo "JSON file created successfully <br>";
-        echo "JSON file sent to: [", $data_path_hotel, "] <br>";
+        echo "JSON file sent to: [", $data_path_location_id, "] <br>";
         //echo "call to api: [", $service_api, "] done <br>";
-        
+
         // echo "<pre>";
         // print_r($json_objekat);
         // echo "</pre>";
     } else {
         echo "Error on JSON file <br>";
     }
-//---------------------------------------------------------
-/*
+
+    $test_location_id = file_get_contents("C:\Apache24\htdocs\Project-trip\projet\back\data\api_call_travel_advisor_location_id.json");
+    $test_location_id_data = json_decode($test_location_id);
+    //print_r($test_location_id_data);
+
+    $test_location_id_data_array = (array) $test_location_id_data->data[0];
+    //echo "location_id: " . $test_location_id_data_array['result_object']->location_id;
+    $location_id = $test_location_id_data_array['result_object']->location_id;
+    echo "location_id: " . $location_id . "<br>";
+
+    // echo "<pre>";
+    // print_r($json_objekat);
+    // echo "</pre>";
+    //---------------------------------------------------------
+
+    //call api hotel
+    //$service_api = $string;
+    $data_path_hotel = "../../back/data/api_call_travel_advisor_hotel.json";
+    //echo "call to api: [", $service_api, "][hotel]... <br>";
+
+    //call api
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    curl_setopt_array($curl, [
+        CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/hotels/list?location_id=" . $location_id . "&adults=" . $voyage_nombre_personne_adulte . "&rooms=1&nights=2&offset=0&currency=USD&order=asc&limit=30&sort=recommended&lang=en_US",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => [
+            "X-RapidAPI-Host: travel-advisor.p.rapidapi.com",
+            "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a"
+        ],
+    ]);
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    }
+
+    $json_objekat = json_decode($response);
+
+    if (file_put_contents($data_path_hotel, $response)) {
+        echo "JSON file created successfully <br>";
+        echo "JSON file sent to: [", $data_path_hotel, "] <br>";
+        //echo "call to api: [", $service_api, "] done <br>";
+
+        // echo "<pre>";
+        // print_r($json_objekat);
+        // echo "</pre>";
+    } else {
+        echo "Error on JSON file <br>";
+    }
+    //---------------------------------------------------------
+    /*
     //call api restaurant
     $service_api = $string;
     $data_path_restaurant = "../../back/data/api_call_travel_advisor_restaurant.json";
@@ -196,14 +197,28 @@ $json_objekat = json_decode($response);
     */
 }
 
-function api_call_flytrips(){
-
+function api_call_flytrips()
+{
 }
 
-function api_call_booking() {
-
+function api_call_booking()
+{
 }
 
-function api_call_the_fork_the_spoon() {
+function api_call_the_fork_the_spoon()
+{
+}
 
+/*
+ces fonctions servent de backup en cas d indisponnibilite d appel a l api
+    plus d appel possible
+    probleme de connexion
+
+ils utilisent des fichier de projet/data/backup en json qui sont des appels stocke et ne doivent en aucun cas etre modifiee
+ce sont des appel api fait a l avance et qui marchent pour la demonstration en cas de probleme uniquement
+
+si plus d appel possible, utiliser backup ou faire une nouvelle cle d appel sur rapidapi: https://rapidapi.com/search/api
+*/
+function api_call_travel_advisor_backup($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule)
+{
 }
