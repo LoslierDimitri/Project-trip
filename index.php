@@ -1,3 +1,3 @@
-<?php include_once './backend/index.php'; 
+<?php 
 header('Location: ./projet/front/html/page-accueil.php');
 ?>
