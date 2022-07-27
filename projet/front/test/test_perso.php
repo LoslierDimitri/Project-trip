@@ -41,7 +41,7 @@ a recup:
 autour
 option
 */
-
+/*
 $file = file_get_contents("../../back/data/api_call_travel_advisor_hotel.json");
 $file_decode = json_decode($file);
 $file_array = (array) $file_decode;
@@ -90,5 +90,5 @@ echo "----------------------<br>";
 // echo "<pre>";
 // print_r($file);
 // echo "</pre> <br>";
-
+*/
 ?>
