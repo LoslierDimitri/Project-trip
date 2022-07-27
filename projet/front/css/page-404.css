@@ -1,7 +1,22 @@
 .btnAccueil{
     width: 100px;
     height: 100px;
-    background-color: #ED6E38;
+    padding: 5px;
+    margin: 5px;
+    background-color: #2e852e;
     border-radius: 8px;
-    border: 1px solid coral;
+    
+   
 }
+
+.btnAccueil :hover{
+    color: yellow;
+    background-color: #2e852e;
+    border-radius: 8px;
+    
+}
+
+.colorBtn{
+    color: white;
+}
+
