@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
 <?php
-include ("test_include.php");
+// include ("test_include.php");
 ?>
 
     <?php
