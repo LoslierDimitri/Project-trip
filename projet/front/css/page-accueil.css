@@ -8,22 +8,22 @@ body {
 
 @font-face {
     font-family: Mali-Regular;
-    src: url(./projet/front/source/fonts/Mali-Regular.ttf);
+    src: url(/Project-trip/projet/front/source/fonts/Mali-Regular.ttf);
 }
 
 @font-face {
     font-family: Mali-SB;
-    src: url(./projet/front/source/fonts/Mali-SemiBold.ttf);
+    src: url(/Project-trip/projet/front/source/fonts/Mali-SemiBold.ttf);
 }
 
 @font-face {
     font-family: Signika-Regular;
-    src: url(./projet/front/source/fonts/Signika-Regular.ttf);
+    src: url(/Project-trip/projet/front/source/fonts/Signika-Regular.ttf);
 }
 
 @font-face {
     font-family: Signika-SB;
-    src: url(./projet/front/source/fonts/Signika-SemiBold.ttf);
+    src: url(/Project-trip/projet/front/source/fonts/Signika-SemiBold.ttf);
 }
 
 .recherche_avancee {
