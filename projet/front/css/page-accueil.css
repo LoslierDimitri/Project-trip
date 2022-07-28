@@ -71,7 +71,7 @@ form {
 input {
     color: #8CC04E;
     font-family: Signika-Regular;
-    width: 250px;
+    width: 12vw;
     height: 35px;
 }
 
@@ -93,7 +93,7 @@ button img {
 }
 
 .carte_france {
-    width: 30vw;
+    width: 70%;
     display: flex;
     justify-content: center;
 }
@@ -113,7 +113,28 @@ h2 {
     color: #ED6E38;
 }
 
-.fromage_chevre {
-    width: 200px;
+.map h3 {
+    font-family: Mali-SB;
+    color: #0FABDF;
+}
+
+.map h5 {
+    font-family: Mali-Regular;
+    color: #ED6E38;
+}
+
+.map h6 {
+    font-family: Mali-Regular;
+    color: #0FABDF;
+}
+
+.map p {
+    font-family: Signika-Regular;
+    color: black;
+}
+
+.region_img {
+    width: 70%;
+    height: 80%;
     border-radius: 20px;
 }
