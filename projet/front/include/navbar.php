@@ -25,7 +25,7 @@ echo "<style>";
                     </li>
                 </ul>
                 <div class="login-logout">
-                    <a href="/project-trip/connexion" class="container-login-logout"><img class="logo-login-logout" src="./projet/front/source/svg/Picto-connexion-inscription.svg" alt="">
+                    <a href="/Project-trip/connexion" class="container-login-logout"><img class="logo-login-logout" src="./projet/front/source/svg/Picto-connexion-inscription.svg" alt="">
                     <p class="text-login-logout">Se connecter/S'inscrire</p></a>
                 </div>
           </div>
