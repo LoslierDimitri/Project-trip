@@ -1,3 +1,5 @@
+
+
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo $_POST["type_search"];
@@ -24,6 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+
+<?php
+include ("test_include.php");
+?>
 
     <?php
     include("./projet/front/include/navbar.php");

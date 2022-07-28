@@ -10,6 +10,9 @@ switch ($page){
     case 'dest':
         require __DIR__ . '/projet/front/html/destinationsFrame.php';
         break;
+    case 'connexion':
+        require __DIR__ . './projet/front/html/connexion.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/projet/front/html/page-404.php';
