@@ -7,7 +7,7 @@ echo "<style>";
 
 <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/project-trip/"><img src="./projet/front/source/svg/Logo.svg" alt=""></a>
+          <a class="navbar-brand" href=""><img src="./projet/front/source/svg/Logo.svg" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -25,7 +25,7 @@ echo "<style>";
                     </li>
                 </ul>
                 <div class="login-logout">
-                    <a href="/project-trip/connexion" class="container-login-logout"><img class="logo-login-logout" src="./projet/front/source/svg/Picto-connexion-inscription.svg" alt="">
+                    <a href="/Project-trip/connexion" class="container-login-logout"><img class="logo-login-logout" src="./projet/front/source/svg/Picto-connexion-inscription.svg" alt="">
                     <p class="text-login-logout">Se connecter/S'inscrire</p></a>
                 </div>
           </div>
