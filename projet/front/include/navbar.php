@@ -7,7 +7,7 @@ echo "<style>";
 
 <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="connexion.php"><img src="./projet/front/source/svg/Logo.svg" alt=""></a>
+          <a class="navbar-brand" href="/project-trip/"><img src="./projet/front/source/svg/Logo.svg" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
