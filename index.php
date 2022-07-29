@@ -2,11 +2,11 @@
 $page = $_GET['page'] ?? '';
 switch ($page){
     case '/':
-        require __DIR__ . '/projet/front/html/page-accueil.php';
+        require __DIR__ . './projet/front/html/page-accueil.php';
         break;
         
         case '':
-            require __DIR__ . '/projet/front/html/page-accueil.php';
+            require __DIR__ . './projet/front/html/page-accueil.php';
             break;
         //pour ajouter une page : 
         // case 'nom de la page'

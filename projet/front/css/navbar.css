@@ -24,11 +24,12 @@
 
 .navbar {
     padding: 0;
+    width: 100%;
 }
 
 .container-fluid {
     background-color: rgba(15, 171, 223, 0.2);
-    padding: 20px 0;
+    padding: 5px 0;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }

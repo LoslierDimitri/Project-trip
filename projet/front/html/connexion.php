@@ -1,11 +1,8 @@
 <?php
-include ("/Project-trip/projet/back/test/test_include.php");
+include("/Project-trip/projet/front/test/test_include.php");
 ?>
 
 <?php
-
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require ("/Project-trip/projet/back/form/form_connection.php");
 
@@ -13,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
     echo "connected with mot_do_passe: [" . $_SESSION['mot_de_passe'] . "] <br>";
     header ("Location: test_function.php");
-
+    
 }
 ?>
 
@@ -39,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="text" name="connexion_pseudo" id="connexion_pseudo" placeholder="Pseudo"><br>
                     <input type="password" name="connexion_mot_de_passe" id="connexion_mot_de_passe" placeholder="Mot de passe">
                     <div class="bouton">
-                    <button type="submit">Valider</button><br>
+                        <button type="submit">Valider</button><br>
                     </div>
                 </form>
             </div>
