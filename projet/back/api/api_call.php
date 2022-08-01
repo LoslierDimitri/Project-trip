@@ -26,6 +26,13 @@ https://rapidapi.com/ptwebsolution/api/worldwide-restaurants/
 https://rapidapi.com/rapapp11/api/restaurants13/pricing
 */
 
+/*
+api key
+dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a
+*/
+
+
+
 function api_call($string, $name)
 {
     //$service_api = "https://www.boredapi.com/api/activity/";
@@ -70,11 +77,15 @@ function api_call($string, $name)
 
 function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
 {
+    $API_KEY = "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a";
+
+
     //call api location_id
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
 
+    //get location id of location near choice
     curl_setopt_array($curl, [
         CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/locations/search?query=" . $voyage_lieu_arrive . "&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US",
         CURLOPT_RETURNTRANSFER => true,
@@ -86,7 +97,7 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => [
             "X-RapidAPI-Host: travel-advisor.p.rapidapi.com",
-            "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a"
+            $API_KEY
         ],
     ]);
 
@@ -148,10 +159,11 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
 
     if ($voyage_formule == "voyage_formule_gastronomique") {
         $sort = "recommended";
-    }else {
+    } else {
         $sort = "price";
     }
 
+    //get location id of hotel
     curl_setopt_array($curl, [
         CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/hotels/list?location_id=" . $location_id . "&adults=" . $voyage_nombre_personne_adulte . "&rooms=" . $voyage_nombre_chambre . "&nights=" . $number_of_night . "&offset=0&currency=USD&order=asc&limit=30&sort=" . $sort . "&lang=en_US",
         CURLOPT_RETURNTRANSFER => true,
@@ -163,7 +175,7 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => [
             "X-RapidAPI-Host: travel-advisor.p.rapidapi.com",
-            "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a"
+            $API_KEY
         ],
     ]);
 
@@ -195,18 +207,22 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
     $file_array = (array) $file_decode;
 
     for ($i = 0; $i < 5; $i++) {
-        $result_hotel_nom = $file_decode->data[$i]->name;
-        $result_hotel_adresse = "";
-        $result_hotel_prix = $file_decode->data[$i]->price;
-        $result_hotel_score = $file_decode->data[$i]->rating;
-        $result_hotel_autour = (array)$file_decode->data[$i]->neighborhood_info;
-        $result_hotel_autour_location_id = array();
-        $result_hotel_autour_nom = array();
-        for ($j = 0; $j < count($result_hotel_autour); $j++) {
-            array_push($result_hotel_autour_location_id, $result_hotel_autour[$j]->location_id);
-            array_push($result_hotel_autour_nom, $result_hotel_autour[$j]->name);
-        }
-        $result_hotel_option = "";
+        $result_hotel_location_id = $file_decode->data[$i]->location_id;
+        // $result_hotel_nom = $file_decode->data[$i]->name;
+        // $result_hotel_adresse = "";
+        // $result_hotel_prix = $file_decode->data[$i]->price;
+        // $result_hotel_score = $file_decode->data[$i]->rating;
+        // $result_hotel_autour = (array)$file_decode->data[$i]->neighborhood_info;
+        // $result_hotel_autour_location_id = array();
+        // $result_hotel_autour_nom = array();
+        // for ($j = 0; $j < count($result_hotel_autour); $j++) {
+        //     array_push($result_hotel_autour_location_id, $result_hotel_autour[$j]->location_id);
+        //     array_push($result_hotel_autour_nom, $result_hotel_autour[$j]->name);
+        // }
+        // $result_hotel_option = "";
+
+
+
         // echo "recap: <br>";
         // echo "hotel nom: [" . $result_hotel_nom . "]<br>";
         // echo "hotel adresse: [" . $result_hotel_adresse . "]<br>";
@@ -225,7 +241,106 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
         // echo "----------------------<br>";
         // echo "----------------------<br>";
         // echo "----------------------<br>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+        //get hotel detail
+        curl_setopt_array($curl, [
+            CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id=" . $result_hotel_location_id . "&checkin=" . $voyage_date_aller . "&adults=" . $voyage_nombre_personne_adulte . "&lang=en_US&currency=EUR&nights=" . $number_of_night . "",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => [
+                "X-RapidAPI-Host: travel-advisor.p.rapidapi.com",
+                $API_KEY
+            ],
+        ]);
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        }
+        // } else {
+        //     echo $response;
+        // }
+
+        $data_path_hotel_detail = "../../back/data/api_call_travel_advisor_hotel_detail_" . $i . ".json";
+        if (file_put_contents($data_path_hotel_detail, $response)) {
+            echo "JSON file created successfully <br>";
+            echo "JSON file sent to: [", $data_path_hotel_detail, "] <br>";
+            //echo "call to api: [", $service_api, "] done <br>";
+
+            // echo "<pre>";
+            // print_r($json_objekat);
+            // echo "</pre>";
+        } else {
+            echo "Error on JSON file <br>";
+        }
+
+        $tab_file = (array) [];
+        for ($i = 0; $i < 5; $i++) {
+            array_push($tab_file, json_decode(file_get_contents("../../back/data/api_call_travel_advisor_hotel_detail_" . $i . ".json")));
+        }
+
+        for ($i = 0; $i < 5; $i++) {
+            $result_hotel_nom_detail = $tab_file[$i]->data[0]->name;
+            $result_hotel_addresse_detail = $tab_file[$i]->data[0]->address;
+            $result_hotel_score_detail = $tab_file[$i]->data[0]->rating;
+            $result_hotel_image_detail = $tab_file[$i]->data[0]->photo->images->medium->url;
+            $result_hotel_chambre_detail = array();
+            for ($j = 0; $j < 5; $j++) {
+                if ($tab_file[$i]->data[0]->hac_offers->availability == "available") {
+                    array_push($result_hotel_chambre_detail, $tab_file[$i]->data[0]->hac_offers->offers[$j]->display_price_int);
+                }
+            }
+
+            echo "----------------------<br>";
+            echo "hotel nom: [" . $result_hotel_nom_detail . "] <br>";
+            echo "hotel adresse: [" . $result_hotel_addresse_detail . "] <br>";
+            echo "hotel note: [" . $result_hotel_score_detail . "] <br>";
+            echo "hotel image: [" . $result_hotel_image_detail . "] <br>";
+            // echo '<img src="' . $result_hotel_image_detail . '" alt=""><br>';
+            for ($j = 0; $j < 5; $j++) {
+                if ($tab_file[$i]->data[0]->hac_offers->availability == "available") {
+                    echo "hotel chambre [" . $j . "]: [" . $result_hotel_chambre_detail[$j] . "] <br>";
+                }
+            }
+
+            echo "<br>";
+        }
+
+        
     }
+
     //---------------------------------------------------------
     /*
     //call api restaurant

@@ -47,10 +47,13 @@ $file_decode = json_decode($file);
 $file_array = (array) $file_decode;
 
 for ($i = 0; $i < 5; $i++) {
+
     // echo "<pre>";
     // print_r($file_decode->data[$i]);
     // echo "</pre> <br>";
+
     echo "----------------------<br>";
+    $result_hotel_location_id = $file_decode->data[$i]->location_id;
     $result_hotel_nom = $file_decode->data[$i]->name;
     $result_hotel_adresse = "";
     $result_hotel_prix = $file_decode->data[$i]->price;
@@ -66,6 +69,7 @@ for ($i = 0; $i < 5; $i++) {
     }
     $result_hotel_option = "";
     echo "recap: <br>";
+    echo "hotel location id: [" . $result_hotel_location_id . "]<br>";
     echo "hotel nom: [" . $result_hotel_nom . "]<br>";
     echo "hotel adresse: [" . $result_hotel_adresse . "]<br>";
     echo "hotel prix: [" . $result_hotel_prix . "]<br>";
@@ -86,9 +90,87 @@ for ($i = 0; $i < 5; $i++) {
 }
 
 echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
+echo "----------------------<br>";
 
 // echo "<pre>";
 // print_r($file);
 // echo "</pre> <br>";
 */
 ?>
+
+<?php
+/*
+a recup:
+    nom
+    addresse
+    prix
+    score
+autour
+option
+*/
+
+// $file = file_get_contents("../../back/data/api_call_travel_advisor_hotel_detail_0.json");
+// $file_decode = json_decode($file);
+// $file_array = (array) $file_decode;
+
+// $file = file_get_contents("../../back/data/api_call_travel_advisor_hotel.json");
+// $file_decode = json_decode($file);
+// $file_array = (array) $file_decode;
+
+
+
+$tab_file = (array) [];
+for ($i = 0; $i < 5; $i++) {
+    array_push($tab_file, json_decode(file_get_contents("../../back/data/api_call_travel_advisor_hotel_detail_" . $i . ".json")));
+}
+
+for ($i = 0; $i < 5; $i++) {
+    $result_hotel_nom_detail = $tab_file[$i]->data[0]->name;
+    $result_hotel_addresse_detail = $tab_file[$i]->data[0]->address;
+    $result_hotel_score_detail = $tab_file[$i]->data[0]->rating;
+    $result_hotel_image_detail = $tab_file[$i]->data[0]->photo->images->medium->url;
+    $result_hotel_chambre_detail = array();
+    for ($j = 0; $j < 5; $j++) {
+        if ($tab_file[$i]->data[0]->hac_offers->availability != "unconfirmed") {
+            array_push($result_hotel_chambre_detail, $tab_file[$i]->data[0]->hac_offers->offers[$j]->display_price_int);
+        }
+    }
+
+    echo "hotel nom: [" . $result_hotel_nom_detail . "] <br>";
+    echo "hotel adresse: [" . $result_hotel_addresse_detail . "] <br>";
+    echo "hotel note: [" . $result_hotel_score_detail . "] <br>";
+    echo "hotel image: [" . $result_hotel_image_detail . "] <br>";
+    // echo '<img src="' . $result_hotel_image_detail . '" alt=""><br>';
+    for ($j = 0; $j < 5; $j++) {
+        if ($tab_file[$i]->data[0]->hac_offers->availability != "unconfirmed") {
+            echo "hotel chambre [" . $j . "]: [" . $result_hotel_chambre_detail[$j] . "] <br>";
+        }
+    }
+
+    echo "<br>";
+    echo "----------------------<br>";
+}
+// echo "----------------------<br>";
+// for ($i = 0; $i < 5; $i++) {
+//     echo "<pre>";
+//     print_r($tab_file[$i]);
+//     echo "</pre>";
+//     echo "----------------------<br>";
+// }
+
+
+
+?>
+
+<img src="" alt="">
