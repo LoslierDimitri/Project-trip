@@ -9,9 +9,9 @@ ne retourne rien
 */
 
 function connection() {
-    require ("../../back/database/database_connect.php");
-    require ("../../back/database/database_disconnect.php");
-    require ("../../back/database/database_request.php");
+    require ("/project-trip/projet/back/database/database_connect.php");
+    require ("/project-trip/projet/back/database/database_disconnect.php");
+    require ("/project-trip/projet/back/database/database_request.php");
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $connexion_pseudo = $_POST['connexion_pseudo'];
