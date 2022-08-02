@@ -1,6 +1,6 @@
 <?php
 echo "<style>";
-include("./projet/front/css/footer.css");
+include("./public/css/footer.css");
 echo "</style>";
 ?>
 
@@ -37,9 +37,9 @@ echo "</style>";
       <div class="links col-lg-4 col-md-12 col-sm-12 mt-4 mb-3">
         <h3 class="text-center">Suivez-nous :</h3>
         <div class="logo_reseaux flex justify-content-center">
-          <a href=""><img src="./projet/front/source/svg/Facebook.svg" alt=""></a>
-          <a href=""><img src="./projet/front/source/svg/Instagram.svg" alt=""></a>
-          <a href=""><img src="./projet/front/source/svg/Twitter.svg" alt=""></a>
+          <a href=""><img src="./public/svg/Facebook.svg" alt=""></a>
+          <a href=""><img src="./public/svg/Instagram.svg" alt=""></a>
+          <a href=""><img src="./public/svg/Twitter.svg" alt=""></a>
         </div>
       </div>
       <!--Grid column-->

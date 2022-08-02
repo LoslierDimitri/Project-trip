@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test form</title>
-    <link rel="stylesheet" href="./projet/front/css/connexion.css">
+    <link rel="stylesheet" href="./public/css/connexion.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="container_connection">
             <div class="connexion">
                 <h2>Connexion</h2>
-                <img src="./projet/front/source/svg/Logo.svg" alt="">
+                <img src="./public/svg/Logo.svg" alt="">
                 <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
                     <input type="text" name="connexion_pseudo" id="connexion_pseudo" placeholder="Pseudo"><br>
                     <input type="password" name="connexion_mot_de_passe" id="connexion_mot_de_passe" placeholder="Mot de passe">

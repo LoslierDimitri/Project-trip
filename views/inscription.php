@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test form</title>
-    <link rel="stylesheet" href="./projet/front/css/inscription.css">
+    <link rel="stylesheet" href="./public/css/inscription.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="inscription">
                 <h2>Inscription</h2>
 
-                <img src="./projet/front/source/svg/Logo.svg" alt="">
+                <img src="./public/svg/Logo.svg" alt="">
 
                 <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
                     <div class="sex">

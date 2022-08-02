@@ -1,44 +1,41 @@
-* {
-    box-sizing: border-box;
-}
-
 @font-face {
     font-family: Mali-Regular;
-    src: url(/Project-trip/projet/front/source/fonts/Mali-Regular.ttf);
+    src: url(./public/fonts/Mali-Regular.ttf);
 }
 
 @font-face {
     font-family: Mali-SB;
-    src: url(/Project-trip/projet/front/source/fonts/Mali-SemiBold.ttf);
+    src: url(./public/fonts/Mali-SemiBold.ttf);
 }
 
 @font-face {
     font-family: Signika-Regular;
-    src: url(/Project-trip/projet/front/source/fonts/Signika-Regular.ttf);
+    src: url(./public/fonts/Signika-Regular.ttf);
 }
 
 @font-face {
     font-family: Signika-SB;
-    src: url(/Project-trip/projet/front/source/fonts/Signika-SemiBold.ttf);
+    src: url(./public/fonts/Signika-SemiBold.ttf);
 }
 
-.container_inscription {
+.container_connection {
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.inscription {
+.connexion {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 5px solid #0FABDF;
     border-radius: 30px;
-    padding: 40px 150px 40px 150px;
+    padding: 20px 45px 20px 45px;
 }
 
-.inscription h2 {
+.connexion h2 {
     font-family: Mali-SB;
     color: #ED6E38;
     font-size: 2rem;
@@ -47,11 +44,6 @@
 form {
     display: flex;
     flex-direction: column;
-}
-
-.sex {
-    display: flex;
-    margin-bottom: 10px;
 }
 
 input {

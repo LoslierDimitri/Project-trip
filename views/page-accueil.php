@@ -17,9 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Project-trip/projet/front/css/navbar.css">
-    <link rel="stylesheet" href="/Project-trip/projet/front/css/footer.css">
-    <link rel="stylesheet" href="/Project-trip/projet/front/css/page-accueil.css">
+    <link rel="stylesheet" href="./public/css/navbar.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
+    <link rel="stylesheet" href="./public/css/page-accueil.css">
     <title>Culin'Air</title>
 </head>
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ?>
 
     <?php
-    include("./projet/front/include/navbar.php");
+    include("./include/navbar.php");
     ?>
 
 
@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h3>Nouvelle Aquitaine</h3>
             <div class="row w-100">
                 <div class="col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center mt-5">
-                    <img class="carte_france" src="./projet/front/source/svg/Sans titre - 1.svg" alt="">
+                    <img class="carte_france" src="./public/svg/Sans titre - 1.svg" alt="">
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6 mt-5">
                     <div class="row">
@@ -139,14 +139,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                                <img class="region_img" src="./projet/front/source/png/chevre_image.png" alt="">
+                                <img class="region_img" src="./public/png/chevre_image.png" alt="">
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3">
                                 <h6>Le fromage de chèvre</h6>
                                 <p>Fromage emblématique de la région Poitou Charentes</p>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                                <img class="region_img" src="./projet/front/source/png/Canneles.png" alt="">
+                                <img class="region_img" src="./public/png/Canneles.png" alt="">
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3">
                                 <h6>Les cannelés</h6>
@@ -155,14 +155,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                                <img class="region_img" src="./projet/front/source/jpeg/broye.jpg" alt="">
+                                <img class="region_img" src="./public/jpeg/broye.jpg" alt="">
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3">
                                 <h6>Le Broyé du Poitou</h6>
                                 <p>Gâteau Poitevin resemblant à un gros biscuit (dur mais pas sec)</p>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                                <img class="region_img" src="./projet/front/source/jpeg/vin.jpg" alt="">
+                                <img class="region_img" src="./public/jpeg/vin.jpg" alt="">
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3">
                                 <h6>Le vin de Bordeaux</h6>
@@ -171,14 +171,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                                <img class="region_img" src="./projet/front/source/jpeg/charcuterie.jpg" alt="">
+                                <img class="region_img" src="./public/jpeg/charcuterie.jpg" alt="">
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3">
                                 <h6>La charcuterie du Sud Ouest</h6>
                                 <p>Jambon de Bayonne, pâté au piment d'Espelette, foie gras... hmmmm !</p>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                                <img class="region_img" src="./projet/front/source/jpeg/axoa.jpg" alt="">
+                                <img class="region_img" src="./public/jpeg/axoa.jpg" alt="">
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3">
                                 <h6>L'Axoa de veau (prononcé achoa)</h6>
@@ -187,14 +187,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                                <img class="region_img" src="./projet/front/source/jpeg/magret.jpg" alt="">
+                                <img class="region_img" src="./public/jpeg/magret.jpg" alt="">
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3">
                                 <h6>Le Magret de canard</h6>
                                 <p>Bien que Gersois, le magret reste très consommé dans les Landes et Pays Basque</p>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                                <img class="region_img" src="./projet/front/source/jpeg/salade-landaise.jpg" alt="">
+                                <img class="region_img" src="./public/jpeg/salade-landaise.jpg" alt="">
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-3">
                                 <h6>La salade Landaise</h6>
@@ -211,11 +211,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     <?php
-    include("./projet/front/include/footer.php");
+    include("./include/footer.php");
     ?>
 
 
-    <script src="./projet/front/js/script.js"></script>
+    <script src="./public/js/script.js"></script>
 </body>
 
 </html>
