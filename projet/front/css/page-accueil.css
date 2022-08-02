@@ -84,8 +84,15 @@ button {
     color: white;
     border: none;
     border-radius: 10px;
+    border: 1px solid transparent;
     padding: 5px 15px 5px 15px;
     font-family: Signika-Regular;
+}
+
+button:hover {
+    background-color: white;
+    color: #ED6E38;
+    border: 1px solid #ED6E38;
 }
 
 button img {
