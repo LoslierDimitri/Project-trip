@@ -1,10 +1,10 @@
 <?php
-include("/Project-trip/projet/front/test/test_include.php");
+include("./Project-trip/projet/front/test/test_include.php");
 ?>
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require ("/Project-trip/projet/back/form/form_connection.php");
+    require ("./projet/back/form/form_connection.php");
 
     connection();
     echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";

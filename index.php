@@ -17,6 +17,9 @@ switch ($page){
     case 'connexion':
         require __DIR__ . './projet/front/html/connexion.php';
         break;
+    case 'inscription':
+        require __DIR__ . './projet/front/html/inscription.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . '/projet/front/html/page-404.php';

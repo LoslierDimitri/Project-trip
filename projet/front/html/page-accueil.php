@@ -1,12 +1,10 @@
-
-
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo $_POST["type_search"];
     echo "<br>";
     echo $_POST["voyage_region"];
 
-    header("Location: test_function_result.php");
+    header("Location: /Project-trip");
 }
 ?>
 
@@ -27,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
 
-<?php
-// include ("test_include.php");
-?>
+    <?php
+    // include ("test_include.php");
+    ?>
 
     <?php
     include("./projet/front/include/navbar.php");
@@ -139,73 +137,73 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="col-sm-12 col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                             <h5>Vous pourrez déguster :</h5>
                         </div>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                            <img class="region_img" src="./projet/front/source/png/chevre_image.png" alt="">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
+                                <img class="region_img" src="./projet/front/source/png/chevre_image.png" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3">
+                                <h6>Le fromage de chèvre</h6>
+                                <p>Fromage emblématique de la région Poitou Charentes</p>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
+                                <img class="region_img" src="./projet/front/source/png/Canneles.png" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3">
+                                <h6>Les cannelés</h6>
+                                <p>Petite patisserie Bordelaise à la vanille</p>
+                            </div>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3">
-                            <h6>Le fromage de chèvre</h6>
-                            <p>Fromage emblématique de la région Poitou Charentes</p>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
+                                <img class="region_img" src="./projet/front/source/jpeg/broye.jpg" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3">
+                                <h6>Le Broyé du Poitou</h6>
+                                <p>Gâteau Poitevin resemblant à un gros biscuit (dur mais pas sec)</p>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
+                                <img class="region_img" src="./projet/front/source/jpeg/vin.jpg" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3">
+                                <h6>Le vin de Bordeaux</h6>
+                                <p>Le mythic vin de Bordeaux célèbre dans le monde entier</p>
+                            </div>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                            <img class="region_img" src="./projet/front/source/png/Canneles.png" alt="">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
+                                <img class="region_img" src="./projet/front/source/jpeg/charcuterie.jpg" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3">
+                                <h6>La charcuterie du Sud Ouest</h6>
+                                <p>Jambon de Bayonne, pâté au piment d'Espelette, foie gras... hmmmm !</p>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
+                                <img class="region_img" src="./projet/front/source/jpeg/axoa.jpg" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3">
+                                <h6>L'Axoa de veau (prononcé achoa)</h6>
+                                <p>Ragoût de veau au poivron et piment d'Espelette</p>
+                            </div>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3">
-                            <h6>Les cannelés</h6>
-                            <p>Petite patisserie Bordelaise à la vanille</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                            <img class="region_img" src="./projet/front/source/jpeg/broye.jpg" alt="">
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3">
-                            <h6>Le Broyé du Poitou</h6>
-                            <p>Gâteau Poitevin resemblant à un gros biscuit (dur mais pas sec)</p>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                            <img class="region_img" src="./projet/front/source/jpeg/vin.jpg" alt="">
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3">
-                            <h6>Le vin de Bordeaux</h6>
-                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                            <img class="region_img" src="./projet/front/source/jpeg/charcuterie.jpg" alt="">
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3">
-                            <h6>La charcuterie du Sud Ouest</h6>
-                            <p>Jambon de Bayonne, pâté au piment d'Espelette, foie gras... hmmmm !</p>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                            <img class="region_img" src="./projet/front/source/jpeg/axoa.jpg" alt="">
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3">
-                            <h6>L'Axoa de veau (prononcé achoa)</h6>
-                            <p>Ragoût de veau au poivron et piment d'Espelette</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                            <img class="region_img" src="./projet/front/source/jpeg/magret.jpg" alt="">
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3">
-                            <h6>Le Magret de canard</h6>
-                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et Pays Basque</p>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
-                            <img class="region_img" src="./projet/front/source/jpeg/salade-landaise.jpg" alt="">
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-3">
-                            <h6>La salade Landaise</h6>
-                            <p>Un peu de fraicheur avec cette succulente salade aux gésiers</p>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
+                                <img class="region_img" src="./projet/front/source/jpeg/magret.jpg" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3">
+                                <h6>Le Magret de canard</h6>
+                                <p>Bien que Gersois, le magret reste très consommé dans les Landes et Pays Basque</p>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3 d-flex justify-content-center">
+                                <img class="region_img" src="./projet/front/source/jpeg/salade-landaise.jpg" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-3">
+                                <h6>La salade Landaise</h6>
+                                <p>Un peu de fraicheur avec cette succulente salade aux gésiers</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
     </section>
 

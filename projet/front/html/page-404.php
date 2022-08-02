@@ -28,7 +28,9 @@
                 <div class="card-body">
                     <h2 class="card-title">404</h2>
                     <p class="card-text">Désolé, mais la page que vous avez demandé n'est pas disponible</p>
-                    <a class="btnAccueil" href="./"><span class="colorBtn">Accueil</span></a>
+                    <div class="bouton">
+                        <a href="/Project-trip"><button type="button">Accueil</button></a>
+                    </div>
                 </div>
             </div>
         </div>

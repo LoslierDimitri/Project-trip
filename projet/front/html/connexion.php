@@ -1,16 +1,18 @@
 <?php
-include("/Project-trip/projet/front/test/test_include.php");
+include("test_connection_check.php");
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require ("/Project-trip/projet/back/form/form_connection.php");
+    require ("./projet/back/form/form_connection.php");
 
     connection();
     echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
     echo "connected with mot_do_passe: [" . $_SESSION['mot_de_passe'] . "] <br>";
-    header ("Location: test_function.php");
-    
+    header ("Location: ../");
 }
 ?>
 
