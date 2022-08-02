@@ -21,7 +21,7 @@ switch ($page) {
         require __DIR__ . './views/inscription.php';
         break;
     case 'concept':
-        require __DIR__ . './projet/front/html/concept.php';
+        require __DIR__ . './views/concept.php';
         break;
     default:
         http_response_code(404);
