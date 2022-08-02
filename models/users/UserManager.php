@@ -2,11 +2,11 @@
 
 require_once './models/Database.php';
 
-class UserModel extends Database {
+class UserManager extends Database {
 
     private $table = 'users';
 
-    public function createUser($type, $nom, $prenom, $age, $sexe, $pseudo, $mot_de_passe, $email, $telephone, $pays, $adresse){
+    public function register($type, $nom, $prenom, $age, $sexe, $pseudo, $mot_de_passe, $email, $telephone, $pays, $adresse){
         $req = "INSERT INTO $this->table (type, nom, prenom, age, sexe, pseudo, mot_de_passe, email, telephone, pays, adresse) VALUES (:type, :nom, :prenom, :age, :sexe, :pseudo, :mot_de_passe, :email, :telephone, :pays, :adresse)";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(':type', $type);
@@ -23,7 +23,7 @@ class UserModel extends Database {
         $stmt->execute();
     }
 
-    public function getUser($pseudo, $mot_de_passe){
+    public function login($pseudo, $mot_de_passe){
         $req = "SELECT * FROM $this->table WHERE pseudo = :pseudo AND mot_de_passe = :mot_de_passe";
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(':pseudo', $pseudo);
