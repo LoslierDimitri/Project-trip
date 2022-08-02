@@ -2,13 +2,8 @@
 $page = $_GET['page'] ?? '';
 switch ($page) {
     case '/':
-<<<<<<< HEAD
         require __DIR__ . './views/page-accueil.php';
         break;    
-=======
-        require __DIR__ . './projet/front/html/page-accueil.php';
-        break;
->>>>>>> 4e2592965c28f73195e7ce4b44cd07168ae70b0a
     case '':
         require __DIR__ . './views/page-accueil.php';
         break;
