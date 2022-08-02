@@ -75,8 +75,13 @@ function api_call($string, $name)
     }
 }
 
-function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
+function api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
 {
+    $api_call_travel_advisor_result_hotel_path = "../../back/data/result_search/";
+    $api_call_travel_advisor_result_hotel_name = "result_search_hotel.json";
+    $api_call_travel_advisor_result_hotel_json = [];
+
+
     $API_KEY = "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a";
 
 
@@ -242,25 +247,6 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
         // echo "----------------------<br>";
         // echo "----------------------<br>";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
@@ -316,30 +302,57 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
             $result_hotel_addresse_detail = $tab_file[$i]->data[0]->address;
             $result_hotel_score_detail = $tab_file[$i]->data[0]->rating;
             $result_hotel_image_detail = $tab_file[$i]->data[0]->photo->images->medium->url;
+            $result_hotel_chambre_detail_available = $tab_file[$i]->data[0]->hac_offers->availability;
             $result_hotel_chambre_detail = array();
             for ($j = 0; $j < 5; $j++) {
-                if ($tab_file[$i]->data[0]->hac_offers->availability == "available") {
+                if ($result_hotel_chambre_detail_available == "available") {
                     array_push($result_hotel_chambre_detail, $tab_file[$i]->data[0]->hac_offers->offers[$j]->display_price_int);
                 }
             }
 
-            echo "----------------------<br>";
-            echo "hotel nom: [" . $result_hotel_nom_detail . "] <br>";
-            echo "hotel adresse: [" . $result_hotel_addresse_detail . "] <br>";
-            echo "hotel note: [" . $result_hotel_score_detail . "] <br>";
-            echo "hotel image: [" . $result_hotel_image_detail . "] <br>";
-            // echo '<img src="' . $result_hotel_image_detail . '" alt=""><br>';
-            for ($j = 0; $j < 5; $j++) {
-                if ($tab_file[$i]->data[0]->hac_offers->availability == "available") {
-                    echo "hotel chambre [" . $j . "]: [" . $result_hotel_chambre_detail[$j] . "] <br>";
-                }
-            }
+            // echo "----------------------<br>";
+            // echo "hotel nom: [" . $result_hotel_nom_detail . "] <br>";
+            // echo "hotel adresse: [" . $result_hotel_addresse_detail . "] <br>";
+            // echo "hotel note: [" . $result_hotel_score_detail . "] <br>";
+            // echo "hotel image: [" . $result_hotel_image_detail . "] <br>";
+            // // echo '<img src="' . $result_hotel_image_detail . '" alt=""><br>';
+            // echo "hotel chambre avaiable: [" . $result_hotel_chambre_detail_available . "] <br>";
+            // for ($j = 0; $j < 5; $j++) {
+            //     if ($result_hotel_chambre_detail_available == "available") {
+            //         echo "hotel chambre [" . $j . "]: [" . $result_hotel_chambre_detail[$j] . "] <br>";
+            //     }
+            // }
 
-            echo "<br>";
+            // echo "<br>";
+
+            $hotel_array = [];
+            array_push($hotel_array, $result_hotel_nom_detail);
+            array_push($hotel_array, $result_hotel_addresse_detail);
+            array_push($hotel_array, $result_hotel_score_detail);
+            array_push($hotel_array, $result_hotel_image_detail);
+            array_push($hotel_array, $result_hotel_chambre_detail_available);
+            array_push($hotel_array, $result_hotel_chambre_detail);
+
+            // $api_call_travel_advisor_result_hotel_json = [];
+            array_push($api_call_travel_advisor_result_hotel_json, $hotel_array);
         }
 
-        
+
+        // echo "<pre>";
+        // print_r($api_call_travel_advisor_result_hotel_json);
+        // echo "</pre>";
+
+        echo "filepath: " . $api_call_travel_advisor_result_hotel_path . $api_call_travel_advisor_result_hotel_name;
+
+        $file = fopen($api_call_travel_advisor_result_hotel_path . $api_call_travel_advisor_result_hotel_name, "wa+");
+        fwrite($file, json_encode($api_call_travel_advisor_result_hotel_json));
+        fclose($file);
     }
+
+
+
+
+    // $location_id
 
     //---------------------------------------------------------
     /*
@@ -362,7 +375,276 @@ function api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyag
         echo "Error on JSON file <br>";
     }
     */
+
+    // $curl = curl_init();
+
+    // curl_setopt_array($curl, [
+    //     CURLOPT_URL => "https://travel-advisor.p.rapidapi.com/restaurants/list?location_id=".$location_id."&restaurant_tagcategory=10591&restaurant_tagcategory_standalone=10591&currency=EUR&lunit=km&limit=30&open_now=false&lang=en_US",
+    //     CURLOPT_RETURNTRANSFER => true,
+    //     CURLOPT_FOLLOWLOCATION => true,
+    //     CURLOPT_ENCODING => "",
+    //     CURLOPT_MAXREDIRS => 10,
+    //     CURLOPT_TIMEOUT => 30,
+    //     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    //     CURLOPT_CUSTOMREQUEST => "GET",
+    //     CURLOPT_HTTPHEADER => [
+    //         "X-RapidAPI-Host: travel-advisor.p.rapidapi.com",
+    //         $API_KEY
+    //     ],
+    // ]);
+
+    // $response = curl_exec($curl);
+    // $err = curl_error($curl);
+
+    // curl_close($curl);
+
+    // if ($err) {
+    //     echo "cURL Error #:" . $err;
+    // } else {
+    //     echo $response;
+    // }
+
+    // $data_path_restaurant = "../../back/data/api_call_travel_advisor_restaurant.json";
+    // if (file_put_contents($data_path_restaurant, $response)) {
+    //     echo "JSON file created successfully <br>";
+    //     echo "JSON file sent to: [", $data_path_restaurant, "] <br>";
+    //     //echo "call to api: [", $service_api, "] done <br>";
+
+    //     // echo "<pre>";
+    //     // print_r($json_objekat);
+    //     // echo "</pre>";
+    // } else {
+    //     echo "Error on JSON file <br>";
+    // }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
+{
+    /*
+    api call location with voyage_lieu_arrive
+    get location_id
+
+    api call restaurant with location_id
+    get restaurant
+
+    api call restaurant detail with restaurant_location_id
+    get restaurant detail
+    */
+
+    $API_KEY = "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a";
+
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //api call location
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    curl_setopt_array($curl, [
+        CURLOPT_URL => "https://the-fork-the-spoon.p.rapidapi.com/locations/v2/auto-complete?text=" . $voyage_lieu_arrive . "",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => [
+            "X-RapidAPI-Host: the-fork-the-spoon.p.rapidapi.com",
+            $API_KEY
+        ],
+    ]);
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    }
+
+    $data_path_location_id = "../../back/data/api_call_the_fork_the_spoon_location_id.json";
+    if (file_put_contents($data_path_location_id, $response)) {
+        echo "JSON file created successfully <br>";
+        echo "JSON file sent to: [", $data_path_location_id, "] <br>";
+        //echo "call to api: [", $service_api, "] done <br>";
+
+        // echo "<pre>";
+        // print_r($json_objekat);
+        // echo "</pre>";
+    } else {
+        echo "Error on JSON file <br>";
+    }
+
+    $file = file_get_contents("../../back/data/api_call_the_fork_the_spoon_location_id.json");
+    $file_decode = json_decode($file);
+    $google_place_id = $file_decode->data->geolocation[0]->id->id;
+    $google_place_geo_text = $file_decode->data->geolocation[0]->name->text;
+    $google_place_geo_type = $file_decode->data->geolocation[0]->id->type;
+
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    curl_setopt_array($curl, [
+        CURLOPT_URL => "https://the-fork-the-spoon.p.rapidapi.com/locations/v2/list?google_place_id=" . $google_place_id . "&geo_ref=false&geo_text=" . $google_place_geo_text . "&geo_type=" . $google_place_geo_type . "",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => [
+            "X-RapidAPI-Host: the-fork-the-spoon.p.rapidapi.com",
+            $API_KEY
+        ],
+    ]);
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    }
+
+    $data_path_location_id = "../../back/data/api_call_the_fork_the_spoon_location_id_google.json";
+    if (file_put_contents($data_path_location_id, $response)) {
+        echo "JSON file created successfully <br>";
+        echo "JSON file sent to: [", $data_path_location_id, "] <br>";
+        //echo "call to api: [", $service_api, "] done <br>";
+
+        // echo "<pre>";
+        // print_r($json_objekat);
+        // echo "</pre>";
+    } else {
+        echo "Error on JSON file <br>";
+    }
+
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //get location_id
+    $file = file_get_contents("../../back/data/api_call_the_fork_the_spoon_location_id_google.json");
+    $file_decode = json_decode($file);
+    $file_array = (array) $file_decode;
+
+    $location_id = $file_decode->id_city;
+
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //api call restaurant with location_id
+    if ($voyage_formule == "voyage_formule_gastronomique") {
+        $sort_type = "quality";
+    } else {
+        $sort_type = "price";
+    }
+
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    curl_setopt_array($curl, [
+        CURLOPT_URL => "https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/list?queryPlaceValueCityId=".$location_id."&pageSize=10&pageNumber=1&sort=".$sort_type."",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => [
+            "X-RapidAPI-Host: the-fork-the-spoon.p.rapidapi.com",
+            $API_KEY
+        ],
+    ]);
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    }
+
+    $data_path = "../../back/data/api_call_the_fork_the_spoon_restaurant.json";
+    if (file_put_contents($data_path, $response)) {
+        echo "JSON file created successfully <br>";
+        echo "JSON file sent to: [", $data_path, "] <br>";
+        //echo "call to api: [", $service_api, "] done <br>";
+
+        // echo "<pre>";
+        // print_r($json_objekat);
+        // echo "</pre>";
+    } else {
+        echo "Error on JSON file <br>";
+    }
+
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //get restaurant_location_id
+
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //api call restaurant detail with restaurant_location_id
+
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //get restaurant detail
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function api_call_flytrips()
 {
@@ -372,9 +654,6 @@ function api_call_booking()
 {
 }
 
-function api_call_the_fork_the_spoon()
-{
-}
 
 /*
 ces fonctions servent de backup en cas d indisponnibilite d appel a l api

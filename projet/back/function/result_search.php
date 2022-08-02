@@ -10,36 +10,39 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-function search($search_type, $voyage_region, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre) {
-    require ("result_format.php");
-    require ("result_send.php");
+function search($search_type, $voyage_region, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
+{
+    require("result_format.php");
+    require("result_send.php");
 
-    require ("../../back/api/api_call.php");
-    require ("../../back/database/database_connect.php");
-    require ("../../back/database/database_disconnect.php");
-    require ("../../back/database/database_request.php");
+    require("../../back/api/api_call.php");
+    require("../../back/database/database_connect.php");
+    require("../../back/database/database_disconnect.php");
+    require("../../back/database/database_request.php");
 
     //recherche api
-    api_call_travel_advisor($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
+    //api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
     //api_call_travel_advisor_backup($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
+
+    api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
 
     //recherche bdd
     if (isset($_SESSION['pseudo']) && isset($_SESSION["mot_de_passe"])) {
-    $connection = database_connect();
+        $connection = database_connect();
 
-    $user_nom = database_select_where($connection, "nom", "pseudo", $_SESSION["pseudo"]);
-    $user_prenom = database_select_where($connection, "prenom", "pseudo", $_SESSION["pseudo"]);
-    $user_age = database_select_where($connection, "age", "pseudo", $_SESSION["pseudo"]);
-    $user_sexe = database_select_where($connection, "sexe", "pseudo", $_SESSION["pseudo"]);
-    $user_mail = database_select_where($connection, "email", "pseudo", $_SESSION["pseudo"]);
+        $user_nom = database_select_where($connection, "nom", "pseudo", $_SESSION["pseudo"]);
+        $user_prenom = database_select_where($connection, "prenom", "pseudo", $_SESSION["pseudo"]);
+        $user_age = database_select_where($connection, "age", "pseudo", $_SESSION["pseudo"]);
+        $user_sexe = database_select_where($connection, "sexe", "pseudo", $_SESSION["pseudo"]);
+        $user_mail = database_select_where($connection, "email", "pseudo", $_SESSION["pseudo"]);
 
-    echo $user_nom[0]["nom"] . "<br>";
-    echo $user_prenom[0]["prenom"] . "<br>";
-    echo $user_age[0]["age"] . "<br>";
-    echo $user_sexe[0]["sexe"] . "<br>";
-    echo $user_mail[0]["email"] . "<br>";
+        echo $user_nom[0]["nom"] . "<br>";
+        echo $user_prenom[0]["prenom"] . "<br>";
+        echo $user_age[0]["age"] . "<br>";
+        echo $user_sexe[0]["sexe"] . "<br>";
+        echo $user_mail[0]["email"] . "<br>";
 
-    $connection = database_disconnect();
+        $connection = database_disconnect();
     }
 
     //affinage recherche
