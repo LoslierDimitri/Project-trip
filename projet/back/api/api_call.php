@@ -446,6 +446,10 @@ function api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voya
 
 function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
 {
+    $api_call_the_fork_the_spoon_result_restaurant_path = "../../back/data/result_search/";
+    $api_call_the_fork_the_spoon_result_restaurant_name = "result_search_restaurant.json";
+    $api_call_the_fork_the_spoon_result_restaurant_json = [];
+
     /*
     api call location with voyage_lieu_arrive
     get location_id
@@ -570,7 +574,7 @@ function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
 
     curl_setopt_array($curl, [
-        CURLOPT_URL => "https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/list?queryPlaceValueCityId=".$location_id."&pageSize=10&pageNumber=1&sort=".$sort_type."",
+        CURLOPT_URL => "https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/list?queryPlaceValueCityId=" . $location_id . "&pageSize=10&pageNumber=1&sort=" . $sort_type . "",
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_ENCODING => "",
@@ -614,7 +618,71 @@ function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $
 
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //get restaurant detail
+    $file = file_get_contents("../../back/data/api_call_the_fork_the_spoon_restaurant.json");
+    $file_decode = json_decode($file);
+    $file_array = (array) $file_decode;
 
+    for ($i = 0; $i < count($file_decode->data); $i++) {
+
+        $result_restaurant_nom = "";
+        $result_restaurant_cuisine = "";
+        $result_restaurant_adresse = "";
+        $result_restaurant_note = "";
+        $result_restaurant_photo = "";
+
+        $result_restaurant_nom = $file_decode->data[$i]->name;
+        if (isset($file_decode->data[$i]->servesCuisine)) {
+            $result_restaurant_cuisine = $file_decode->data[$i]->servesCuisine;
+        }
+        $result_restaurant_adresse = $file_decode->data[$i]->address->street . ", " . $file_decode->data[$i]->address->postalCode . ", " . $file_decode->data[$i]->address->locality . ", " . $file_decode->data[$i]->address->country;
+        $result_restaurant_note = $file_decode->data[$i]->aggregateRatings->tripadvisor->ratingValue;
+        $result_restaurant_photo = $file_decode->data[$i]->mainPhotoSrc;
+
+        // // nom
+        // echo "<pre>";
+        // print_r("nom: " . $file_decode->data[$i]->name);
+        // echo "</pre>";
+
+        // // cuisine
+        // echo "<pre>";
+        // print_r("cuisine: " . $file_decode->data[$i]->servesCuisine);
+        // echo "</pre>";
+
+        // // addresse
+        // echo "<pre>";
+        // print_r("adresse: " . $file_decode->data[$i]->address->street . ", " . $file_decode->data[$i]->address->postalCode . ", " . $file_decode->data[$i]->address->locality . ", " . $file_decode->data[$i]->address->country);
+        // echo "</pre>";
+
+        // // note
+        // echo "<pre>";
+        // print_r("note: " . $file_decode->data[$i]->aggregateRatings->tripadvisor->ratingValue);
+        // echo "</pre>";
+
+        // // photo
+        // echo "<pre>";
+        // print_r("photo: " . $file_decode->data[$i]->mainPhotoSrc);
+        // echo "</pre>";
+
+        // // echo '<img src="'.$file_decode->data[$i]->mainPhotoSrc.'" alt="">';
+
+        // echo "----------------------------<br>";
+        // echo "<br>";$hotel_array = [];
+
+        $restaurant_array = [];
+        array_push($restaurant_array, $result_restaurant_nom);
+        array_push($restaurant_array, $result_restaurant_cuisine);
+        array_push($restaurant_array, $result_restaurant_adresse);
+        array_push($restaurant_array, $result_restaurant_note);
+        array_push($restaurant_array, $result_restaurant_photo);
+
+        array_push($api_call_the_fork_the_spoon_result_restaurant_json, $restaurant_array);
+    }
+
+    echo "filepath: " . $api_call_the_fork_the_spoon_result_restaurant_path . $api_call_the_fork_the_spoon_result_restaurant_name;
+
+    $file = fopen($api_call_the_fork_the_spoon_result_restaurant_path . $api_call_the_fork_the_spoon_result_restaurant_name, "wa+");
+    fwrite($file, json_encode($api_call_the_fork_the_spoon_result_restaurant_json));
+    fclose($file);
 }
 
 

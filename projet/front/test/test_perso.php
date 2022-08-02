@@ -110,7 +110,7 @@ echo "----------------------<br>";
 ?>
 
 <?php
-/*
+    /*
 a recup:
     nom
     addresse
@@ -120,15 +120,15 @@ autour
 option
 */
 
-// $file = file_get_contents("../../back/data/api_call_travel_advisor_hotel_detail_0.json");
-// $file_decode = json_decode($file);
-// $file_array = (array) $file_decode;
+    // $file = file_get_contents("../../back/data/api_call_travel_advisor_hotel_detail_0.json");
+    // $file_decode = json_decode($file);
+    // $file_array = (array) $file_decode;
 
-// $file = file_get_contents("../../back/data/api_call_travel_advisor_hotel.json");
-// $file_decode = json_decode($file);
-// $file_array = (array) $file_decode;
+    // $file = file_get_contents("../../back/data/api_call_travel_advisor_hotel.json");
+    // $file_decode = json_decode($file);
+    // $file_array = (array) $file_decode;
 
-/*
+    /*
 $api_call_travel_advisor_result_hotel_path = "../../back/data/result_search/";
 $api_call_travel_advisor_result_hotel_name = "result_search_hotel.json";
 $api_call_travel_advisor_result_hotel_json = [];
@@ -253,10 +253,6 @@ fclose($file)
 ?>
 
 <?php
-$file = file_get_contents("../../back/data/api_call_the_fork_the_spoon_restaurant.json");
-$file_decode = json_decode($file);
-$file_array = (array) $file_decode;
-
 /*
 a regarder
 "servesCuisine": "French",
@@ -280,4 +276,58 @@ a regarder
 "mainPhotoSrc": "https://res.cloudinary.com/tf-lab/image/upload/restaurant/739ec324-6b20-48d2-a8cb-d0c69b1c62b3/619557ba-2ba6-45bd-8019-7008f187f989.jpg",
 
 */
+$file = file_get_contents("../../back/data/api_call_the_fork_the_spoon_restaurant.json");
+$file_decode = json_decode($file);
+$file_array = (array) $file_decode;
+
+for ($i = 0; $i < count($file_decode->data); $i++) {
+
+    $result_restaurant_nom = "";
+    $result_restaurant_cuisine = "";
+    $result_restaurant_adresse = "";
+    $result_restaurant_note = "";
+    $result_restaurant_photo = "";
+
+    $result_restaurant_nom = $file_decode->data[$i]->name;
+    if (isset($file_decode->data[$i]->servesCuisine)) {
+        $result_restaurant_cuisine = $file_decode->data[$i]->servesCuisine;
+    }
+    $result_restaurant_adresse = $file_decode->data[$i]->address->street . ", " . $file_decode->data[$i]->address->postalCode . ", " . $file_decode->data[$i]->address->locality . ", " . $file_decode->data[$i]->address->country;
+    $result_restaurant_note = $file_decode->data[$i]->aggregateRatings->tripadvisor->ratingValue;
+    $result_restaurant_photo = $file_decode->data[$i]->mainPhotoSrc;
+
+    // nom
+    echo "<pre>";
+    print_r("nom: " . $result_restaurant_nom);
+    echo "</pre>";
+
+    // cuisine
+    echo "<pre>";
+    print_r("cuisine: " . $result_restaurant_cuisine);
+    echo "</pre>";
+
+    // addresse
+    echo "<pre>";
+    print_r("adresse: " . $result_restaurant_adresse);
+    echo "</pre>";
+
+    // note
+    echo "<pre>";
+    print_r("note: " . $result_restaurant_note);
+    echo "</pre>";
+
+    // photo
+    echo "<pre>";
+    print_r("photo: " . $result_restaurant_photo);
+    echo "</pre>";
+
+    // echo '<img src="'.$file_decode->data[$i]->mainPhotoSrc.'" alt="">';
+
+    echo "----------------------------<br>";
+    echo "<br>";
+}
+
+// echo "<pre>";
+// print_r($file_decode);
+// echo "</pre>";
 ?>
