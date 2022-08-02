@@ -1,16 +1,21 @@
-<?php 
+<?php
 $page = $_GET['page'] ?? '';
-switch ($page){
+switch ($page) {
     case '/':
+<<<<<<< HEAD
         require __DIR__ . './views/page-accueil.php';
         break;    
+=======
+        require __DIR__ . './projet/front/html/page-accueil.php';
+        break;
+>>>>>>> 4e2592965c28f73195e7ce4b44cd07168ae70b0a
     case '':
         require __DIR__ . './views/page-accueil.php';
         break;
-    //pour ajouter une page : 
-    // case 'nom de la page'
-    // require __DIR__ . '/projet/front/html/page-nom-de-la-page.php';
-    // pour les href : project-trip/nom-de-la-page
+        //pour ajouter une page : 
+        // case 'nom de la page'
+        // require __DIR__ . '/projet/front/html/page-nom-de-la-page.php';
+        // pour les href : project-trip/nom-de-la-page
     case 'dest':
         require __DIR__ . './views/destinationsFrame.php';
         break;
@@ -20,10 +25,11 @@ switch ($page){
     case 'inscription':
         require __DIR__ . './views/inscription.php';
         break;
+    case 'concept':
+        require __DIR__ . './projet/front/html/concept.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . './views/page-404.php';
         break;
-
 }
-?>
