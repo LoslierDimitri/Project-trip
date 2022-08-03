@@ -204,7 +204,125 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 </div>
             </div>
+    </section>
 
+    <!-- 3D Slideshow Section -->
+    <section class="slideshow">
+        <div class="container">
+            <div class="entire-content">
+                <div class="content-carrousel">
+                    <figure class="d-flex align-items-center">
+                        <img src="./projet/front/source/svg/Logo-simple.svg" alt="">
+                    </figure>
+                    <figure class="title d-flex align-items-center text-center w-100">
+                        <h2>Vous propose</h2>
+                    </figure>
+                    <figure class="shadow"><img src="./projet/front/source/jpeg/Bretagne.jpg" />
+                        <p>Dégustez la Bretagne</p>
+                    </figure>
+                    <figure class="shadow"><img src="./projet/front/source/svg/Provence.svg" />
+                        <p>Goûtez la Provence</p>
+                    </figure>
+                    <figure class="shadow"><img src="./projet/front/source/svg/Reunion.svg" />
+                        <p>Savourez la Réunion</p>
+                    </figure>
+                    <figure class="shadow"><img src="./projet/front/source/svg/Pays_basque.svg" />
+                        <p>Croquez le Pays-Basque</p>
+                    </figure>
+                    <figure class="shadow"><img src="./projet/front/source/jpeg/Corse.jpg" />
+                        <p>Dévorez la Corse</p>
+                    </figure>
+                    <figure class="shadow"><img src="./projet/front/source/jpeg/Alsace.jpg" />
+                        <p>Régalez-vous de l'Alsace</p>
+                    </figure>
+                    <figure class="shadow guadeloupe"><img src="./projet/front/source/jpeg/Guadeloupe.jpg" />
+                        <p>Mordez la Guadeloupe<br> à pleines dents</p>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section>
+
+
+            <div class="contenu mt-5">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-4 mt-5 mb-3 d-flex justify-content-around">
+                        <div class="column">
+                            <img src="./projet/front/source/svg/Bretagne.svg" alt="">
+                            <p>Dégustez la Bretagne</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-4 mt-5 mb-3 d-flex justify-content-around">
+                        <div class="column">
+                            <img src="./projet/front/source/svg/Reunion.svg" alt="">
+                            <p>Savourez la Réunion</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-4 mt-5 mb-3 d-flex justify-content-around">
+                        <div class="column">
+                            <img src="./projet/front/source/svg/Provence.svg" alt="">
+                            <p>Goûtez la Provence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section>
+        <div class="advantages">
+            <div class="title mt-5">
+                <h2>Pourquoi partir avec</h2>
+                <img src="./projet/front/source/svg/Logo-simple.svg" alt="">
+                <h2>?</h2>
+            </div>
+            <div class="contenu mt-5">
+                <div class="row w-100">
+                    <div class="col-md-12 col-lg-3 mt-5 mb-3 mx-auto">
+                        <div class="card mx-auto" style="width: 18rem; background-color: transparent; border: none;">
+                            <img class="card-img-top" src="./projet/front/source/svg/Sur-mesure.svg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text text-center">Des voyages culinaires
+                                    sur mesures rien que
+                                    pour vous</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3 mt-5 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem; background-color: transparent; border: none;">
+                            <img class="card-img-top d-flex justify-content-center" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Des voyages culinaires
+                                    sur mesures rien que
+                                    pour vous</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3 mt-5 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem; background-color: transparent; border: none;">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Des voyages culinaires
+                                    sur mesures rien que
+                                    pour vous</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3 mt-5 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem; background-color: transparent; border: none;">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">Des voyages culinaires
+                                    sur mesures rien que
+                                    pour vous</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
 
