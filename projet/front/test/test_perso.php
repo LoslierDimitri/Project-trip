@@ -276,6 +276,7 @@ a regarder
 "mainPhotoSrc": "https://res.cloudinary.com/tf-lab/image/upload/restaurant/739ec324-6b20-48d2-a8cb-d0c69b1c62b3/619557ba-2ba6-45bd-8019-7008f187f989.jpg",
 
 */
+/*
 $file = file_get_contents("../../back/data/api_call_the_fork_the_spoon_restaurant.json");
 $file_decode = json_decode($file);
 $file_array = (array) $file_decode;
@@ -330,4 +331,479 @@ for ($i = 0; $i < count($file_decode->data); $i++) {
 // echo "<pre>";
 // print_r($file_decode);
 // echo "</pre>";
+*/
+?>
+
+<?php
+/*
+$region = "France";
+
+$file = file_get_contents("../../back/data/api_call_flytrip_country.json");
+$file_decode = json_decode($file);
+$file_array = (array) $file_decode;
+
+$result_country_nom_send = "";
+$result_country_code_send = "";
+
+for ($i = 0; $i < count($file_decode); $i++) {
+    $result_coutry_nom = "";
+    $result_country_code = "";
+
+    $result_coutry_nom = $file_decode[$i]->name;
+    $result_country_code = $file_decode[$i]->code;
+
+    if ($result_coutry_nom == $region) {
+        $result_country_nom_send = $result_coutry_nom;
+        $result_country_code_send = $result_country_code;
+    }
+
+    // //nom
+    // echo "<pre>";
+    // print_r("nom: " . $result_coutry_nom);
+    // echo "</pre>";
+
+    // //code
+    // echo "<pre>";
+    // print_r("code: " . $result_country_code);
+    // echo "</pre>";
+
+    // echo "----------------------------<br>";
+    // echo "<br>";
+}
+
+//result
+echo "<pre>";
+print_r("nom: " . $result_country_nom_send);
+echo "<br>";
+print_r("code: " . $result_country_code_send);
+echo "</pre>";
+
+echo "<pre>";
+print_r($file_decode);
+echo "</pre>";
+*/
+?>
+
+<?php
+/*
+$file = file_get_contents("../../back/data/api_call_flytrip_airport.json");
+$file_decode = json_decode($file);
+$file_array = (array) $file_decode;
+
+$result_airport_nom_send = "";
+$result_airport_code_send = "";
+
+for ($i = 0; $i < count($file_decode); $i++) {
+    if ($file_decode[$i]->scheduled_service != "no") {
+        echo "<pre>";
+        print_r("nom: " . $file_decode[$i]->name);
+        echo "</pre>";
+        echo "<pre>";
+        print_r("code: " . $file_decode[$i]->ident);
+        echo "</pre>";
+
+        echo "----------------------------<br>";
+        echo "<br>";
+    }
+}
+
+// echo "<pre>";
+// print_r($file_decode);
+// echo "</pre>";
+*/
+?>
+
+<?php
+// $file = file_get_contents("../../back/data/api_call_flytrip_airport.json");
+// $file_decode = json_decode($file);
+// $file_array = (array) $file_decode;
+
+// echo "<pre>";
+// print_r($file_decode);
+// echo "</pre>";
+
+
+//$API_KEY_2 = "98872b5d1d217e2fe785f29e31b032a7";
+/*
+$curl = curl_init();
+
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+// set our url with curl_setopt()
+curl_setopt($curl, CURLOPT_URL, "https://api.aviationstack.com/v1/flights?access_key = " . $API_KEY_2 . "");
+
+// return the transfer as a string, also with setopt()
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+// curl_exec() executes the started curl session
+// $output contains the output string
+$response = curl_exec($curl);
+
+// close curl resource to free up system resources
+// (deletes the variable made by curl_init)
+curl_close($curl);
+*/
+
+
+
+
+/*
+
+$API_KEY_3 = "03e5ab1b-1bc0-497c-9307-4572b3e5cffd";
+/*
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+// set our url with curl_setopt()
+curl_setopt($curl, CURLOPT_URL, "https://api.sncf.com/v1/coverage/sncf/journeys?from=admin:fr:75056&to=admin:fr:69123&datetime=20220803T091414&03e5ab1b-1bc0-497c-9307-4572b3e5cffd");
+
+// return the transfer as a string, also with setopt()
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+// curl_exec() executes the started curl session
+// $output contains the output string
+$response = curl_exec($curl);
+
+// close curl resource to free up system resources
+// (deletes the variable made by curl_init)
+curl_close($curl);
+
+
+// $service_url     = 'https://api.sncf.com/v1/coverage/sncf/journeys?from=admin:fr:75056&to=admin:fr:69123&datetime=20220803T091414&2bef594f-3493-47fc-9621-062cb4f25fe7';
+$service_url     = "https://test.api.amadeus.com/v1/shopping/flight-destinations?origin=PAR&maxPrice=200 -H Authorization: Bearer BrS30l1KP7IEfd5KYik7lvjPyREgII9U";
+$curl            = curl_init($service_url);
+// curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+// curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+// curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+// curl_setopt($curl, CURLOPT_POST, false);
+// curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+$curl_response   = curl_exec($curl);
+curl_close($curl);
+$json_objekat    = json_decode($curl_response);
+// $quotes          = $json_objekat->contents->quotes;
+
+echo "<pre>";
+print_r($json_objekat);
+echo "</pre>";
+*/
+?>
+
+<?php
+/*
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+curl_setopt_array($curl, [
+    CURLOPT_URL => "https://priceline-com-provider.p.rapidapi.com/v2/flight/departures?sid=iSiX639&departure_date=2022-10-10&adults=1&cabin_class=economy&children=2&origin_airport_code=BOD&destination_airport_code=CDG",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+    CURLOPT_HTTPHEADER => [
+        "X-RapidAPI-Host: priceline-com-provider.p.rapidapi.com",
+        "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a"
+    ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+    echo "cURL Error #:" . $err;
+}
+
+$json_decode = json_decode($response);
+
+echo "<pre>";
+print_r($json_decode);
+echo "</pre>";
+*/
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+/*
+$file = file_get_contents("../../back/data/api_call_priceline_airport_code_departure.json");
+$file_decode = json_decode($file);
+$file_array = (array) $file_decode;
+
+echo "<pre>";
+print_r($file_decode);
+echo "</pre>";
+
+echo "<pre>";
+print_r("aiirport code: " . $file_decode[0]->id);
+echo "</pre>";
+
+echo "---------------------------------- <br>";
+
+$file = file_get_contents("../../back/data/api_call_priceline_airport_code_arrival.json");
+$file_decode = json_decode($file);
+$file_array = (array) $file_decode;
+
+echo "<pre>";
+print_r($file_decode);
+echo "</pre>";
+
+echo "<pre>";
+print_r("aiirport code: " . $file_decode[0]->id);
+echo "</pre>";
+
+echo "---------------------------------- <br>";
+*/
+?>
+
+
+
+
+
+
+
+
+<?php
+/*
+$file = file_get_contents("../../back/data/api_call_priceline_departure_arrival.json");
+$file_decode = json_decode($file);
+$file_array = (array) $file_decode;
+
+// echo "<pre>";
+// print_r($file_decode);
+// echo "</pre>";
+
+if (isset($file_decode->getAirFlightDepartures->error->status) == false) {
+    if ($result_itinerary = $file_decode->getAirFlightDepartures->error->status != "Air.FlightDepartures: No itineraries available.") {
+        for ($i = 0; $i < $file_decode->getAirFlightDepartures->results->result->itinerary_count; $i++) {
+            $result_itinerary = $file_decode->getAirFlightDepartures->results->result->itinerary_data->{'itinerary_' . $i};
+
+            $result_itinerary_departure_airport = $result_itinerary->baggage_carrier->departure;
+            $result_itinerary_arrival_airport = $result_itinerary->baggage_carrier->arrival;
+            $result_itinerary_departure_date = $result_itinerary->slice_data->slice_0->departure->datetime->date;
+            $result_itinerary_departure_hour = $result_itinerary->slice_data->slice_0->departure->datetime->time_24h;
+            $result_itinerary_arrival_date = $result_itinerary->slice_data->slice_0->arrival->datetime->date;
+            $result_itinerary_arrival_hour = $result_itinerary->slice_data->slice_0->arrival->datetime->time_24h;
+
+            $result_itinerary_adult_number = "";
+            $result_itinerary_child_number = "";
+            $result_itinerary_infant_number = "";
+            $result_itinerary_price = $result_itinerary->price_details->display_total_fare;
+            $result_itinerary_price_currency = $result_itinerary->price_details->baseline_currency;
+
+            $result_itinerary_fly_type = $result_itinerary->slice_data->slice_0->flight_data->flight_0->info->cabin_class;
+            $result_itinerary_fly_time = $result_itinerary->slice_data->slice_0->flight_data->flight_0->info->duration;
+            $result_itinerary_fly_company = $result_itinerary->baggage_carrier->airline;
+            $result_itinerary_fly_bagage = "";
+
+            echo "<pre>";
+            print_r("result_itinerary_departure_airport : " . $result_itinerary_departure_airport . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_arrival_airport : " . $result_itinerary_arrival_airport . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_departure_date : " . $result_itinerary_departure_date . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_departure_hour : " . $result_itinerary_departure_hour . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_arrival_date : " . $result_itinerary_arrival_date . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_arrival_hour : " . $result_itinerary_arrival_hour . "<br>");
+            echo "</pre>";
+
+            echo "<pre>";
+            print_r("result_itinerary_adult_number : " . $result_itinerary_adult_number . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_child_number : " . $result_itinerary_child_number . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_infant_number : " . $result_itinerary_infant_number . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_price : " . $result_itinerary_price . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_price_currency : " . $result_itinerary_price_currency . "<br>");
+            echo "</pre>";
+
+            echo "<pre>";
+            print_r("result_itinerary_fly_type : " . $result_itinerary_fly_type . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_fly_time : " . $result_itinerary_fly_time . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_fly_company : " . $result_itinerary_fly_company . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_fly_bagage : " . $result_itinerary_fly_bagage . "<br>");
+            echo "</pre>";
+
+            // echo "<pre>";
+            // print_r($result_itinerary);
+            // echo "</pre>";
+
+            echo "---------------------------------- <br>";
+        }
+    }
+}
+// echo "<pre>";
+// print_r($file_decode->getAirFlightDepartures->results->result->itinerary_data->itinerary_0);
+// echo "</pre>";
+echo "---------------------------------- <br>";
+echo "---------------------------------- <br>";
+echo "---------------------------------- <br>";
+echo "---------------------------------- <br>";
+echo "---------------------------------- <br>";
+echo "---------------------------------- <br>";
+echo "---------------------------------- <br>";
+
+$file = file_get_contents("../../back/data/api_call_priceline_arrival_departure.json");
+$file_decode = json_decode($file);
+$file_array = (array) $file_decode;
+
+// echo "<pre>";
+// print_r($file_decode);
+// echo "</pre>";
+
+if (isset($file_decode->getAirFlightDepartures->error->status) == false) {
+    if ($result_itinerary = $file_decode->getAirFlightDepartures->error->status != "Air.FlightDepartures: No itineraries available.") {
+        for ($i = 0; $i < $file_decode->getAirFlightDepartures->results->result->itinerary_count; $i++) {
+            $result_itinerary = $file_decode->getAirFlightDepartures->results->result->itinerary_data->{'itinerary_' . $i};
+
+            $result_itinerary_departure_airport = $result_itinerary->baggage_carrier->departure;
+            $result_itinerary_arrival_airport = $result_itinerary->baggage_carrier->arrival;
+            $result_itinerary_departure_date = $result_itinerary->slice_data->slice_0->departure->datetime->date;
+            $result_itinerary_departure_hour = $result_itinerary->slice_data->slice_0->departure->datetime->time_24h;
+            $result_itinerary_arrival_date = $result_itinerary->slice_data->slice_0->arrival->datetime->date;
+            $result_itinerary_arrival_hour = $result_itinerary->slice_data->slice_0->arrival->datetime->time_24h;
+
+            $result_itinerary_adult_number = "";
+            $result_itinerary_child_number = "";
+            $result_itinerary_infant_number = "";
+            $result_itinerary_price = $result_itinerary->price_details->display_total_fare;
+            $result_itinerary_price_currency = $result_itinerary->price_details->baseline_currency;
+
+            $result_itinerary_fly_type = $result_itinerary->slice_data->slice_0->flight_data->flight_0->info->cabin_class;
+            $result_itinerary_fly_time = $result_itinerary->slice_data->slice_0->flight_data->flight_0->info->duration;
+            $result_itinerary_fly_company = $result_itinerary->baggage_carrier->airline;
+            $result_itinerary_fly_bagage = "";
+
+            echo "<pre>";
+            print_r("result_itinerary_departure_airport : " . $result_itinerary_departure_airport . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_arrival_airport : " . $result_itinerary_arrival_airport . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_departure_date : " . $result_itinerary_departure_date . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_departure_hour : " . $result_itinerary_departure_hour . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_arrival_date : " . $result_itinerary_arrival_date . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_arrival_hour : " . $result_itinerary_arrival_hour . "<br>");
+            echo "</pre>";
+
+            echo "<pre>";
+            print_r("result_itinerary_adult_number : " . $result_itinerary_adult_number . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_child_number : " . $result_itinerary_child_number . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_infant_number : " . $result_itinerary_infant_number . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_price : " . $result_itinerary_price . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_price_currency : " . $result_itinerary_price_currency . "<br>");
+            echo "</pre>";
+
+            echo "<pre>";
+            print_r("result_itinerary_fly_type : " . $result_itinerary_fly_type . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_fly_time : " . $result_itinerary_fly_time . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_fly_company : " . $result_itinerary_fly_company . "<br>");
+            echo "</pre>";
+            echo "<pre>";
+            print_r("result_itinerary_fly_bagage : " . $result_itinerary_fly_bagage . "<br>");
+            echo "</pre>";
+
+            // echo "<pre>";
+            // print_r($result_itinerary);
+            // echo "</pre>";
+
+            echo "---------------------------------- <br>";
+        }
+    }
+}
+// echo "<pre>";
+// print_r($file_decode->getAirFlightDepartures->results->result->itinerary_data->itinerary_0);
+// echo "</pre>";
+*/
+?>
+
+<?php
+$file_hotel = file_get_contents("../../back/data/result_search/result_search_hotel.json");
+$file_hotel_decode = json_decode($file_hotel);
+$file_hotel_array_json = [];
+
+$file_restaurant = file_get_contents("../../back/data/result_search/result_search_restaurant.json");
+$file_restaurant_decode = json_decode($file_restaurant);
+$file_restaurant_decode_array_json = [];
+
+$file_departure_arrival = file_get_contents("../../back/data/result_search/travel_departure_arrival_array_json.json");
+$file_departure_arrival_decode = json_decode($file_departure_arrival);
+$file_departure_arrival_decode_array_json = [];
+
+$file_arrival_departure = file_get_contents("../../back/data/result_search/travel_departure_arrival_array_json.json");
+$file_arrival_departure_decode = json_decode($file_arrival_departure);
+$file_arrival_departure_decode_array_json = [];
+
+$result_search_array_json = [];
+array_push($result_search_array_json, $file_hotel_decode);
+array_push($result_search_array_json, $file_restaurant_decode);
+array_push($result_search_array_json, $file_departure_arrival_decode);
+array_push($result_search_array_json, $file_arrival_departure_decode);
+
+$result_search_path = "../../back/data/result_search/";
+$result_search_name = "result_search_format.json";
+echo "filepath: " . $result_search_path . $result_search_name;
+
+$file = fopen($result_search_path . $result_search_name, "wa+");
+fwrite($file, json_encode($result_search_array_json));
+fclose($file);
 ?>
