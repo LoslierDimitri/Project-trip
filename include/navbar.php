@@ -7,9 +7,9 @@ echo "</style>";
 
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/Project-trip"><img src="./public/svg/Logo.svg" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand mx-auto my-auto" href="/Project-trip"><img src="./public/svg/Logo.svg" alt=""></a>
+        <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bg-none"><img src="./public/svg/Picto-menu-burger.svg" alt=""></span>
         </button>
         <div class="collapse navbar-collapse mt-2" id="navbarTogglerDemo01">
 
