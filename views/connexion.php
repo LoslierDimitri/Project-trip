@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test form</title>
     <link rel="stylesheet" href="./public/css/connexion.css">
+    <link rel="shortcut icon" type="image/png" href="./public/svg/pointer.svg"/>
 </head>
 
 <body>

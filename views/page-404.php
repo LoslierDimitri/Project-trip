@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./public/css/navbar.css">
     <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/css/page-404.css">
+    <link rel="shortcut icon" type="image/png" href="./public/svg/pointer.svg"/>
     <title>erreur 404</title>
 </head>
 
