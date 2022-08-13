@@ -7,15 +7,15 @@ echo "</style>";
 
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand mx-auto my-auto" href="/Project-trip"><img src="./public/svg/Logo.svg" alt=""></a>
-        <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand mx-4 my-auto" href="/Project-trip"><img src="./public/svg/Logo.svg" alt=""></a>
+        <button class="navbar-toggler mx-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="bg-none"><img src="./public/svg/Picto-menu-burger.svg" alt=""></span>
         </button>
         <div class="collapse navbar-collapse mt-2" id="navbarTogglerDemo01">
 
             <ul class="navbar-nav me-auto mb-2 ml-1 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Le concept</a>
+                    <a class="nav-link" href="./views/concept.php">Le concept</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Destinations</a>
