@@ -1,7 +1,7 @@
-<?php
-echo "<style>";
-include("./public/css/navbar.css");
-echo "</style>";
+<!-- <?php
+// echo "<style>";
+// include("./public/css/navbar.css");
+// echo "</style>";
 ?>
 
 
@@ -37,12 +37,12 @@ echo "</style>";
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 <?php
-if (isset($_SESSION['pseudo']) && isset($_SESSION["mot_de_passe"])) {
-    echo "<br><br><br>";
-    echo "connected <br>";
-    echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
-    echo "connected with mot_do_passe: [" . $_SESSION['mot_de_passe'] . "] <br>";
-} else {
-    echo ("Disconnected<br>");
-}
-?>
+// if (isset($_SESSION['pseudo']) && isset($_SESSION["mot_de_passe"])) {
+//     echo "<br><br><br>";
+//     echo "connected <br>";
+//     echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
+//     echo "connected with mot_do_passe: [" . $_SESSION['mot_de_passe'] . "] <br>";
+// } else {
+//     echo ("Disconnected<br>");
+// }
+?> -->
