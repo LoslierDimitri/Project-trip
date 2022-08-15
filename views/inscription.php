@@ -60,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <button type="submit">Envoyer</button><br>
                     </div>
                 </form>
+                <a class="login-link" href="connexion">Déjà un compte? Connectez-vous ici</a>
             </div>
         </div>
     </section>

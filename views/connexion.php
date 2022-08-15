@@ -7,12 +7,12 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require ("./projet/back/form/form_connection.php");
+    require("./projet/back/form/form_connection.php");
 
     connection();
     echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
     echo "connected with mot_do_passe: [" . $_SESSION['mot_de_passe'] . "] <br>";
-    header ("Location: ../");
+    header("Location: ../");
 }
 ?>
 
@@ -23,9 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test form</title>
+    <title>Connexion</title>
     <link rel="stylesheet" href="./public/css/connexion.css">
-    <link rel="shortcut icon" type="image/png" href="./public/svg/pointer.svg"/>
+    <link rel="shortcut icon" type="image/png" href="./public/svg/pointer.svg" />
 </head>
 
 <body>
@@ -42,6 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <button type="submit">Valider</button><br>
                     </div>
                 </form>
+                <a class="register-link" href="inscription">
+                    <p>Pas de compte? Inscrivez-vous ici</p>
+                </a>
             </div>
         </div>
     </section>

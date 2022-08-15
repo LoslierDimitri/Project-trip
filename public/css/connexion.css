@@ -83,3 +83,13 @@ button {
 img {
     margin-bottom: 40px;
 }
+
+.register-link {
+    font-family: Signika-Regular;
+    text-decoration: none;
+    color: #0FABDF;
+}
+
+.register-link:hover {
+    color: rgba(15, 171, 223, 0.2);
+}

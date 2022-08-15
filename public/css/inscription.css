@@ -35,7 +35,7 @@
     align-items: center;
     border: 5px solid #0FABDF;
     border-radius: 30px;
-    padding: 40px 150px 40px 150px;
+    padding: 40px 100px 40px 100px;
 }
 
 .inscription h2 {
@@ -79,6 +79,7 @@ button {
     font-size: 1.4rem;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .bouton {
@@ -90,4 +91,14 @@ button {
 
 img {
     margin-bottom: 40px;
+}
+
+.login-link {
+    font-family: Signika-Regular;
+    text-decoration: none;
+    color: #0FABDF;
+}
+
+.login-link:hover {
+    color: rgba(15, 171, 223, 0.2);
 }
