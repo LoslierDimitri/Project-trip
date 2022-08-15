@@ -15,7 +15,7 @@ echo "</style>";
 
             <ul class="navbar-nav me-auto mb-2 ml-1 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="./views/concept.php">Le concept</a>
+                    <a class="nav-link" href="concept">Le concept</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Destinations</a>

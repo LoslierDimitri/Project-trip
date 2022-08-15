@@ -10,7 +10,7 @@ switch ($page) {
         //pour ajouter une page : 
         // case 'nom de la page'
         // require __DIR__ . './views/page-nom-de-la-page.php';
-        // pour les href : project-trip/nom-de-la-page
+        // pour les href : nom-de-la-page
     case 'dest':
         require __DIR__ . './views/destinationsFrame.php';
         break;

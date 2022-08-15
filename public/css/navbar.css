@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 @font-face {
     font-family: Mali-Regular;
     src: url(./public/fonts/Mali-Regular.ttf);
@@ -20,6 +16,10 @@
 @font-face {
     font-family: Signika-SB;
     src: url(./public/fonts/Signika-SemiBold.ttf);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -52,9 +52,8 @@
 }
 
 .nav-link:hover {
-    background-color: #0FABDF;
-    color: white;
-    transition: all 1s;
+    color: rgba(15, 171, 223, 0.2);
+    transition: all 0.5s;
 }
 
 .container-login-logout {
