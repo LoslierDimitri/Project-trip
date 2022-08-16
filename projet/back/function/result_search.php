@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 <?php
 /*
 recupere info du formulaire de recherche
