@@ -299,7 +299,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="advantages">
             <div class="title mt-5">
                 <h2>Pourquoi partir avec</h2>
-                <img src="./projet/front/source/svg/Logo-simple.svg" alt="">
+                <img src="./projet/front/source/svg/Logo-simple.svg" style="margin-left: 10px;" alt="">
                 <h2>?</h2>
             </div>
             <div class="contenu mt-5">
