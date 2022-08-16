@@ -19,7 +19,7 @@ echo "</style>";
             <a href="">
               <li>Mentions légales</li>
             </a>
-            <a href="">
+            <a href="concept">
               <li>Le concept</li>
             </a>
           </ul>
