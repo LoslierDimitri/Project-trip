@@ -4,14 +4,14 @@ include("./public/css/footer.css");
 echo "</style>";
 ?>
 
-<footer class="text-white text-lg-center">
+<footer class="text-white text-lg-left">
   <!-- Grid container -->
   <div class="container pt-2 pb-0">
     <!--Grid row-->
-    <div class="row">
+    <div class="row d-flex justify-content-between">
       <!--Grid column-->
-      <div class="links col-lg-4 col-md-12 col-sm-12 mt-4 mb-3">
-        <div class="text-center">
+      <div class="links col-lg-4 col-md-12 col-sm-12 mt-4 mb-3 w-25">
+        <div>
           <ul>
             <a href="">
               <li>Nous contacter</li>
