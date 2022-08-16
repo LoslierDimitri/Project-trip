@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
 
-            <input type="text" name="type_search" value="france" hidden>
+            <input type="text" name="type_search" value="France" hidden>
 
             <label for="voyage_region">region</label>
             <select id="voyage_region" name="voyage_region">

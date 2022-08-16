@@ -20,11 +20,24 @@ function search($search_type, $voyage_region, $voyage_lieu_depart, $voyage_lieu_
     require("../../back/database/database_disconnect.php");
     require("../../back/database/database_request.php");
 
-    //recherche api
-    //api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
-    //api_call_travel_advisor_backup($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
+    /*
+    https://rapidapi.com/
+    https://aviationstack.com/dashboard
+    https://www.digital.sncf.com/startup/api/token-developpeur
+    */
+    $API_KEY_1 = "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a";
+    $API_KEY_2 = "98872b5d1d217e2fe785f29e31b032a7";
+    $API_KEY_3 = "03e5ab1b-1bc0-497c-9307-4572b3e5cffd";
 
+
+    //recherche api
+    api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
     api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
+    //----------------api_call_flytrips($API_KEY_1, $API_KEY_2, $search_type, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
+    //----------------api_call_sncf($API_KEY_3, $search_type, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
+    api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
+
+    api_call_format();
 
     //recherche bdd
     if (isset($_SESSION['pseudo']) && isset($_SESSION["mot_de_passe"])) {
