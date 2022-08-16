@@ -1,0 +1,23 @@
+.title img {
+    width: 150px;
+}
+
+.title h3 {
+    font-family: Mali-SB;
+}
+
+.contents p {
+    font-family: Signika-Regular;
+}
+
+.gastronomique {
+    color: #ED6E38;
+}
+
+.touristique {
+    color: #8CC04E;
+}
+
+.petits_budgets {
+    color: #0FABDF;
+}

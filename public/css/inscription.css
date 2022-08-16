@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Mali-Regular;
+    src: url(./public/fonts/Mali-Regular.ttf);
+}
+
+@font-face {
+    font-family: Mali-SB;
+    src: url(./public/fonts/Mali-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Signika-Regular;
+    src: url(./public/fonts/Signika-Regular.ttf);
+}
+
+@font-face {
+    font-family: Signika-SB;
+    src: url(./public/fonts/Signika-SemiBold.ttf);
+}
+
+.container_inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #0FABDF;
+    border-radius: 30px;
+    padding: 40px 100px 40px 100px;
+}
+
+.inscription h2 {
+    font-family: Mali-SB;
+    color: #ED6E38;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sex {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+input {
+    border: 5px solid #0FABDF;
+    border-radius: 50px;
+    padding: 10px 25px 10px 25px;
+    display: flex;
+    align-items: center;
+}
+
+input::placeholder {
+    font-family: Signika-SB;
+    color: #0FABDF;
+    font-size: 1.4rem;
+}
+
+button {
+    width: 70%;
+    border: none;
+    border-radius: 50px;
+    background-color: #ED6E38;
+    padding: 10px 35px 10px 35px;
+    color: white;
+    font-family: Signika-SB;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+img {
+    margin-bottom: 40px;
+}
+
+.login-link {
+    font-family: Signika-Regular;
+    text-decoration: none;
+    color: #0FABDF;
+}
+
+.login-link:hover {
+    color: rgba(15, 171, 223, 0.2);
+}

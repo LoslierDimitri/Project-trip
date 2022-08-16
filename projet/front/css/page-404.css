@@ -1,26 +1,22 @@
 section {
-    margin-top: 89px;
-    margin-bottom: 105px;
+    margin-top: 100px;
 }
 
-button {
-    border: none;
-    border-radius: 50px;
-    background-color: #ED6E38;
-    padding: 10px 35px 10px 35px;
+.btnAccueil {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #2e852e;
+    border-radius: 8px;
+}
+
+.btnAccueil :hover {
+    color: yellow;
+    background-color: #2e852e;
+    border-radius: 8px;
+}
+
+.colorBtn {
     color: white;
-    font-family: Signika-SB;
-    font-size: 1.4rem;
-    border: 2px solid transparent;
-}
-
-.bouton {
-    display: flex;
-    justify-content: center;
-}
-
-button:hover {
-    background-color: white;
-    border: 2px solid #ED6E38;
-    color: #ED6E38;
 }
