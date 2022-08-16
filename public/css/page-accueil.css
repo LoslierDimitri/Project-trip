@@ -367,15 +367,6 @@ h2 {
     border-top-right-radius: 0;
 }
 
-.advantages .contenu img {
-    width: 150px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
 .advantages p {
     font-family: Mali-Regular;
     font-size: 1.5rem;
