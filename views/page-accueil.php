@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ?>
 
 
-    <section class="recherche_avancee">
+<section class="recherche_avancee py-4">
         <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
 
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
@@ -306,7 +306,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="row w-100">
                     <div class="col-md-12 col-lg-3 mt-5 mb-3 mx-auto">
                         <div class="card mx-auto" style="width: 18rem; background-color: transparent; border: none;">
-                            <img class="card-img-top" src="./projet/front/source/svg/Sur-mesure.svg" alt="Card image cap">
+                            <img class="card-img-top" src="./public/svg/Sur-mesure.svg" alt="Card image cap">
                             <div class="card-body">
                                 <p class="card-text text-center">Des voyages culinaires
                                     sur mesures rien que
