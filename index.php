@@ -11,8 +11,8 @@ switch ($page) {
         // case 'nom de la page'
         // require __DIR__ . './views/page-nom-de-la-page.php';
         // pour les href : nom-de-la-page
-    case 'dest':
-        require __DIR__ . './views/destinationsFrame.php';
+    case 'destinations':
+        require __DIR__ . './views/destinations.php';
         break;
     case 'connexion':
         require __DIR__ . './views/connexion.php';

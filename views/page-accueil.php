@@ -237,30 +237,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="entire-content">
                 <div class="content-carrousel">
                     <figure class="d-flex align-items-center">
-                        <img src="./projet/front/source/svg/Logo-simple.svg" alt="">
+                        <img src="./public/svg/Logo-simple.svg" alt="">
                     </figure>
                     <figure class="title d-flex align-items-center text-center w-100">
                         <h2>Vous propose</h2>
                     </figure>
-                    <figure class="shadow"><img src="./projet/front/source/jpeg/Bretagne.jpg" />
+                    <figure class="shadow"><img src="./public/jpeg/Bretagne.jpg" />
                         <p>Dégustez la Bretagne</p>
                     </figure>
-                    <figure class="shadow"><img src="./projet/front/source/svg/Provence.svg" />
+                    <figure class="shadow"><img src="./public/svg/Provence.svg" />
                         <p>Goûtez la Provence</p>
                     </figure>
-                    <figure class="shadow"><img src="./projet/front/source/svg/Reunion.svg" />
+                    <figure class="shadow"><img src="./public/svg/Reunion.svg" />
                         <p>Savourez la Réunion</p>
                     </figure>
-                    <figure class="shadow"><img src="./projet/front/source/svg/Pays_basque.svg" />
+                    <figure class="shadow"><img src="./public/svg/Pays_basque.svg" />
                         <p>Croquez le Pays-Basque</p>
                     </figure>
-                    <figure class="shadow"><img src="./projet/front/source/jpeg/Corse.jpg" />
+                    <figure class="shadow"><img src="./public/jpeg/Corse.jpg" />
                         <p>Dévorez la Corse</p>
                     </figure>
-                    <figure class="shadow"><img src="./projet/front/source/jpeg/Alsace.jpg" />
+                    <figure class="shadow"><img src="./public/jpeg/Alsace.jpg" />
                         <p>Régalez-vous de l'Alsace</p>
                     </figure>
-                    <figure class="shadow guadeloupe"><img src="./projet/front/source/jpeg/Guadeloupe.jpg" />
+                    <figure class="shadow guadeloupe"><img src="./public/jpeg/Guadeloupe.jpg" />
                         <p>Mordez la Guadeloupe<br> à pleines dents</p>
                     </figure>
                 </div>
@@ -299,7 +299,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="advantages">
             <div class="title mt-5">
                 <h2>Pourquoi partir avec</h2>
-                <img src="./projet/front/source/svg/Logo-simple.svg" style="margin-left: 10px;" alt="">
+                <img src="./public/svg/Logo-simple.svg" style="margin-left: 10px;" alt="">
                 <h2>?</h2>
             </div>
             <div class="contenu mt-5">

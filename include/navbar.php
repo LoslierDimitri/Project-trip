@@ -18,7 +18,7 @@ echo "</style>";
                     <a class="nav-link" href="concept">Le concept</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Destinations</a>
+                    <a class="nav-link" href="destinations">Destinations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Témoignages</a>
