@@ -25,18 +25,18 @@
 
 
     <section class="w-100 d-flex justify-content-center">
-        <div class="column w-75">
+        <div class="column w-50">
             <div class="title mt-5 mb-3">
                 <h3><img src="./public/svg/Logo-text.svg" alt="">, qu'est ce que c'est au juste?</h3>
             </div>
             <div class="contents mb-5">
-                <p class="text-dark">
+                <p class="text-dark text-justify">
                     Cette aventure commence par l’idée de 4 amis qui voulaient partir en vacance, 2 voulaientgoûter à des spécialités qu’ils ne connaissaient pas et les 2 autres rêvaient de découvrir le monde et toutes ses merveilles.
                     2 points différents mais les 4 s’accordaient sur 1 point, ils n’avaient pas beaucoup d’argent et ne parlaient pas (ou presque) un mot d’une autre langue que le français.
                 </p>
 
                 <p class="text-dark">
-                    C’est là que le concept Culin’Air est né. Ils ont rasemblé leurs idées pour proposer aux gens des voyages tout conçus sur 2 axes principaux :
+                    C’est là que le concept Culin’Air est né. Ils ont rasemblé leurs idées pour proposer aux gens des voyages tout conçus sur 3 axes principaux :
                 </p>
 
                 <p class="text-dark">
