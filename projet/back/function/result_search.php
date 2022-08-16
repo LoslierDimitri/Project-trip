@@ -22,10 +22,17 @@ function search($search_type, $voyage_region, $voyage_lieu_depart, $voyage_lieu_
     require("../../back/database/database_request.php");
 
     /*
-    https://rapidapi.com/
-    https://aviationstack.com/dashboard
-    https://www.digital.sncf.com/startup/api/token-developpeur
-    */
+https://rapidapi.com/apidojo/api/travel-advisor/
+https://rapidapi.com/ruben-jimenez-lancho-ruben-jimenez-lancho-default/api/flytrips/
+https://rapidapi.com/tipsters/api/booking-com/pricing
+https://rapidapi.com/apidojo/api/the-fork-the-spoon/pricing
+https://rapidapi.com/tipsters/api/priceline-com-provider/pricing
+
+very limited
+https://rapidapi.com/ptwebsolution/api/worldwide-restaurants/
+https://rapidapi.com/rapapp11/api/restaurants13/pricing
+*/
+
     $API_KEY_1 = "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a";
     $API_KEY_2 = "98872b5d1d217e2fe785f29e31b032a7";
     $API_KEY_3 = "03e5ab1b-1bc0-497c-9307-4572b3e5cffd";
