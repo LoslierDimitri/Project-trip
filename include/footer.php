@@ -4,7 +4,7 @@ include("./public/css/footer.css");
 echo "</style>";
 ?>
 
-<footer class="text-white text-lg-left">
+<footer class="text-white text-lg-left pt-3">
   <!-- Grid container -->
   <div class="container pt-2 pb-0">
     <!--Grid row-->
@@ -36,10 +36,10 @@ echo "</style>";
       <!--Grid column-->
       <div class="links col-lg-4 col-md-12 col-sm-12 mt-4 mb-3">
         <h3 class="text-center">Suivez-nous :</h3>
-        <div class="logo_reseaux flex justify-content-center">
-          <a href=""><img src="./public/svg/Facebook.svg" alt=""></a>
-          <a href=""><img src="./public/svg/Instagram.svg" alt=""></a>
-          <a href=""><img src="./public/svg/Twitter.svg" alt=""></a>
+        <div class="logo_reseaux mx-3 d-flex justify-content-center">
+          <a href="" class="mx-1"><img src="./public/svg/Facebook.svg" alt=""></a>
+          <a href="" class="mx-1"><img src="./public/svg/Instagram.svg" alt=""></a>
+          <a href="" class="mx-2"><img src="./public/svg/Twitter.svg" alt=""></a>
         </div>
       </div>
       <!--Grid column-->
@@ -50,7 +50,7 @@ echo "</style>";
 
   <!-- Copyright -->
   <div class="copyright text-center">
-    <p class="text-white">© - Culin'Air 2022. Tous droits réservés</p>
+    <p class="text-white my-0">© - Culin'Air 2022. Tous droits réservés</p>
   </div>
   <!-- Copyright -->
 </footer>

@@ -54,24 +54,7 @@ a {
     color: #0FABDF;
 }
 
-ul {
-    padding-left: 0;
-}
-
-.logo_reseaux {
-    display: flex;
-}
-
-.logo_reseaux a {
-    width: 30px;
-    margin-right: 15px;
-}
-
 .logo_reseaux img {
     width: 30px;
     height: 30px;
-}
-
-.text-white {
-    margin: 0;
 }
