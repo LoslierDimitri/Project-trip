@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="column">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <img src="./public/svg/Picto-map.svg" alt="">
+                                    <img class="w-25" src="./public/svg/Picto-map.svg" alt="">
                                 </div>
                             </div>
                             <div class="row">
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="column">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <img src="./public/svg/Picto-dates.svg" alt="">
+                                    <img class="w-25" src="./public/svg/Picto-dates.svg" alt="">
                                 </div>
                             </div>
                             <div class="row">
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="column">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <img src="./public/svg/Picto-add-people.svg" alt="">
+                                    <img class="w-25" src="./public/svg/Picto-add-people.svg" alt="">
                                 </div>
                             </div>
                             <div class="row">
@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="column">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <img src="./public/svg/Picto-lit.svg" alt="">
+                                    <img class="w-25" src="./public/svg/Picto-lit.svg" alt="">
                                 </div>
                             </div>
                             <div class="row">
