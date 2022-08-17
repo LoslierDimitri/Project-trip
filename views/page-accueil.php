@@ -1,4 +1,13 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+    echo ("pseudo: ". $_SESSION['pseudo']);
+    echo ("<br>");
+    echo ("mot de passe: ". $_SESSION['mot_de_passe']);
+}
+?>
+
+<?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo $_POST["type_search"];
     echo "<br>";
@@ -7,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header("Location: /Project-trip");
 }
 ?>
+
 
 
 <!DOCTYPE html>

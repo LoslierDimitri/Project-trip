@@ -78,6 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </section>
 
+    <a href="accueil">menu</a>
+
 </body>
 
 </html>
