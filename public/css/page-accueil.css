@@ -26,7 +26,10 @@ body {
     margin: 0;
 }
 
-.recherche_avancee {
+
+/*advanced search start*/
+
+.advanced_search {
     background-color: rgba(15, 171, 223, 0.2);
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -90,55 +93,31 @@ button img {
     width: 30px;
 }
 
-.carte_france {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-}
 
-.map {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+/*advanced search end*/
+
+
+/*region search start*/
+
+.region_search {
+    height: 100vh;
 }
 
 h2 {
-    margin-bottom: 50px;
     font-family: Mali-Regular;
     color: #ED6E38;
 }
 
-.map h3 {
+.region_search h3 {
     font-family: Mali-SB;
     color: #0FABDF;
 }
 
-.map h5 {
-    font-family: Mali-Regular;
-    color: #ED6E38;
-}
 
-.map h6 {
-    font-family: Mali-Regular;
-    color: #0FABDF;
-}
-
-.map p {
-    font-family: Signika-Regular;
-    color: black;
-}
-
-.region_img {
-    width: 70%;
-    height: 80%;
-    border-radius: 20px;
-}
+/*region search end*/
 
 
-/* 3D Slideshow */
+/* 3D Slideshow start*/
 
 .slideshow {
     margin: 0 auto;

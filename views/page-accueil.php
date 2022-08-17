@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ?>
 
 
-    <section class="recherche_avancee py-4">
+    <section class="advanced_search py-4">
         <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
 
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
@@ -149,17 +149,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- Recherche par région -->
 
-    <section>
-        <div class="map mt-5 mb-5">
+    <section class="region_search">
+        <div class="title mt-5 mb-5">
             <div class="column w-100">
-                <h2 class="text-center">Recherche par région</h2>
-                <h3 class="text-center">Nouvelle Aquitaine</h3>
+                <h2 class="text-center mb-4">Recherche par région</h2>
+                <h3 class="text-center mb-4">Nouvelle Aquitaine</h3>
             </div>
             <div id="panel">
 
             </div>
             <!-- <svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 480"> -->
-            <svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100vh" viewBox="0 0 600 300">
+            <svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="600">
                 <g id="paris">
                     <g id="arrondissements">
                         <a href="javascript:display_panel('region_name_1');">
