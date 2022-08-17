@@ -1,21 +1,21 @@
 @font-face {
     font-family: Mali-Regular;
-    src: url(/Project-trip/projet/front/source/fonts/Mali-Regular.ttf);
+    src: url(./public/fonts/Mali-Regular.ttf);
 }
 
 @font-face {
     font-family: Mali-SB;
-    src: url(/Project-trip/projet/front/source/fonts/Mali-SemiBold.ttf);
+    src: url(./public/fonts/Mali-SemiBold.ttf);
 }
 
 @font-face {
     font-family: Signika-Regular;
-    src: url(/Project-trip/projet/front/source/fonts/Signika-Regular.ttf);
+    src: url(./public/fonts/Signika-Regular.ttf);
 }
 
 @font-face {
     font-family: Signika-SB;
-    src: url(/Project-trip/projet/front/source/fonts/Signika-SemiBold.ttf);
+    src: url(./public/fonts/Signika-SemiBold.ttf);
 }
 
 * {
@@ -107,6 +107,103 @@ h2 {
 .region_search h3 {
     font-family: Mali-SB;
     color: #0FABDF;
+}
+
+
+/* The map */
+
+svg {
+    height: 100%;
+}
+
+#arrondissements a:hover path {
+    fill: rgba(15, 171, 223, 0.2);
+    ;
+}
+
+#arrondissements a:hover text {
+    fill: #ffffff;
+}
+
+#arrondissements text {
+    font-family: "Poller One", "Arial black", arial;
+    font-size: 20px;
+    font-weight: bold;
+    fill: #585858;
+}
+
+
+/* The page */
+
+h1 {
+    font-family: "Poller One", "Arial black", arial;
+}
+
+#arr-descriptions {
+    margin-bottom: 7em;
+}
+
+header.page-title a:after,
+header.page-title a:before,
+header.page-title a {
+    transition: all linear 0.3s;
+}
+
+header.page-title a {
+    font-family: "Poller One", "Arial black", arial;
+    font-size: 2em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #cfd1de;
+    padding: 20px 9999px;
+    padding-top: 10px;
+    margin: 0 -9999px;
+    color: #000;
+    text-decoration: none;
+}
+
+header.page-title a:before {
+    content: "";
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 8.775em;
+    width: 0px;
+    height: 0px;
+    border: 12px solid transparent;
+    border-bottom: 16px solid #000;
+}
+
+header.page-title a:after {
+    content: "up";
+    position: absolute;
+    background-color: #000;
+    width: 32px;
+    height: 3px;
+    overflow: hidden;
+    margin-top: -2px;
+    margin-left: -8.82em;
+}
+
+header.page-title a:hover {
+    text-decoration: underline;
+    border-top-color: #edeef3;
+    /*color: $bgcolor;
+  background-color: $hcolor2;
+  //background: linear-gradient(rgba($hcolor2, 0) 3px, rgba($hcolor2, 1) 3px);/**/
+}
+
+header.page-title a:hover:after {
+    transform: translateY(-3px);
+}
+
+header.page-title a:hover:before {
+    transform: translateY(-3px);
+}
+
+.hidden_item {
+    display: none;
 }
 
 

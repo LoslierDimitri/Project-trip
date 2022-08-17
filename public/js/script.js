@@ -48,3 +48,51 @@ function display_panel(region_name) {
     zone = document.getElementById(region_name);
     zone.setAttribute("fill", "#0FABDF")
 }
+
+for (let i = 0; i < 13; i++) {
+    panel = document.getElementById('region_panel_' + (i + 1) + "");
+
+    //panel = document.getElementById("panel");
+    panel.classList.add("hidden_item");
+}
+
+
+function display_panel(region_name, panel_name) {
+
+    console.log(region_name);
+    console.log(panel_name);
+    //color of region
+    let zone;
+    let panel_display;
+    let panel;
+
+
+    for (let i = 0; i < 13; i++) {
+        zone = document.getElementById("region_name_" + (i + 1) + "");
+        zone.setAttribute("fill", "#ffffff");
+    }
+    zone = document.getElementById(region_name);
+    zone.setAttribute("fill", "#0FABDF");
+
+    for (let i = 0; i < 13; i++) {
+        panel = document.getElementById('region_panel_' + (i + 1) + "");
+
+        //panel = document.getElementById("panel");
+        panel.classList.add("hidden_item");
+    }
+
+    panel = document.getElementById(panel_name);
+    panel.classList.remove("hidden_item");
+
+    // if (region_name == "region_name_1") {}
+    // if (region_name == "region_name_2") {
+    //     panel.innerHTML = panel_region_aquitaine;
+
+    // }
+}
+
+function display_panel2(region_panel) {
+    for (let i = 0; i < 13; i++) {
+        document.getElementById('region_panel_' + (i + 1) + "").style.visibility = 'hidden';
+    }
+}
