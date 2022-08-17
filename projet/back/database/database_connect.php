@@ -56,6 +56,7 @@ try {
 ]);
 if ($pdo != null) {
     echo "database connected <br>";
+
     return $pdo;
 }
     
@@ -64,4 +65,3 @@ if ($pdo != null) {
 }
 return;
 }
-?>

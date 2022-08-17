@@ -7,9 +7,9 @@ se connecte
 ne retourne rien
 */
 
-require ("../../back/database/database_connect.php");
-require ("../../back/database/database_disconnect.php");
-require ("../../back/database/database_request.php");
+require ("./projet/back/database/database_connect.php");
+require ("./projet/back/database/database_disconnect.php");
+require ("./projet/back/database/database_request.php");
 
 function registration() {
 $connection = database_connect();

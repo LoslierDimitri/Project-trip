@@ -20,6 +20,7 @@ https://rapidapi.com/apidojo/api/travel-advisor/
 https://rapidapi.com/ruben-jimenez-lancho-ruben-jimenez-lancho-default/api/flytrips/
 https://rapidapi.com/tipsters/api/booking-com/pricing
 https://rapidapi.com/apidojo/api/the-fork-the-spoon/pricing
+https://rapidapi.com/tipsters/api/priceline-com-provider/pricing
 
 very limited
 https://rapidapi.com/ptwebsolution/api/worldwide-restaurants/
@@ -32,7 +33,7 @@ dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a
 */
 
 
-
+//deprecated
 function api_call($string, $name)
 {
     //$service_api = "https://www.boredapi.com/api/activity/";
@@ -713,10 +714,10 @@ function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $
 
 
 
-
-function api_call_flytrips($search_type, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
+//deprecated
+function api_call_flytrips($API_KEY_1, $API_KEY_2, $search_type, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
 {
-    $API_KEY = "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a";
+
     /*
     search country code
     search airport code
@@ -747,7 +748,7 @@ function api_call_flytrips($search_type, $voyage_lieu_depart, $voyage_lieu_arriv
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => [
             "X-RapidAPI-Host: flytrips.p.rapidapi.com",
-            $API_KEY
+            $API_KEY_1
         ],
     ]);
 
@@ -814,7 +815,7 @@ function api_call_flytrips($search_type, $voyage_lieu_depart, $voyage_lieu_arriv
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => [
             "X-RapidAPI-Host: flytrips.p.rapidapi.com",
-            $API_KEY
+            $API_KEY_1
         ],
     ]);
 
@@ -839,6 +840,36 @@ function api_call_flytrips($search_type, $voyage_lieu_depart, $voyage_lieu_arriv
     } else {
         echo "Error on JSON file <br>";
     }
+
+
+
+
+
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    // set our url with curl_setopt()
+    curl_setopt($curl, CURLOPT_URL, "https://api.aviationstack.com/v1/routes?access_key = " . $API_KEY_2 . "");
+
+    // return the transfer as a string, also with setopt()
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+    // curl_exec() executes the started curl session
+    // $output contains the output string
+    $response = curl_exec($curl);
+
+    // close curl resource to free up system resources
+    // (deletes the variable made by curl_init)
+    curl_close($curl);
+
+    echo "<pre>";
+    print_r($response);
+    echo "</pre>";
+
+
+
+
 
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //get airport code
@@ -877,6 +908,31 @@ function api_call_flytrips($search_type, $voyage_lieu_depart, $voyage_lieu_arriv
 
 
 
+//deprecated
+function api_call_sncf($API_KEY_3, $search_type, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
+{
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    // set our url with curl_setopt()
+    curl_setopt($curl, CURLOPT_URL, "https://api.sncf.com/v1/coverage/sncf/journeys?from=admin:fr:75056&to=admin:fr:69123&datetime=20220803T091414" . "&" . $API_KEY_3);
+
+    // return the transfer as a string, also with setopt()
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+    // curl_exec() executes the started curl session
+    // $output contains the output string
+    $response = curl_exec($curl);
+
+    // close curl resource to free up system resources
+    // (deletes the variable made by curl_init)
+    curl_close($curl);
+
+    echo "<pre>";
+    print_r($response);
+    echo "</pre>";
+}
 
 
 
@@ -896,6 +952,366 @@ function api_call_flytrips($search_type, $voyage_lieu_depart, $voyage_lieu_arriv
 
 
 
+
+
+
+
+
+
+
+function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
+{
+    //get departure airport code
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    curl_setopt_array($curl, [
+        CURLOPT_URL => "https://priceline-com-provider.p.rapidapi.com/v1/flights/locations?name=" . $voyage_lieu_depart . "",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => [
+            "X-RapidAPI-Host: priceline-com-provider.p.rapidapi.com",
+            $API_KEY_1
+        ],
+    ]);
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    }
+    $data_path = "../../back/data/api_call_priceline_airport_code_departure.json";
+    if (file_put_contents($data_path, $response)) {
+        echo "JSON file created successfully <br>";
+        echo "JSON file sent to: [", $data_path, "] <br>";
+        //echo "call to api: [", $service_api, "] done <br>";
+
+        // echo "<pre>";
+        // print_r($json_objekat);
+        // echo "</pre>";
+    } else {
+        echo "Error on JSON file <br>";
+    }
+
+    $file = file_get_contents("../../back/data/api_call_priceline_airport_code_departure.json");
+    $file_decode = json_decode($file);
+    $airport_code_departure = $file_decode[0]->id;
+
+    //get arrival airport code
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    curl_setopt_array($curl, [
+        CURLOPT_URL => "https://priceline-com-provider.p.rapidapi.com/v1/flights/locations?name=" . $voyage_lieu_arrive . "",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => [
+            "X-RapidAPI-Host: priceline-com-provider.p.rapidapi.com",
+            $API_KEY_1
+        ],
+    ]);
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    }
+    $data_path = "../../back/data/api_call_priceline_airport_code_arrival.json";
+    if (file_put_contents($data_path, $response)) {
+        echo "JSON file created successfully <br>";
+        echo "JSON file sent to: [", $data_path, "] <br>";
+        //echo "call to api: [", $service_api, "] done <br>";
+
+        // echo "<pre>";
+        // print_r($json_objekat);
+        // echo "</pre>";
+    } else {
+        echo "Error on JSON file <br>";
+    }
+
+    $file = file_get_contents("../../back/data/api_call_priceline_airport_code_arrival.json");
+    $file_decode = json_decode($file);
+    $airport_code_arrival = $file_decode[0]->id;
+
+    //get flight departure-arrival
+    if ($voyage_formule == "voyage_formule_gastronomique") {
+        $sort_type = "premium";
+    } else {
+        $sort_type = "economy";
+    }
+
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    curl_setopt_array($curl, [
+        // CURLOPT_URL => "https://priceline-com-provider.p.rapidapi.com/v2/flight/departures?sid=iSiX639&departure_date=" . $voyage_date_aller . "&adults=" . $voyage_nombre_personne_adulte . "&origin_city_id=".$voyage_lieu_depart."&cabin_class=" . $sort_type . "&children=" . $voyage_nombre_personne_enfant . "&destination_city_id=".$voyage_lieu_arrive."",
+        CURLOPT_URL => "https://priceline-com-provider.p.rapidapi.com/v2/flight/departures?sid=iSiX639&departure_date=" . $voyage_date_aller . "&adults=" . $voyage_nombre_personne_adulte . "&cabin_class=economy&children=" . $voyage_nombre_personne_enfant . "&origin_airport_code=" . $airport_code_departure . "&destination_airport_code=" . $airport_code_arrival . "",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => [
+            "X-RapidAPI-Host: priceline-com-provider.p.rapidapi.com",
+            $API_KEY_1
+        ],
+    ]);
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    }
+
+    $json_decode = json_decode($response);
+
+    $data_path = "../../back/data/api_call_priceline_departure_arrival.json";
+    if (file_put_contents($data_path, $response)) {
+        echo "JSON file created successfully <br>";
+        echo "JSON file sent to: [", $data_path, "] <br>";
+        //echo "call to api: [", $service_api, "] done <br>";
+
+        // echo "<pre>";
+        // print_r($json_objekat);
+        // echo "</pre>";
+    } else {
+        echo "Error on JSON file <br>";
+    }
+
+    //get flight arrival-departure
+    if ($voyage_formule == "voyage_formule_gastronomique") {
+        $sort_type = "premium";
+    } else {
+        $sort_type = "economy";
+    }
+
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+
+    curl_setopt_array($curl, [
+        // CURLOPT_URL => "https://priceline-com-provider.p.rapidapi.com/v2/flight/departures?sid=iSiX639&departure_date=" . $voyage_date_aller . "&adults=" . $voyage_nombre_personne_adulte . "&origin_city_id=".$voyage_lieu_depart."&cabin_class=" . $sort_type . "&children=" . $voyage_nombre_personne_enfant . "&destination_city_id=".$voyage_lieu_arrive."",
+        CURLOPT_URL => "https://priceline-com-provider.p.rapidapi.com/v2/flight/departures?sid=iSiX639&departure_date=" . $voyage_date_retour . "&adults=" . $voyage_nombre_personne_adulte . "&cabin_class=economy&children=" . $voyage_nombre_personne_enfant . "&origin_airport_code=" . $airport_code_arrival . "&destination_airport_code=" . $airport_code_departure . "",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+        CURLOPT_HTTPHEADER => [
+            "X-RapidAPI-Host: priceline-com-provider.p.rapidapi.com",
+            $API_KEY_1
+        ],
+    ]);
+
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+
+    curl_close($curl);
+
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    }
+
+    $json_decode = json_decode($response);
+
+    $data_path = "../../back/data/api_call_priceline_arrival_departure.json";
+    if (file_put_contents($data_path, $response)) {
+        echo "JSON file created successfully <br>";
+        echo "JSON file sent to: [", $data_path, "] <br>";
+        //echo "call to api: [", $service_api, "] done <br>";
+
+        // echo "<pre>";
+        // print_r($json_objekat);
+        // echo "</pre>";
+    } else {
+        echo "Error on JSON file <br>";
+    }
+
+    $file_departure_arrival = file_get_contents("../../back/data/api_call_priceline_departure_arrival.json");
+    $file_decode_departure_arrival = json_decode($file_departure_arrival);
+    $travel_departure_arrival_array_json = [];
+
+    if (isset($file_decode_departure_arrival->getAirFlightDepartures->error->status) == false) {
+        for ($i = 0; $i < $file_decode_departure_arrival->getAirFlightDepartures->results->result->itinerary_count; $i++) {
+            $result_itinerary = $file_decode_departure_arrival->getAirFlightDepartures->results->result->itinerary_data->{'itinerary_' . $i};
+
+            $result_itinerary_departure_city = $result_itinerary->slice_data->slice_0->departure->airport->name;
+            $result_itinerary_arrival_city = $result_itinerary->slice_data->slice_0->arrival->airport->name;
+            $result_itinerary_departure_airport = $result_itinerary->baggage_carrier->departure;
+            $result_itinerary_arrival_airport = $result_itinerary->baggage_carrier->arrival;
+            $result_itinerary_departure_date = $result_itinerary->slice_data->slice_0->departure->datetime->date;
+            $result_itinerary_departure_hour = $result_itinerary->slice_data->slice_0->departure->datetime->time_24h;
+            $result_itinerary_arrival_date = $result_itinerary->slice_data->slice_0->arrival->datetime->date;
+            $result_itinerary_arrival_hour = $result_itinerary->slice_data->slice_0->arrival->datetime->time_24h;
+
+            $result_itinerary_adult_number = "";
+            $result_itinerary_child_number = "";
+            $result_itinerary_infant_number = "";
+            $result_itinerary_price = $result_itinerary->price_details->display_total_fare;
+            $result_itinerary_price_currency = $result_itinerary->price_details->baseline_currency;
+
+            $result_itinerary_fly_type = $result_itinerary->slice_data->slice_0->flight_data->flight_0->info->cabin_class;
+            $result_itinerary_fly_time = $result_itinerary->slice_data->slice_0->flight_data->flight_0->info->duration;
+            $result_itinerary_fly_company = $result_itinerary->baggage_carrier->airline;
+            $result_itinerary_fly_bagage = "";
+
+            // echo "<pre>";
+            // print_r($result_itinerary);
+            // echo "</pre>";
+
+            $travel_departure_arrival_array = [];
+            array_push($travel_departure_arrival_array, $result_itinerary_departure_city);
+            array_push($travel_departure_arrival_array, $result_itinerary_arrival_city);
+            array_push($travel_departure_arrival_array, $result_itinerary_departure_airport);
+            array_push($travel_departure_arrival_array, $result_itinerary_arrival_airport);
+            array_push($travel_departure_arrival_array, $result_itinerary_departure_date);
+            array_push($travel_departure_arrival_array, $result_itinerary_departure_hour);
+            array_push($travel_departure_arrival_array, $result_itinerary_arrival_date);
+            array_push($travel_departure_arrival_array, $result_itinerary_arrival_hour);
+
+            array_push($travel_departure_arrival_array, $result_itinerary_adult_number);
+            array_push($travel_departure_arrival_array, $result_itinerary_child_number);
+            array_push($travel_departure_arrival_array, $result_itinerary_infant_number);
+            array_push($travel_departure_arrival_array, $result_itinerary_price);
+            array_push($travel_departure_arrival_array, $result_itinerary_price_currency);
+
+            array_push($travel_departure_arrival_array, $result_itinerary_fly_type);
+            array_push($travel_departure_arrival_array, $result_itinerary_fly_time);
+            array_push($travel_departure_arrival_array, $result_itinerary_fly_company);
+            array_push($travel_departure_arrival_array, $result_itinerary_fly_bagage);
+
+            array_push($travel_departure_arrival_array_json, $travel_departure_arrival_array);
+        }
+    }
+    $travel_departure_arrival_array_json_path = "../../back/data/result_search/";
+    $travel_departure_arrival_array_json_name = "travel_departure_arrival_array_json.json";
+    echo "filepath: " . $travel_departure_arrival_array_json_path . $travel_departure_arrival_array_json_name;
+
+    $file = fopen($travel_departure_arrival_array_json_path . $travel_departure_arrival_array_json_name, "wa+");
+    fwrite($file, json_encode($travel_departure_arrival_array_json));
+    fclose($file);
+
+    //////////////////////////////////////////////////////
+    $file_arrival_departure = file_get_contents("../../back/data/api_call_priceline_arrival_departure.json");
+    $file_decode_arrival_departure = json_decode($file_arrival_departure);
+    $travel_arrival_departure_array_json = [];
+
+    if (isset($file_decode_arrival_departure->getAirFlightDepartures->error->status) == false) {
+        for ($i = 0; $i < $file_decode_arrival_departure->getAirFlightDepartures->results->result->itinerary_count; $i++) {
+            $result_itinerary = $file_decode_arrival_departure->getAirFlightDepartures->results->result->itinerary_data->{'itinerary_' . $i};
+
+            $result_itinerary_departure_city = $result_itinerary->slice_data->slice_0->departure->airport->name;
+            $result_itinerary_arrival_city = $result_itinerary->slice_data->slice_0->arrival->airport->name;
+            $result_itinerary_departure_airport = $result_itinerary->baggage_carrier->departure;
+            $result_itinerary_arrival_airport = $result_itinerary->baggage_carrier->arrival;
+            $result_itinerary_departure_date = $result_itinerary->slice_data->slice_0->departure->datetime->date;
+            $result_itinerary_departure_hour = $result_itinerary->slice_data->slice_0->departure->datetime->time_24h;
+            $result_itinerary_arrival_date = $result_itinerary->slice_data->slice_0->arrival->datetime->date;
+            $result_itinerary_arrival_hour = $result_itinerary->slice_data->slice_0->arrival->datetime->time_24h;
+
+            $result_itinerary_adult_number = "";
+            $result_itinerary_child_number = "";
+            $result_itinerary_infant_number = "";
+            $result_itinerary_price = $result_itinerary->price_details->display_total_fare;
+            $result_itinerary_price_currency = $result_itinerary->price_details->baseline_currency;
+
+            $result_itinerary_fly_type = $result_itinerary->slice_data->slice_0->flight_data->flight_0->info->cabin_class;
+            $result_itinerary_fly_time = $result_itinerary->slice_data->slice_0->flight_data->flight_0->info->duration;
+            $result_itinerary_fly_company = $result_itinerary->baggage_carrier->airline;
+            $result_itinerary_fly_bagage = "";
+
+            // echo "<pre>";
+            // print_r($result_itinerary);
+            // echo "</pre>";
+
+            $travel_arrival_departure_array = [];
+            array_push($travel_arrival_departure_array, $result_itinerary_departure_city);
+            array_push($travel_arrival_departure_array, $result_itinerary_arrival_city);
+            array_push($travel_arrival_departure_array, $result_itinerary_departure_airport);
+            array_push($travel_arrival_departure_array, $result_itinerary_arrival_airport);
+            array_push($travel_arrival_departure_array, $result_itinerary_departure_date);
+            array_push($travel_arrival_departure_array, $result_itinerary_departure_hour);
+            array_push($travel_arrival_departure_array, $result_itinerary_arrival_date);
+            array_push($travel_arrival_departure_array, $result_itinerary_arrival_hour);
+
+            array_push($travel_arrival_departure_array, $result_itinerary_adult_number);
+            array_push($travel_arrival_departure_array, $result_itinerary_child_number);
+            array_push($travel_arrival_departure_array, $result_itinerary_infant_number);
+            array_push($travel_arrival_departure_array, $result_itinerary_price);
+            array_push($travel_arrival_departure_array, $result_itinerary_price_currency);
+
+            array_push($travel_arrival_departure_array, $result_itinerary_fly_type);
+            array_push($travel_arrival_departure_array, $result_itinerary_fly_time);
+            array_push($travel_arrival_departure_array, $result_itinerary_fly_company);
+            array_push($travel_arrival_departure_array, $result_itinerary_fly_bagage);
+
+            array_push($travel_arrival_departure_array_json, $travel_arrival_departure_array);
+        }
+    }
+    $travel_arrival_departure_array_json_path = "../../back/data/result_search/";
+    $travel_arrival_departure_array_json_name = "travel_arrival_departure_array_json.json";
+    echo "filepath: " . $travel_arrival_departure_array_json_path . $travel_arrival_departure_array_json_name;
+
+    $file = fopen($travel_arrival_departure_array_json_path . $travel_arrival_departure_array_json_name, "wa+");
+    fwrite($file, json_encode($travel_arrival_departure_array_json));
+    fclose($file);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//deprecated
 function api_call_booking()
 {
 }
@@ -914,3 +1330,38 @@ si plus d appel possible, utiliser backup ou faire une nouvelle cle d appel sur 
 function api_call_travel_advisor_backup($voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule)
 {
 }
+
+/*
+function api_call_format()
+{
+    $file_hotel = file_get_contents("../../back/data/result_search/result_search_hotel.json");
+    $file_hotel_decode = json_decode($file_hotel);
+    $file_hotel_array_json = [];
+
+    $file_restaurant = file_get_contents("../../back/data/result_search/result_search_restaurant.json");
+    $file_restaurant_decode = json_decode($file_restaurant);
+    $file_restaurant_decode_array_json = [];
+
+    $file_departure_arrival = file_get_contents("../../back/data/result_search/travel_departure_arrival_array_json.json");
+    $file_departure_arrival_decode = json_decode($file_departure_arrival);
+    $file_departure_arrival_decode_array_json = [];
+
+    $file_arrival_departure = file_get_contents("../../back/data/result_search/travel_departure_arrival_array_json.json");
+    $file_arrival_departure_decode = json_decode($file_arrival_departure);
+    $file_arrival_departure_decode_array_json = [];
+
+    $result_search_array_json = [];
+    array_push($result_search_array_json, $file_hotel_decode);
+    array_push($result_search_array_json, $file_restaurant_decode);
+    array_push($result_search_array_json, $file_departure_arrival_decode);
+    array_push($result_search_array_json, $file_arrival_departure_decode);
+
+    $result_search_path = "../../back/data/result_search/";
+    $result_search_name = "result_search_format.json";
+    echo "filepath: " . $result_search_path . $result_search_name;
+
+    $file = fopen($result_search_path . $result_search_name, "wa+");
+    fwrite($file, json_encode($result_search_array_json));
+    fclose($file);
+}
+*/

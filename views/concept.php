@@ -1,3 +1,12 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+    echo ("pseudo: ". $_SESSION['pseudo']);
+    echo ("<br>");
+    echo ("mot de passe: ". $_SESSION['mot_de_passe']);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
