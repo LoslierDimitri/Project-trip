@@ -16,19 +16,19 @@
 
 <body>
 
-    <?php
+     <?php
     include("./include/navbar.php");
     ?>
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./public/svg/Bretagne.svg" class="d-block w-100" alt="paysage">
+      <img src="./public/jpeg/Bretagne.jpg" class="d-block w-100" alt="paysage">
     </div>
     <div class="carousel-item">
-      <img src="./public/svg/Pays_basque.svg" class="d-block w-100" alt="paysage">
+      <img src="./public/jpeg/Alsace.jpg" class="d-block w-100" alt="paysage">
     </div>
     <div class="carousel-item">
-      <img src="./public/svg/Reunion.svg" class="d-block w-100" alt="paysage">
+      <img src="./public/jpeg/Corse.jpg" class="d-block w-100" alt="paysage">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -40,7 +40,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
+ 
 
 
 <?php
