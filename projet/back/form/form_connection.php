@@ -9,9 +9,9 @@ ne retourne rien
 */
 
 function connection() {
-    require ("/project-trip/projet/back/database/database_connect.php");
-    require ("/project-trip/projet/back/database/database_disconnect.php");
-    require ("/project-trip/projet/back/database/database_request.php");
+    require ("./projet/back/database/database_connect.php");
+    require ("./projet/back/database/database_disconnect.php");
+    require ("./projet/back/database/database_request.php");
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $connexion_pseudo = $_POST['connexion_pseudo'];
@@ -21,6 +21,7 @@ function connection() {
         $request_mot_de_passe = database_select_where($connection, "mot_de_passe", "pseudo", $connexion_pseudo);
         $connection = database_disconnect();
 
+        // $request_mot_de_passe = $request_mot_de_passe[0]["mot_de_passe"];
         $request_mot_de_passe = $request_mot_de_passe[0]["mot_de_passe"];
 
         if (password_verify($connexion_mot_de_passe, $request_mot_de_passe)) {
