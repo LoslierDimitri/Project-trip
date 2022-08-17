@@ -13,3 +13,9 @@ height: auto;
    background-color: transparent;
    border: none;
 }
+
+.carousel-control-next:hover{
+   opacity: 1 ;
+   background-color: transparent;
+   border: none;
+}
