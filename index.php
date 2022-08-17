@@ -14,6 +14,9 @@ switch ($page) {
     case 'destinations':
         require __DIR__ . './views/destinations.php';
         break;
+    case 'temoignages':
+        require __DIR__ . './views/temoignages.php';
+        break;
     case 'connexion':
         require __DIR__ . './views/connexion.php';
         break;
