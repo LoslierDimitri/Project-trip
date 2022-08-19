@@ -34,7 +34,7 @@ echo "</style>";
       <!--Grid column-->
 
       <!--Grid column-->
-      <div class="links col-lg-4 col-md-12 col-sm-12 mt-4 mb-3">
+      <div class="follow links col-lg-4 col-md-12 col-sm-12 mt-4 mb-3">
         <h3 class="text-center">Suivez-nous :</h3>
         <div class="logo_reseaux mx-3 d-flex justify-content-center">
           <a href="" class="mx-1"><img src="./public/svg/Facebook.svg" alt=""></a>

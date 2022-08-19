@@ -37,34 +37,36 @@ function test(city_name) {
     alert("test " + city_name);
 }
 
-function display_panel(region_name) {
-    let zone;
+// function display_panel(region_name) {
+//     let zone;
 
-    for (let i = 0; i < 13; i++) {
-        zone = document.getElementById("region_name_" + (i + 1) + "");
-        zone.setAttribute("fill", "#ffffff")
-    }
+//     for (let i = 0; i < 13; i++) {
+//         zone = document.getElementById("region_name_" + (i + 1) + "");
+//         zone.setAttribute("fill", "#ffffff")
+//     }
 
-    zone = document.getElementById(region_name);
-    zone.setAttribute("fill", "#0FABDF")
-}
+//     zone = document.getElementById(region_name);
+//     zone.setAttribute("fill", "#0FABDF")
+// }
 
-for (let i = 0; i < 13; i++) {
-    panel = document.getElementById('region_panel_' + (i + 1) + "");
+// for (let i = 0; i < 13; i++) {
+//     panel = document.getElementById('region_panel_' + (i + 1) + "");
 
-    //panel = document.getElementById("panel");
-    panel.classList.add("hidden_item");
-}
+//     //panel = document.getElementById("panel");
+//     panel.classList.add("hidden_item");
+// }
 
 
-function display_panel(region_name, panel_name) {
+function display_panel(region_name, panel_name, details) {
 
     console.log(region_name);
     console.log(panel_name);
+    console.log(details);
     //color of region
     let zone;
     let panel_display;
     let panel;
+    let panel_details;
 
 
     for (let i = 0; i < 13; i++) {
@@ -84,15 +86,17 @@ function display_panel(region_name, panel_name) {
     panel = document.getElementById(panel_name);
     panel.classList.remove("hidden_item");
 
+    // for (let i = 0; i < 1; i++) {
+    //     panel_details = document.getElementById("details_map");
+    //     panel_details.classList.add("show_item")
+    // }
+
+    // panel_details = document.getElementById(details);
+    // panel_details.classList.remove("show_item");
+
     // if (region_name == "region_name_1") {}
     // if (region_name == "region_name_2") {
     //     panel.innerHTML = panel_region_aquitaine;
 
     // }
-}
-
-function display_panel2(region_panel) {
-    for (let i = 0; i < 13; i++) {
-        document.getElementById('region_panel_' + (i + 1) + "").style.visibility = 'hidden';
-    }
 }

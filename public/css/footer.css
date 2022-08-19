@@ -58,3 +58,7 @@ a {
     width: 30px;
     height: 30px;
 }
+
+.follow {
+    border-left: 2px solid #0FABDF;
+}

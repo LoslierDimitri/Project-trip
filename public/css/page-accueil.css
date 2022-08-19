@@ -24,6 +24,7 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 
@@ -35,7 +36,7 @@ body {
     border-top-right-radius: 50px;
 }
 
-h1 {
+.advanced_search h1 {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -107,6 +108,21 @@ h2 {
 .region_search h3 {
     font-family: Mali-SB;
     color: #0FABDF;
+}
+
+.region_search h6 {
+    font-family: Signika-SB;
+    color: #0FABDF;
+}
+
+.region_search h5 {
+    font-family: Signika-Regular;
+    color: #0FABDF;
+}
+
+.region_search p {
+    font-family: Signika-Regular;
+    color: #000;
 }
 
 
@@ -207,6 +223,17 @@ header.page-title a:hover:before {
 }
 
 
+/* .show_item {
+    display: unset;
+} */
+
+.region_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+
 /*region search end*/
 
 
@@ -221,7 +248,7 @@ header.page-title a:hover:before {
     background-color: rgba(15, 171, 223, 0.2);
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    height: 53vh;
+    height: 70%;
     display: flex;
     flex-direction: column;
 }
