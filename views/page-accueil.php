@@ -245,14 +245,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/choucroute.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/choucroute.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La choucroute</h6>
                                             <p>Plat à base de charcuterie, servie avec du chou fermenté et des pommes de terre. Accompagnée généralement d'une bonne bière.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/flammekueche.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/flammekueche.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La flammekueche</h6>
@@ -261,14 +261,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/andouillette.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/andouillette.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>L'andouillette de Troyes</h6>
                                             <p>Une charcuterie artisanale en forme de saucisse faite à partir d'abats.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/kougelhopf.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/kougelhopf.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le kougelhopf</h6>
@@ -281,14 +281,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Colmar.png" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/Colmar.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La vieille ville de Colmar</h6>
                                                 <p>Petite ville pittoresque, très agréable avec ses maisons colorées et sa rivière la traversant.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Sundgau.png" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/Sundgau.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Sundgau</h6>
@@ -297,14 +297,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Verdun.png" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/Verdun.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les champs de bataille de Verdun</h6>
                                                 <p>Mettez un peu d'histoire dans votre voyage et venez visiter ce lieu qui aura marqué la France.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Château-du-Haut-Koenigsbourg.png" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/Château-du-Haut-Koenigsbourg.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le château du Haut-Koenigsbourg</h6>
