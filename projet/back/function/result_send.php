@@ -12,8 +12,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
 function result_send() {
 
-    die();
-    header ("Location: ../../front/test/test_function_result.php");
+    // die();
+    // header ("Location: ../../front/test/test_function_result.php");
 }
-
-?>
