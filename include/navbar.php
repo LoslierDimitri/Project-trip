@@ -24,11 +24,21 @@ echo "</style>";
                     <a class="nav-link" href="#">Témoignages</a>
                 </li>
             </ul>
+            <!-- Si la personne est connecté -->
+            <?php if (isset($_SESSION['pseudo']) && isset($_SESSION["mot_de_passe"])):?>
             <div class="login-logout">
-                <a href="/Project-trip/connexion" class="container-login-logout"><img class="logo-login-logout" src="./public/svg/Picto-connexion-inscription.svg" alt="">
+                <a href="#" class="container-login-logout"><img class="logo-login-logout" src="./public/svg/Picto-compte.svg" alt="">
+                    <p class="text-login-logout">Mon compte</p>
+                </a>
+            </div>
+            <!-- Si la personne n'est pas connecté -->
+            <?php else: ?>
+            <div class="login-logout">
+                <a href="connexion" class="container-login-logout"><img class="logo-login-logout" src="./public/svg/Picto-connexion-inscription.svg" alt="">
                     <p class="text-login-logout">Se connecter/S'inscrire</p>
                 </a>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </nav>
@@ -38,11 +48,9 @@ echo "</style>";
 
 <?php
 if (isset($_SESSION['pseudo']) && isset($_SESSION["mot_de_passe"])) {
-    echo "<br><br><br>";
-    echo "connected <br>";
-    echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
-    echo "connected with mot_do_passe: [" . $_SESSION['mot_de_passe'] . "] <br>";
-} else {
-    echo ("Disconnected<br>");
+    echo "Bienvenue " . $_SESSION['pseudo'] . " <br>";
 }
+// } else {
+//     echo ("Disconnected<br>");
+// }
 ?>
