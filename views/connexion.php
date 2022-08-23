@@ -3,9 +3,6 @@
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
-    echo ("pseudo: ". $_SESSION['pseudo']);
-    echo ("<br>");
-    echo ("mot de passe: ". $_SESSION['mot_de_passe']);
 }
 ?>
 
@@ -20,12 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     fwrite($file, "after post: " . $_SERVER['REQUEST_METHOD']);
     fclose($file);
     
-    require("C:/Apache24/htdocs/Project-trip/projet/back/form/form_connection.php");
+    require("./projet/back/form/form_connection.php");
 
     connection();
     echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
     echo "connected with mot_do_passe: [" . $_SESSION['mot_de_passe'] . "] <br>";
-    // header("Location: ../");
+    header("Location: ./");
 }
 ?>
 

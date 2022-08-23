@@ -1,472 +1,380 @@
 @font-face {
-    font-family: Mali-Regular;
-    src: url(./public/fonts/Mali-Regular.ttf);
+  font-family: Mali-Regular;
+  src: url(./public/fonts/Mali-Regular.ttf);
 }
 
 @font-face {
-    font-family: Mali-SB;
-    src: url(./public/fonts/Mali-SemiBold.ttf);
+  font-family: Mali-SB;
+  src: url(./public/fonts/Mali-SemiBold.ttf);
 }
 
 @font-face {
-    font-family: Signika-Regular;
-    src: url(./public/fonts/Signika-Regular.ttf);
+  font-family: Signika-Regular;
+  src: url(./public/fonts/Signika-Regular.ttf);
 }
 
 @font-face {
-    font-family: Signika-SB;
-    src: url(./public/fonts/Signika-SemiBold.ttf);
+  font-family: Signika-SB;
+  src: url(./public/fonts/Signika-SemiBold.ttf);
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    overflow-x: hidden;
+  margin: 0;
+  overflow-x: hidden;
 }
-
 
 /*advanced search start*/
 
 .advanced_search {
-    background-color: rgba(15, 171, 223, 0.2);
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+  background-color: rgba(15, 171, 223, 0.2);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
 .advanced_search h1 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-family: Mali-SB;
-    color: #ED6E38;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Mali-SB;
+  color: #ed6e38;
+  margin-bottom: 50px;
 }
 
 form {
-    background-color: #8CC04E;
-    border-radius: 20px;
-    margin: 0 200px;
+  background-color: #8cc04e;
+  border-radius: 20px;
+  margin: 0 200px;
 }
 
 .formule {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .formule select {
-    width: 250px;
-    font-family: Signika-Regular;
-    color: #8CC04E;
+  width: 250px;
+  font-family: Signika-Regular;
+  color: #8cc04e;
 }
 
 .formule label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-family: Mali-SB;
-    color: #ED6E38;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-family: Mali-SB;
+  color: #ed6e38;
 }
 
 input {
-    color: #8CC04E;
-    font-family: Signika-Regular;
-    width: 190px;
-    height: 35px;
+  color: #8cc04e;
+  font-family: Signika-Regular;
+  width: 190px;
+  height: 35px;
 }
 
 input::placeholder {
-    color: #8CC04E;
+  color: #8cc04e;
 }
 
 button {
-    background-color: #ED6E38;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 15px 5px 15px;
-    font-family: Signika-Regular;
+  background-color: #ed6e38;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+  font-family: Signika-Regular;
 }
 
 button img {
-    width: 30px;
+  width: 30px;
 }
 
-
 /*advanced search end*/
-
 
 /*region search start*/
 
 h2 {
-    font-family: Mali-Regular;
-    color: #ED6E38;
+  font-family: Mali-Regular;
+  color: #ed6e38;
 }
 
 .region_search h3 {
-    font-family: Mali-SB;
-    color: #0FABDF;
+  font-family: Mali-SB;
+  color: #0fabdf;
 }
 
 .region_search h6 {
-    font-family: Signika-SB;
-    color: #0FABDF;
+  font-family: Signika-SB;
+  color: #0fabdf;
 }
 
 .region_search h5 {
-    font-family: Signika-Regular;
-    color: #0FABDF;
+  font-family: Signika-Regular;
+  color: #0fabdf;
 }
 
 .region_search p {
-    font-family: Signika-Regular;
-    color: #000;
+  font-family: Signika-Regular;
+  color: #000;
 }
 
-
-/* The map */
-
 svg {
-    height: 100%;
+  height: 100%;
 }
 
 #arrondissements a:hover path {
-    fill: rgba(15, 171, 223, 0.2);
-    ;
-}
-
-#arrondissements a:hover text {
-    fill: #ffffff;
-}
-
-#arrondissements text {
-    font-family: "Poller One", "Arial black", arial;
-    font-size: 20px;
-    font-weight: bold;
-    fill: #585858;
-}
-
-
-/* The page */
-
-h1 {
-    font-family: "Poller One", "Arial black", arial;
-}
-
-#arr-descriptions {
-    margin-bottom: 7em;
-}
-
-header.page-title a:after,
-header.page-title a:before,
-header.page-title a {
-    transition: all linear 0.3s;
-}
-
-header.page-title a {
-    font-family: "Poller One", "Arial black", arial;
-    font-size: 2em;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #cfd1de;
-    padding: 20px 9999px;
-    padding-top: 10px;
-    margin: 0 -9999px;
-    color: #000;
-    text-decoration: none;
-}
-
-header.page-title a:before {
-    content: "";
-    position: absolute;
-    margin-top: -35px;
-    margin-left: 8.775em;
-    width: 0px;
-    height: 0px;
-    border: 12px solid transparent;
-    border-bottom: 16px solid #000;
-}
-
-header.page-title a:after {
-    content: "up";
-    position: absolute;
-    background-color: #000;
-    width: 32px;
-    height: 3px;
-    overflow: hidden;
-    margin-top: -2px;
-    margin-left: -8.82em;
-}
-
-header.page-title a:hover {
-    text-decoration: underline;
-    border-top-color: #edeef3;
-    /*color: $bgcolor;
-  background-color: $hcolor2;
-  //background: linear-gradient(rgba($hcolor2, 0) 3px, rgba($hcolor2, 1) 3px);/**/
-}
-
-header.page-title a:hover:after {
-    transform: translateY(-3px);
-}
-
-header.page-title a:hover:before {
-    transform: translateY(-3px);
+  fill: rgba(15, 171, 223, 0.2);
 }
 
 .hidden_item {
-    display: none;
+  display: none;
 }
 
-
-/* .show_item {
-    display: unset;
-} */
+.show_item {
+  display: none;
+}
 
 .region_img {
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
 }
 
-
 /*region search end*/
-
 
 /* 3D Slideshow start*/
 
 .slideshow {
-    margin: 0 auto;
-    padding-top: 50px;
-    height: 600px;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: rgba(15, 171, 223, 0.2);
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
+  margin: 0 auto;
+  padding-top: 50px;
+  height: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(15, 171, 223, 0.2);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
 }
 
 .slideshow h2 {
-    color: #0FABDF;
-    font-family: Mali-SB;
-    display: flex;
-    margin-bottom: 0;
-    margin-right: 15px;
-    margin-left: 10px;
+  color: #0fabdf;
+  font-family: Mali-SB;
+  display: flex;
+  margin-bottom: 0;
+  margin-right: 15px;
+  margin-left: 10px;
 }
 
 .shadow {
-    border: none;
+  border: none;
 }
 
 .slideshow img {
-    width: 150px;
-    margin-right: 15px;
+  width: 150px;
+  margin-right: 15px;
 }
 
 .slideshow p {
-    position: relative;
-    bottom: 40px;
-    left: 5px;
-    color: white;
-    font-family: Signika-SB;
+  position: relative;
+  bottom: 40px;
+  left: 5px;
+  color: white;
+  font-family: Signika-SB;
 }
 
 .guadeloupe p {
-    position: relative;
-    bottom: 65px;
+  position: relative;
+  bottom: 65px;
 }
 
 .slideshow .title {
-    display: flex;
+  display: flex;
 }
 
 .figure {
-    border: none;
+  border: none;
 }
 
 .slideshow-title {
-    font-family: 'Allerta Stencil';
-    font-size: 62px;
-    color: #fff;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 25%;
-    letter-spacing: 3px;
-    font-weight: 300;
+  font-family: "Allerta Stencil";
+  font-size: 62px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 25%;
+  letter-spacing: 3px;
+  font-weight: 300;
 }
 
 .content-carrousel img {
-    width: 100%;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    border: none;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: none;
 }
 
 .sub-heading {
-    padding-top: 50px;
-    font-size: 18px;
+  padding-top: 50px;
+  font-size: 18px;
 }
 
 .sub-heading-two {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .sub-heading-three {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .sub-heading-four {
-    font-size: 11px;
+  font-size: 11px;
 }
 
 .sub-heading-five {
-    font-size: 9px;
+  font-size: 9px;
 }
 
 .sub-heading-six {
-    font-size: 7px;
+  font-size: 7px;
 }
 
 .sub-heading-seven {
-    font-size: 5px;
+  font-size: 5px;
 }
 
 .sub-heading-eight {
-    font-size: 3px;
+  font-size: 3px;
 }
 
 .sub-heading-nine {
-    font-size: 1px;
+  font-size: 1px;
 }
 
 .entire-content {
-    margin: auto;
-    width: 190px;
-    perspective: 1000px;
-    position: relative;
-    padding-top: 80px;
+  margin: auto;
+  width: 190px;
+  perspective: 1000px;
+  position: relative;
+  padding-top: 80px;
 }
 
 .entire-content .title {
-    width: 250px;
+  width: 250px;
 }
 
 .content-carrousel {
-    width: 100%;
-    position: absolute;
-    float: right;
-    animation: rotar 60s infinite linear;
-    transform-style: preserve-3d;
+  width: 100%;
+  position: absolute;
+  float: right;
+  animation: rotar 60s infinite linear;
+  transform-style: preserve-3d;
 }
 
 .content-carrousel:hover {
-    animation-play-state: paused;
-    cursor: pointer;
+  animation-play-state: paused;
+  cursor: pointer;
 }
 
 .content-carrousel figure {
-    width: 100%;
-    height: 146px;
-    overflow: hidden;
-    position: absolute;
-    border-radius: 20px;
+  width: 100%;
+  height: 146px;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 20px;
 }
 
 .content-carrousel figure:nth-child(1) {
-    transform: rotateY(0deg) translateZ(450px);
+  transform: rotateY(0deg) translateZ(450px);
 }
 
 .content-carrousel figure:nth-child(2) {
-    transform: rotateY(40deg) translateZ(450px);
+  transform: rotateY(40deg) translateZ(450px);
 }
 
 .content-carrousel figure:nth-child(3) {
-    transform: rotateY(80deg) translateZ(450px);
+  transform: rotateY(80deg) translateZ(450px);
 }
 
 .content-carrousel figure:nth-child(4) {
-    transform: rotateY(120deg) translateZ(450px);
+  transform: rotateY(120deg) translateZ(450px);
 }
 
 .content-carrousel figure:nth-child(5) {
-    transform: rotateY(160deg) translateZ(450px);
+  transform: rotateY(160deg) translateZ(450px);
 }
 
 .content-carrousel figure:nth-child(6) {
-    transform: rotateY(200deg) translateZ(450px);
+  transform: rotateY(200deg) translateZ(450px);
 }
 
 .content-carrousel figure:nth-child(7) {
-    transform: rotateY(240deg) translateZ(450px);
+  transform: rotateY(240deg) translateZ(450px);
 }
 
 .content-carrousel figure:nth-child(8) {
-    transform: rotateY(280deg) translateZ(450px);
+  transform: rotateY(280deg) translateZ(450px);
 }
 
 .content-carrousel figure:nth-child(9) {
-    transform: rotateY(320deg) translateZ(450px);
+  transform: rotateY(320deg) translateZ(450px);
 }
 
 .content-carrousel figure:nth-child(10) {
-    transform: rotateY(360deg) translateZ(450px);
+  transform: rotateY(360deg) translateZ(450px);
 }
 
 .shadow {
-    position: absolute;
-    box-shadow: 0px 0px 20px 0px #000;
-    border-radius: 1px;
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px #000;
+  border-radius: 1px;
 }
 
 .content-carrousel img {
-    image-rendering: auto;
-    transition: all 300ms;
-    width: 100%;
-    height: 100%;
+  image-rendering: auto;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%;
 }
 
 .content-carrousel img:hover {
-    transform: scale(1.2);
-    transition: all 300ms;
+  transform: scale(1.2);
+  transition: all 300ms;
 }
 
 @keyframes rotar {
-    from {
-        transform: rotateY(360deg);
-    }
-    to {
-        transform: rotateY(0deg);
-    }
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }
-
 
 /* 3D Slideshow End*/
 
 .advantages h2 {
-    color: black;
-    font-family: Mali-SB;
-    margin-bottom: 0;
+  color: black;
+  font-family: Mali-SB;
+  margin-bottom: 0;
 }
 
 .advantages img {
-    width: 150px;
+  width: 150px;
 }
 
 .advantages .contents {
-    background-color: #0FABDF;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  background-color: #0fabdf;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .advantages p {
-    font-family: Mali-Regular;
-    font-size: 1.5rem;
+  font-family: Mali-Regular;
+  font-size: 1.5rem;
 }
