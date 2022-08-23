@@ -1,4 +1,3 @@
-
 <?php
 /*
 recupere info du formulaire de recherche
@@ -16,10 +15,10 @@ function search($search_type, $voyage_region, $voyage_lieu_depart, $voyage_lieu_
     require("result_format.php");
     require("result_send.php");
 
-    require("../../back/api/api_call.php");
-    require("../../back/database/database_connect.php");
-    require("../../back/database/database_disconnect.php");
-    require("../../back/database/database_request.php");
+    require("./projet/back/api/api_call.php");
+    require("./projet/back/database/database_connect.php");
+    require("./projet/back/database/database_disconnect.php");
+    require("./projet/back/database/database_request.php");
 
     /*
 https://rapidapi.com/apidojo/api/travel-advisor/
@@ -45,7 +44,7 @@ https://rapidapi.com/rapapp11/api/restaurants13/pricing
     //----------------api_call_sncf($API_KEY_3, $search_type, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
     api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre);
 
-    api_call_format();
+    // api_call_format();
 
     //recherche bdd
     if (isset($_SESSION['pseudo']) && isset($_SESSION["mot_de_passe"])) {
@@ -76,4 +75,3 @@ https://rapidapi.com/rapapp11/api/restaurants13/pricing
     //envoie des info sur le front
     result_send();
 }
-?>

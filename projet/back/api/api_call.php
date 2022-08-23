@@ -40,7 +40,7 @@ function api_call($string, $name)
     //$service_api = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
     $service_api = $string;
 
-    $data_path = "../../back/data/" . $name . ".json";
+    $data_path = "./projet/back/data/" . $name . ".json";
 
     echo "call to api: [", $service_api, "]... <br>";
 
@@ -78,7 +78,7 @@ function api_call($string, $name)
 
 function api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
 {
-    $api_call_travel_advisor_result_hotel_path = "../../back/data/result_search/";
+    $api_call_travel_advisor_result_hotel_path = "./projet/back/data/result_search/";
     $api_call_travel_advisor_result_hotel_name = "result_search_hotel.json";
     $api_call_travel_advisor_result_hotel_json = [];
 
@@ -117,7 +117,7 @@ function api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voya
     }
 
     $json_objekat = json_decode($response);
-    $data_path_location_id = "../../back/data/api_call_travel_advisor_location_id.json";
+    $data_path_location_id = "./projet/back/data/api_call_travel_advisor_location_id.json";
     if (file_put_contents($data_path_location_id, $response)) {
         echo "JSON file created successfully <br>";
         echo "JSON file sent to: [", $data_path_location_id, "] <br>";
@@ -146,7 +146,7 @@ function api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voya
 
     //call api hotel
     //$service_api = $string;
-    $data_path_hotel = "../../back/data/api_call_travel_advisor_hotel.json";
+    $data_path_hotel = "./projet/back/data/api_call_travel_advisor_hotel.json";
     //echo "call to api: [", $service_api, "][hotel]... <br>";
 
     //number of night
@@ -208,7 +208,7 @@ function api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voya
         echo "Error on JSON file <br>";
     }
 
-    $file = file_get_contents("../../back/data/api_call_travel_advisor_hotel.json");
+    $file = file_get_contents("./projet/back/data/api_call_travel_advisor_hotel.json");
     $file_decode = json_decode($file);
     $file_array = (array) $file_decode;
 
@@ -280,7 +280,7 @@ function api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voya
         //     echo $response;
         // }
 
-        $data_path_hotel_detail = "../../back/data/api_call_travel_advisor_hotel_detail_" . $i . ".json";
+        $data_path_hotel_detail = "./projet/back/data/api_call_travel_advisor_hotel_detail_" . $i . ".json";
         if (file_put_contents($data_path_hotel_detail, $response)) {
             echo "JSON file created successfully <br>";
             echo "JSON file sent to: [", $data_path_hotel_detail, "] <br>";
@@ -295,7 +295,7 @@ function api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voya
 
         $tab_file = (array) [];
         for ($i = 0; $i < 5; $i++) {
-            array_push($tab_file, json_decode(file_get_contents("../../back/data/api_call_travel_advisor_hotel_detail_" . $i . ".json")));
+            array_push($tab_file, json_decode(file_get_contents("./projet/back/data/api_call_travel_advisor_hotel_detail_" . $i . ".json")));
         }
 
         for ($i = 0; $i < 5; $i++) {
@@ -447,7 +447,7 @@ function api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voya
 
 function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $voyage_date_aller, $voyage_date_retour, $voyage_nombre_personne_adulte, $voyage_nombre_personne_enfant, $voyage_formule, $voyage_nombre_chambre)
 {
-    $api_call_the_fork_the_spoon_result_restaurant_path = "../../back/data/result_search/";
+    $api_call_the_fork_the_spoon_result_restaurant_path = "./projet/back/data/result_search/";
     $api_call_the_fork_the_spoon_result_restaurant_name = "result_search_restaurant.json";
     $api_call_the_fork_the_spoon_result_restaurant_json = [];
 
@@ -494,7 +494,7 @@ function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $
         echo "cURL Error #:" . $err;
     }
 
-    $data_path_location_id = "../../back/data/api_call_the_fork_the_spoon_location_id.json";
+    $data_path_location_id = "./projet/back/data/api_call_the_fork_the_spoon_location_id.json";
     if (file_put_contents($data_path_location_id, $response)) {
         echo "JSON file created successfully <br>";
         echo "JSON file sent to: [", $data_path_location_id, "] <br>";
@@ -507,7 +507,7 @@ function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $
         echo "Error on JSON file <br>";
     }
 
-    $file = file_get_contents("../../back/data/api_call_the_fork_the_spoon_location_id.json");
+    $file = file_get_contents("./projet/back/data/api_call_the_fork_the_spoon_location_id.json");
     $file_decode = json_decode($file);
     $google_place_id = $file_decode->data->geolocation[0]->id->id;
     $google_place_geo_text = $file_decode->data->geolocation[0]->name->text;
@@ -541,7 +541,7 @@ function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $
         echo "cURL Error #:" . $err;
     }
 
-    $data_path_location_id = "../../back/data/api_call_the_fork_the_spoon_location_id_google.json";
+    $data_path_location_id = "./projet/back/data/api_call_the_fork_the_spoon_location_id_google.json";
     if (file_put_contents($data_path_location_id, $response)) {
         echo "JSON file created successfully <br>";
         echo "JSON file sent to: [", $data_path_location_id, "] <br>";
@@ -556,7 +556,7 @@ function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $
 
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //get location_id
-    $file = file_get_contents("../../back/data/api_call_the_fork_the_spoon_location_id_google.json");
+    $file = file_get_contents("./projet/back/data/api_call_the_fork_the_spoon_location_id_google.json");
     $file_decode = json_decode($file);
     $file_array = (array) $file_decode;
 
@@ -598,7 +598,7 @@ function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $
         echo "cURL Error #:" . $err;
     }
 
-    $data_path = "../../back/data/api_call_the_fork_the_spoon_restaurant.json";
+    $data_path = "./projet/back/data/api_call_the_fork_the_spoon_restaurant.json";
     if (file_put_contents($data_path, $response)) {
         echo "JSON file created successfully <br>";
         echo "JSON file sent to: [", $data_path, "] <br>";
@@ -619,7 +619,7 @@ function api_call_the_fork_the_spoon($voyage_lieu_depart, $voyage_lieu_arrive, $
 
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //get restaurant detail
-    $file = file_get_contents("../../back/data/api_call_the_fork_the_spoon_restaurant.json");
+    $file = file_get_contents("./projet/back/data/api_call_the_fork_the_spoon_restaurant.json");
     $file_decode = json_decode($file);
     $file_array = (array) $file_decode;
 
@@ -761,7 +761,7 @@ function api_call_flytrips($API_KEY_1, $API_KEY_2, $search_type, $voyage_lieu_de
         echo "cURL Error #:" . $err;
     }
 
-    $data_path = "../../back/data/api_call_flytrip_country.json";
+    $data_path = "./projet/back/data/api_call_flytrip_country.json";
     if (file_put_contents($data_path, $response)) {
         echo "JSON file created successfully <br>";
         echo "JSON file sent to: [", $data_path, "] <br>";
@@ -778,7 +778,7 @@ function api_call_flytrips($API_KEY_1, $API_KEY_2, $search_type, $voyage_lieu_de
     //get country code
     $region = $search_type;
 
-    $file = file_get_contents("../../back/data/api_call_flytrip_country.json");
+    $file = file_get_contents("./projet/back/data/api_call_flytrip_country.json");
     $file_decode = json_decode($file);
     $file_array = (array) $file_decode;
 
@@ -828,7 +828,7 @@ function api_call_flytrips($API_KEY_1, $API_KEY_2, $search_type, $voyage_lieu_de
         echo "cURL Error #:" . $err;
     }
 
-    $data_path = "../../back/data/api_call_flytrip_airport.json";
+    $data_path = "./projet/back/data/api_call_flytrip_airport.json";
     if (file_put_contents($data_path, $response)) {
         echo "JSON file created successfully <br>";
         echo "JSON file sent to: [", $data_path, "] <br>";
@@ -989,7 +989,7 @@ function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voya
     if ($err) {
         echo "cURL Error #:" . $err;
     }
-    $data_path = "../../back/data/api_call_priceline_airport_code_departure.json";
+    $data_path = "./projet/back/data/api_call_priceline_airport_code_departure.json";
     if (file_put_contents($data_path, $response)) {
         echo "JSON file created successfully <br>";
         echo "JSON file sent to: [", $data_path, "] <br>";
@@ -1002,7 +1002,7 @@ function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voya
         echo "Error on JSON file <br>";
     }
 
-    $file = file_get_contents("../../back/data/api_call_priceline_airport_code_departure.json");
+    $file = file_get_contents("./projet/back/data/api_call_priceline_airport_code_departure.json");
     $file_decode = json_decode($file);
     $airport_code_departure = $file_decode[0]->id;
 
@@ -1034,7 +1034,7 @@ function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voya
     if ($err) {
         echo "cURL Error #:" . $err;
     }
-    $data_path = "../../back/data/api_call_priceline_airport_code_arrival.json";
+    $data_path = "./projet/back/data/api_call_priceline_airport_code_arrival.json";
     if (file_put_contents($data_path, $response)) {
         echo "JSON file created successfully <br>";
         echo "JSON file sent to: [", $data_path, "] <br>";
@@ -1047,7 +1047,7 @@ function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voya
         echo "Error on JSON file <br>";
     }
 
-    $file = file_get_contents("../../back/data/api_call_priceline_airport_code_arrival.json");
+    $file = file_get_contents("./projet/back/data/api_call_priceline_airport_code_arrival.json");
     $file_decode = json_decode($file);
     $airport_code_arrival = $file_decode[0]->id;
 
@@ -1089,7 +1089,7 @@ function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voya
 
     $json_decode = json_decode($response);
 
-    $data_path = "../../back/data/api_call_priceline_departure_arrival.json";
+    $data_path = "./projet/back/data/api_call_priceline_departure_arrival.json";
     if (file_put_contents($data_path, $response)) {
         echo "JSON file created successfully <br>";
         echo "JSON file sent to: [", $data_path, "] <br>";
@@ -1140,7 +1140,7 @@ function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voya
 
     $json_decode = json_decode($response);
 
-    $data_path = "../../back/data/api_call_priceline_arrival_departure.json";
+    $data_path = "./projet/back/data/api_call_priceline_arrival_departure.json";
     if (file_put_contents($data_path, $response)) {
         echo "JSON file created successfully <br>";
         echo "JSON file sent to: [", $data_path, "] <br>";
@@ -1153,7 +1153,7 @@ function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voya
         echo "Error on JSON file <br>";
     }
 
-    $file_departure_arrival = file_get_contents("../../back/data/api_call_priceline_departure_arrival.json");
+    $file_departure_arrival = file_get_contents("./projet/back/data/api_call_priceline_departure_arrival.json");
     $file_decode_departure_arrival = json_decode($file_departure_arrival);
     $travel_departure_arrival_array_json = [];
 
@@ -1209,7 +1209,7 @@ function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voya
             array_push($travel_departure_arrival_array_json, $travel_departure_arrival_array);
         }
     }
-    $travel_departure_arrival_array_json_path = "../../back/data/result_search/";
+    $travel_departure_arrival_array_json_path = "./projet/back/data/result_search/";
     $travel_departure_arrival_array_json_name = "travel_departure_arrival_array_json.json";
     echo "filepath: " . $travel_departure_arrival_array_json_path . $travel_departure_arrival_array_json_name;
 
@@ -1218,7 +1218,7 @@ function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voya
     fclose($file);
 
     //////////////////////////////////////////////////////
-    $file_arrival_departure = file_get_contents("../../back/data/api_call_priceline_arrival_departure.json");
+    $file_arrival_departure = file_get_contents("./projet/back/data/api_call_priceline_arrival_departure.json");
     $file_decode_arrival_departure = json_decode($file_arrival_departure);
     $travel_arrival_departure_array_json = [];
 
@@ -1274,7 +1274,7 @@ function api_call_priceline($API_KEY_1, $search_type, $voyage_lieu_depart, $voya
             array_push($travel_arrival_departure_array_json, $travel_arrival_departure_array);
         }
     }
-    $travel_arrival_departure_array_json_path = "../../back/data/result_search/";
+    $travel_arrival_departure_array_json_path = "./projet/back/data/result_search/";
     $travel_arrival_departure_array_json_name = "travel_arrival_departure_array_json.json";
     echo "filepath: " . $travel_arrival_departure_array_json_path . $travel_arrival_departure_array_json_name;
 
