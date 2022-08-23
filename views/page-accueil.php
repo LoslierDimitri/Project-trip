@@ -1,9 +1,9 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
-    echo ("pseudo: " . $_SESSION['pseudo']);
-    echo ("<br>");
-    echo ("mot de passe: " . $_SESSION['mot_de_passe']);
+    // echo ("pseudo: " . $_SESSION['pseudo']);
+    // echo ("<br>");
+    // echo ("mot de passe: " . $_SESSION['mot_de_passe']);
 }
 ?>
 
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     <section class="advanced_search py-4">
-        <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
+        <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional ?</h1>
 
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
             <div class="formule">
