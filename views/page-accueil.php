@@ -487,34 +487,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/chevre_image.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpeg/boeuf_bourgignon.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
+                                            <h6>Le bœuf bourguignon</h6>
+                                            <p>Voilà un fameux plat traditionnel apprécié des grands comme des petits !</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpeg/escargot.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
+                                            <h6>L'escargot de Bourgogne</h6>
+                                            <p>Egalement appelé "Gros blanc", est un mets consommé depuis toujours.</p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpeg/coq-au-vin-jaune.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
+                                            <h6>Le coq au vin jaune</h6>
+                                            <p>Le coq au vin jaune est l'une des spécialités culinaires les plus célèbres du Jura, c'est même un fleuron de la gastronomie française ! </p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpeg/potee-franc-comtoise.jpeg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
+                                            <h6>la potée franc-comtoise</h6>
+                                            <p>A l'origine, la potée était cuisinée dans un pot, ce qui a donné son nom aux différents plats dégustés dans toute la France. </p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -523,34 +523,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/abbaye.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
+                                                <h6>L'abbaye de Fontenay</h6>
+                                                <p>Fondée en 1118 par saint Bernard, l’abbaye de Fontenay est l’un des plus anciens monastères cisterciens de France.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/colline.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
+                                                <h6>Basilique et colline de Vézelay</h6>
+                                                <p>Fondé au IXe siècle, le monastère bénédictin acquiert les reliques de sainte Marie-Madeleine et devient un haut-lieu de pèlerinage.</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/roche.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
+                                                <h6>La Roche de Solutré</h6>
+                                                <p>Culminant à 495 mètres, la Roche de Solutré se situe au coeur du Grand Site de France, constitué de Solutré, Pouilly et Vergisson</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/musee.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
+                                                <h6>Le MuséoParc Alésia</h6>
+                                                <p>De loin, le MuséoParc Alésia apparaît comme un ovni posé au milieu des paysages vallonnés de l’Auxois. Sa configuration circulaire se veut un clin d’œil à l’encerclement des Gaulois par les Romains.</p>
                                             </div>
                                         </div>
                                     </div>
