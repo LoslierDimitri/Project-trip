@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <div class="col-lg-12 pb-3 d-flex justify-content-center">
-                <button type="submit"> <img src="./public/svg/Picto-rechercher.svg" alt=""> Trouvez</button><br>
+                <button type="submit"> <img src="./public/svg/Picto-rechercher.svg" alt=""> Trouvez</button>
             </div>
             </div>
 
