@@ -459,14 +459,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/boeuf_bourgignon.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/boeuf_bourgignon.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le bœuf bourguignon</h6>
                                             <p>Voilà un fameux plat traditionnel apprécié des grands comme des petits !</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/escargot.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/escargot.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>L'escargot de Bourgogne</h6>
@@ -475,14 +475,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/coq-au-vin-jaune.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/coq-au-vin-jaune.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le coq au vin jaune</h6>
                                             <p>Le coq au vin jaune est l'une des spécialités culinaires les plus célèbres du Jura, c'est même un fleuron de la gastronomie française ! </p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/potee-franc-comtoise.jpeg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/potee-franc-comtoise.jpeg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>la potée franc-comtoise</h6>
@@ -495,14 +495,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/abbaye.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/abbaye.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>L'abbaye de Fontenay</h6>
                                                 <p>Fondée en 1118 par saint Bernard, l’abbaye de Fontenay est l’un des plus anciens monastères cisterciens de France.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/colline.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/colline.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Basilique et colline de Vézelay</h6>
