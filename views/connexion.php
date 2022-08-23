@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     fwrite($file, "after post: " . $_SERVER['REQUEST_METHOD']);
     fclose($file);
     
-    require("C:/Apache24/htdocs/Project-trip/projet/back/form/form_connection.php");
+    require("./projet/back/form/form_connection.php");
 
     connection();
     echo "connected with pseudo: [" . $_SESSION['pseudo'] . "] <br>";
