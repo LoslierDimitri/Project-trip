@@ -1,0 +1,25 @@
+truncate projet_trip.regions;
+truncate projet_trip.specialities;
+
+insert into projet_trip.regions(noms) values("Grand-Est");
+insert into projet_trip.regions(noms) values("Nouvelle Aquitaine");
+insert into projet_trip.regions(noms) values("Auvergne-Rhône-Alpes");
+insert into projet_trip.regions(noms) values("Bourgogne-Franche-Comté");
+insert into projet_trip.regions(noms) values("Centre-Val de Loire");
+insert into projet_trip.regions(noms) values("Corse");
+insert into projet_trip.regions(noms) values("Occitanie");
+insert into projet_trip.regions(noms) values("Île-de-France");
+insert into projet_trip.regions(noms) values("Hauts-de-France");
+insert into projet_trip.regions(noms) values("Normandie");
+insert into projet_trip.regions(noms) values("Grand-Est");
+insert into projet_trip.regions(noms) values("Provence-Alpes-Côte-d'Azur");
+insert into projet_trip.regions(noms) values("Bretagne");
+
+insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("La choucroute", "choucroute.jpg", "Plat à base de charcuterie, servie avec du chou fermenté et des pommes de terre. Accompagnée généralement d'une bonne bière.", 1);
+insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("La flammekueche", "flammekueche.jpg", "Tarte fine flambée, garnit de crème fraîche, de lardons et d'oignons pour la recette classique.", 1);
+insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("L'andouillette de Troyes", "andouillette.jpg", "Une charcuterie artisanale en forme de saucisse faite à partir d'abats.", 1);
+insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Le kougelhopf", "kougelhopf.jpg", "Sans doute le plaisir sucré le plus connu du Grand-Est. Une brioche aux fruits secs(généralement des raisins) et amandes.", 1);
+
+
+select * from projet_trip.specialities;
+/*select distinct images from projet_trip.regions inner join projet_trip.specialities where id = idregions;*/
