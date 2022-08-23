@@ -8,10 +8,11 @@ se connecte
 ne retourne rien
 */
 
-function connection() {
-    require ("./projet/back/database/database_connect.php");
-    require ("./projet/back/database/database_disconnect.php");
-    require ("./projet/back/database/database_request.php");
+function connection()
+{
+    require("./projet/back/database/database_connect.php");
+    require("./projet/back/database/database_disconnect.php");
+    require("./projet/back/database/database_request.php");
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $connexion_pseudo = $_POST['connexion_pseudo'];
@@ -26,11 +27,10 @@ function connection() {
 
         if (password_verify($connexion_mot_de_passe, $request_mot_de_passe)) {
             if (session_status() === PHP_SESSION_NONE) {
-            session_start ();
+                session_start();
+            }
             $_SESSION['pseudo'] = $_POST['connexion_pseudo'];
             $_SESSION['mot_de_passe'] = $_POST['connexion_mot_de_passe'];
-            }
         }
-        
     }
 }
