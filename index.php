@@ -32,6 +32,9 @@ switch ($page) {
     case 'concept':
         require __DIR__ . './views/concept.php';
         break;
+    case 'search_result':
+        require __DIR__ . './views/search_result.php';
+        break;    
     default:
         http_response_code(404);
         require __DIR__ . './views/page-404.php';
