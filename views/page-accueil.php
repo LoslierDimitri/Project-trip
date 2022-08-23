@@ -1,9 +1,6 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
-    echo ("pseudo: " . $_SESSION['pseudo']);
-    echo ("<br>");
-    echo ("mot de passe: " . $_SESSION['mot_de_passe']);
 }
 ?>
 
@@ -385,17 +382,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La Tartiflette</h6>
-                                            <p>Tout le monde connaît ce plat emblématique du pays Savoyard, mais rien ne
-                                                vaut de le déguster chez lui avec vue sur les Montagnes. Parfait en
-                                                hiver.</p>
+                                            <p>Tout le monde connaît ce plat emblématique du pays Savoyard, mais rien ne vaut de le déguster chez lui avec vue sur les Montagnes. Parfait en hiver.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/png/Truffade.png" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La Truffade</h6>
-                                            <p>La concurrente Auvergnate de la Tartiflette car les recettes se resemble
-                                                mais la préparation est la cuisson est différente. À "taster" !</p>
+                                            <p>La concurrente Auvergnate de la Tartiflette car les recettes se resemble mais la préparation est la cuisson est différente. À "taster" !</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -404,17 +398,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Les quenelles sauce Nantua</h6>
-                                            <p>Recette de quenelle Lyonnaise arrosée d'une sauce onctueuse à la bisque
-                                                de homard.</p>
+                                            <p>Recette de quenelle Lyonnaise arrosée d'une sauce onctueuse à la bisque de homard.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/png/Creme-marrons.png" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La crème de marrons</h6>
-                                            <p>Dégustez cette délicieuse pâte de chataîgnes glacées venant d'Ardèche. En
-                                                gâteau, sur des tartines ou même à la cuillère, cette friandise vous
-                                                fera fondre.</p>
+                                            <p>Dégustez cette délicieuse pâte de chataîgnes glacées venant d'Ardèche. En gâteau, sur des tartines ou même à la cuillère, cette friandise vous fera fondre.</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -423,42 +414,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Aiguille-midi.png"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/png/Aiguille-midi.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>L'Aiguille du Midi</h6>
-                                                <p>Si vous aimez la randonnée en montagne ce lieu est fait pour vous.
-                                                    Vous y trouverez un spectacle à couper le souffle.</p>
+                                                <p>Si vous aimez la randonnée en montagne ce lieu est fait pour vous. Vous y trouverez un spectacle à couper le souffle.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/png/Lac-leman.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac Léman</h6>
-                                                <p>Visitez le plus grand lac de France (et d'Europe). Il traverse
-                                                    également la Suisse. Vous pourrez vous promener, vous baigner et
-                                                    même naviguer.</p>
+                                                <p>Visitez le plus grand lac de France (et d'Europe). Il traverse également la Suisse. Vous pourrez vous promener, vous baigner et même naviguer.</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4"
-                                                    src="./public/png/Palais-facteur-cheval.png" alt="">
+                                                <img class="region_img mt-4" src="./public/png/Palais-facteur-cheval.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le palais du Facteur Cheval</h6>
-                                                <p>Un facteur, M.Cheval, ramassait durant ses tournée des pierres afin
-                                                    de construire de ses mains un palais à l'architecture étonnante.</p>
+                                                <p>Un facteur, M.Cheval, ramassait durant ses tournée des pierres afin de construire de ses mains un palais à l'architecture étonnante.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/png/Puy-de-dome.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Puy-de-Dôme et ses volcans</h6>
-                                                <p>Le Puy-de-Dôme est composé de plus de 80 volcans, ils sont tous
-                                                    endormis donc il est très facile de venir visiter cet endroit
-                                                    spectaculaire.</p>
+                                                <p>Le Puy-de-Dôme est composé de plus de 80 volcans, ils sont tous endormis donc il est très facile de venir visiter cet endroit spectaculaire.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -470,41 +453,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="row w-100">
 
                                 <div class="row">
-                                    <h3 class="text-center mb-4">Bourgogne-Franche-Comté</h3>
+                                <h3 class="text-center mb-4">Bourgogne-Franche-Comté</h3>
                                     <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                         <h5>Vous pourrez déguster par exemple:</h5>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/chevre_image.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/boeuf_bourgignon.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
+                                            <h6>Le bœuf bourguignon</h6>
+                                            <p>Voilà un fameux plat traditionnel apprécié des grands comme des petits !</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/escargot.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
+                                            <h6>L'escargot de Bourgogne</h6>
+                                            <p>Egalement appelé "Gros blanc", est un mets consommé depuis toujours.</p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/coq-au-vin-jaune.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <h6>Le coq au vin jaune</h6>
+                                            <p>Le coq au vin jaune est l'une des spécialités culinaires les plus célèbres du Jura, c'est même un fleuron de la gastronomie française ! </p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/potee-franc-comtoise.jpeg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
+                                            <h6>la potée franc-comtoise</h6>
+                                            <p>A l'origine, la potée était cuisinée dans un pot, ce qui a donné son nom aux différents plats dégustés dans toute la France. </p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -513,39 +495,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/abbaye.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <h6>L'abbaye de Fontenay</h6>
+                                                <p>Fondée en 1118 par saint Bernard, l’abbaye de Fontenay est l’un des plus anciens monastères cisterciens de France.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/colline.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <h6>Basilique et colline de Vézelay</h6>
+                                                <p>Fondé au IXe siècle, le monastère bénédictin acquiert les reliques de sainte Marie-Madeleine et devient un haut-lieu de pèlerinage.</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/roche.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <h6>La Roche de Solutré</h6>
+                                                <p>Culminant à 495 mètres, la Roche de Solutré se situe au coeur du Grand Site de France, constitué de Solutré, Pouilly et Vergisson</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
+                                                <img class="region_img mt-4" src="./public/jpg/musee.jpg"
                                                     alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <h6>Le MuséoParc Alésia</h6>
+                                                <p>De loin, le MuséoParc Alésia apparaît comme un ovni posé au milieu des paysages vallonnés de l’Auxois. Sa configuration circulaire se veut un clin d’œil à l’encerclement des Gaulois par les Romains.</p>
                                             </div>
                                         </div>
                                     </div>
