@@ -511,14 +511,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/roche.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/roche.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Roche de Solutré</h6>
                                                 <p>Culminant à 495 mètres, la Roche de Solutré se situe au coeur du Grand Site de France, constitué de Solutré, Pouilly et Vergisson</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/musee.jpg"
+                                                <img class="region_img mt-4" src="./public/jpg/musee.jpg"
                                                     alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
