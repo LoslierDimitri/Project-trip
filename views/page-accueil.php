@@ -1,25 +1,19 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
-    // echo ("pseudo: " . $_SESSION['pseudo']);
-    // echo ("<br>");
-    // echo ("mot de passe: " . $_SESSION['mot_de_passe']);
+    echo ("pseudo: " . $_SESSION['pseudo']);
+    echo ("<br>");
+    echo ("mot de passe: " . $_SESSION['mot_de_passe']);
 }
 ?>
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // echo $_POST["type_search"];
-    // echo "<br>";
-    // echo $_POST["voyage_region"];
+    echo $_POST["type_search"];
+    echo "<br>";
+    echo $_POST["voyage_region"];
 
-    require "./projet/back/function/result_search.php";
-    // require "./projet/back/function/result_format.php";
-    // require "./projet/back/function/result_send.php";
-
-    search($_POST["voyage_formule"], $_POST["type_search"], $_POST["voyage_lieu_depart"], $_POST["voyage_lieu_arrive"], $_POST["voyage_date_aller"], $_POST["voyage_date_retour"], $_POST["voyage_nombre_personne_adulte"], $_POST["voyage_nombre_personne_enfant"], $_POST["voyage_formule"], $_POST["voyage_nombre_chambre"]);
-
-    // header("Location: /Project-trip");
+    header("Location: /Project-trip");
 }
 ?>
 
@@ -32,8 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/css/navbar.css">
     <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/css/page-accueil.css">
@@ -53,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     <section class="advanced_search py-4">
-        <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional ?</h1>
+        <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
 
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
             <div class="formule">
@@ -88,14 +81,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="text" name="voyage_lieu_depart" id="voyage_lieu_depart"
-                                        placeholder="Depart">
+                                    <input type="text" name="voyage_lieu_depart" id="voyage_lieu_depart" placeholder="Depart">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="text" name="voyage_lieu_arrive" id="voyage_lieu_arrive"
-                                        placeholder="Arrivée">
+                                    <input type="text" name="voyage_lieu_arrive" id="voyage_lieu_arrive" placeholder="Arrivée">
                                 </div>
                             </div>
                         </div>
@@ -109,14 +100,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="date" name="voyage_date_aller" id="voyage_date_aller"
-                                        placeholder="Date aller">
+                                    <input type="date" name="voyage_date_aller" id="voyage_date_aller" placeholder="Date aller">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="date" name="voyage_date_retour" id="voyage_date_retour"
-                                        placeholder="Date retour">
+                                    <input type="date" name="voyage_date_retour" id="voyage_date_retour" placeholder="Date retour">
                                 </div>
                             </div>
                         </div>
@@ -130,14 +119,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="number" name="voyage_nombre_personne_adulte"
-                                        id="voyage_nombre_personne_adulte" placeholder="Nombre d'adulte">
+                                    <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="Nombre d'adulte">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="number" name="voyage_nombre_personne_enfant"
-                                        id="voyage_nombre_personne_enfant" placeholder="Nombre d'enfant">
+                                    <input type="number" name="voyage_nombre_personne_enfant" id="voyage_nombre_personne_enfant" placeholder="Nombre d'enfant">
                                 </div>
                             </div>
                         </div>
@@ -151,8 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre"
-                                        placeholder="Nombre de chambre">
+                                    <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre" placeholder="Nombre de chambre">
                                 </div>
                             </div>
                         </div>
@@ -184,7 +170,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="map">
                 <div class="row">
                     
-
                 <?php
                 include("./include/map.php");
                 ?>
@@ -210,16 +195,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La choucroute</h6>
-                                            <p>Plat à base de charcuterie, servie avec du chou fermenté et des pommes de
-                                                terre. Accompagnée généralement d'une bonne bière.</p>
+                                            <p>Plat à base de charcuterie, servie avec du chou fermenté et des pommes de terre. Accompagnée généralement d'une bonne bière.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpg/flammekueche.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La flammekueche</h6>
-                                            <p>Tarte fine flambée, garnit de crème fraîche, de lardons et d'oignons pour
-                                                la recette classique.</p>
+                                            <p>Tarte fine flambée, garnit de crème fraîche, de lardons et d'oignons pour la recette classique.</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -228,16 +211,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>L'andouillette de Troyes</h6>
-                                            <p>Une charcuterie artisanale en forme de saucisse faite à partir d'abats.
-                                            </p>
+                                            <p>Une charcuterie artisanale en forme de saucisse faite à partir d'abats.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpg/kougelhopf.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le kougelhopf</h6>
-                                            <p>Sans doute le plaisir sucré le plus connu du Grand-Est. Une brioche aux
-                                                fruits secs(génralement des raisins) et amandes.</p>
+                                            <p>Sans doute le plaisir sucré le plus connu du Grand-Est. Une brioche aux fruits secs(génralement des raisins) et amandes.</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -250,16 +231,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La vieille ville de Colmar</h6>
-                                                <p>Petite ville pittoresque, très agréable avec ses maisons colorées et
-                                                    sa rivière la traversant.</p>
+                                                <p>Petite ville pittoresque, très agréable avec ses maisons colorées et sa rivière la traversant.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/jpg/Sundgau.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Sundgau</h6>
-                                                <p>Parcourez ce magnifique petit coin de nature sauvage et visitez ses
-                                                    villages tous authentiques.</p>
+                                                <p>Parcourez ce magnifique petit coin de nature sauvage et visitez ses villages tous authentiques.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -268,17 +247,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les champs de bataille de Verdun</h6>
-                                                <p>Mettez un peu d'histoire dans votre voyage et venez visiter ce lieu
-                                                    qui aura marqué la France.</p>
+                                                <p>Mettez un peu d'histoire dans votre voyage et venez visiter ce lieu qui aura marqué la France.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4"
-                                                    src="./public/jpg/Château-du-Haut-Koenigsbourg.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/Château-du-Haut-Koenigsbourg.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le château du Haut-Koenigsbourg</h6>
-                                                <p>Plongez en plein Moyen-Âge avec le seul château fort entièrement
-                                                    reconstitué en France.</p>
+                                                <p>Plongez en plein Moyen-Âge avec le seul château fort entièrement reconstitué en France.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -315,8 +291,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/png/Vin.png" alt="">
@@ -332,21 +307,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Marais-Poitevin.png"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/png/Marais-Poitevin.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/png/Pilat.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -355,16 +327,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac d'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/png/Kakuetta.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -386,17 +356,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La Tartiflette</h6>
-                                            <p>Tout le monde connaît ce plat emblématique du pays Savoyard, mais rien ne
-                                                vaut de le déguster chez lui avec vue sur les Montagnes. Parfait en
-                                                hiver.</p>
+                                            <p>Tout le monde connaît ce plat emblématique du pays Savoyard, mais rien ne vaut de le déguster chez lui avec vue sur les Montagnes. Parfait en hiver.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/png/Truffade.png" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La Truffade</h6>
-                                            <p>La concurrente Auvergnate de la Tartiflette car les recettes se resemble
-                                                mais la préparation est la cuisson est différente. À "taster" !</p>
+                                            <p>La concurrente Auvergnate de la Tartiflette car les recettes se resemble mais la préparation est la cuisson est différente. À "taster" !</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -405,17 +372,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Les quenelles sauce Nantua</h6>
-                                            <p>Recette de quenelle Lyonnaise arrosée d'une sauce onctueuse à la bisque
-                                                de homard.</p>
+                                            <p>Recette de quenelle Lyonnaise arrosée d'une sauce onctueuse à la bisque de homard.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/png/Creme-marrons.png" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La crème de marrons</h6>
-                                            <p>Dégustez cette délicieuse pâte de chataîgnes glacées venant d'Ardèche. En
-                                                gâteau, sur des tartines ou même à la cuillère, cette friandise vous
-                                                fera fondre.</p>
+                                            <p>Dégustez cette délicieuse pâte de chataîgnes glacées venant d'Ardèche. En gâteau, sur des tartines ou même à la cuillère, cette friandise vous fera fondre.</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -424,42 +388,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Aiguille-midi.png"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/png/Aiguille-midi.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>L'Aiguille du Midi</h6>
-                                                <p>Si vous aimez la randonnée en montagne ce lieu est fait pour vous.
-                                                    Vous y trouverez un spectacle à couper le souffle.</p>
+                                                <p>Si vous aimez la randonnée en montagne ce lieu est fait pour vous. Vous y trouverez un spectacle à couper le souffle.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/png/Lac-leman.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac Léman</h6>
-                                                <p>Visitez le plus grand lac de France (et d'Europe). Il traverse
-                                                    également la Suisse. Vous pourrez vous promener, vous baigner et
-                                                    même naviguer.</p>
+                                                <p>Visitez le plus grand lac de France (et d'Europe). Il traverse également la Suisse. Vous pourrez vous promener, vous baigner et même naviguer.</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4"
-                                                    src="./public/png/Palais-facteur-cheval.png" alt="">
+                                                <img class="region_img mt-4" src="./public/png/Palais-facteur-cheval.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le palais du Facteur Cheval</h6>
-                                                <p>Un facteur, M.Cheval, ramassait durant ses tournée des pierres afin
-                                                    de construire de ses mains un palais à l'architecture étonnante.</p>
+                                                <p>Un facteur, M.Cheval, ramassait durant ses tournée des pierres afin de construire de ses mains un palais à l'architecture étonnante.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/png/Puy-de-dome.png" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Puy-de-Dôme et ses volcans</h6>
-                                                <p>Le Puy-de-Dôme est composé de plus de 80 volcans, ils sont tous
-                                                    endormis donc il est très facile de venir visiter cet endroit
-                                                    spectaculaire.</p>
+                                                <p>Le Puy-de-Dôme est composé de plus de 80 volcans, ils sont tous endormis donc il est très facile de venir visiter cet endroit spectaculaire.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -471,7 +427,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="row w-100">
 
                                 <div class="row">
-                                    <h3 class="text-center mb-4">Bourgogne-Franche-Comté</h3>
+                                <h3 class="text-center mb-4">Bourgogne-Franche-Comté</h3>
                                     <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                         <h5>Vous pourrez déguster par exemple:</h5>
                                     </div>
@@ -497,8 +453,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
@@ -518,16 +473,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -536,17 +489,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -559,7 +509,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
 
                             <div class="row">
-                                <h3 class="text-center mb-4">Centre-Val de Loire</h3>
+                            <h3 class="text-center mb-4">Centre-Val de Loire</h3>
                                 <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                     <h5>Vous pourrez déguster par exemple:</h5>
                                 </div>
@@ -584,8 +534,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <img class="region_img mt-4" src="./public/jpg/Rillettes_Tours.jpg" alt="">
                                     </div>
                                     <div class="col-md-12 col-lg-3">
-                                        <h6>Le Magret de canard</h6>
-                                        <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
+                                        <h6>Les rillettes de Tours</h6>
+                                        <p>Vous connaissez sans doute les rillettes du Mans mais c'est bien en Touraine qu'elles sont nées. Moins grasses et moins hachées vous allez vous régaler.</p>
                                     </div>
                                     <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                         <img class="region_img mt-4" src="./public/jpg/Tarte_tatin.jpg" alt="">
@@ -604,7 +554,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le Marais Poitevin</h6>
+                                            <h6>Visite des châteaux de Touraine</h6>
                                             <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
@@ -612,8 +562,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>La Dune du Pilat</h6>
-                                            <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan.
-                                                Préparez vos mollets.</p>
+                                            <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -622,16 +571,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le lac d\'Hossegor</h6>
-                                            <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                magnifique lac.</p>
+                                            <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Les gorges de Kakuetta</h6>
-                                            <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades
-                                                et grotte au programme.</p>
+                                            <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -643,7 +590,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="row w-100">
 
                                 <div class="row">
-                                    <h3 class="text-center mb-4">Corse</h3>
+                                <h3 class="text-center mb-4">Corse</h3>
                                     <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                         <h5>Vous pourrez déguster par exemple:</h5>
                                     </div>
@@ -669,8 +616,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
@@ -690,16 +636,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -708,17 +652,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -730,7 +671,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="row w-100">
 
                                 <div class="row">
-                                    <h3 class="text-center mb-4">Occitanie</h3>
+                                <h3 class="text-center mb-4">Occitanie</h3>
                                     <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                         <h5>Vous pourrez déguster par exemple:</h5>
                                     </div>
@@ -756,8 +697,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
@@ -777,16 +717,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -795,17 +733,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -817,7 +752,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="row w-100">
 
                                 <div class="row">
-                                    <h3 class="text-center mb-4">Île-de-France</h3>
+                                <h3 class="text-center mb-4">Île-de-France</h3>
                                     <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                         <h5>Vous pourrez déguster par exemple:</h5>
                                     </div>
@@ -843,8 +778,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mmt-4" src="./public/jpeg/vin.jpg" alt="">
@@ -864,16 +798,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -882,17 +814,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -904,7 +833,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="row w-100">
 
                                 <div class="row">
-                                    <h3 class="text-center mb-4">Hauts-de-France</h3>
+                                <h3 class="text-center mb-4">Hauts-de-France</h3>
                                     <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                         <h5>Vous pourrez déguster par exemple:</h5>
                                     </div>
@@ -930,8 +859,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
@@ -951,16 +879,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -969,17 +895,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -991,7 +914,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="row w-100">
 
                                 <div class="row">
-                                    <h3 class="text-center mb-4">Normandie</h3>
+                                <h3 class="text-center mb-4">Normandie</h3>
                                     <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                         <h5>Vous pourrez déguster par exemple:</h5>
                                     </div>
@@ -1017,8 +940,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
@@ -1038,16 +960,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -1056,17 +976,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1078,7 +995,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="row w-100">
 
                                 <div class="row">
-                                    <h3 class="text-center mb-4">Pays de la Loire</h3>
+                                <h3 class="text-center mb-4">Pays de la Loire</h3>
                                     <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                         <h5>Vous pourrez déguster par exemple:</h5>
                                     </div>
@@ -1104,8 +1021,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
@@ -1125,16 +1041,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -1143,17 +1057,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                             </div>
                                         </div>
 
@@ -1165,7 +1076,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="row w-100">
 
                                 <div class="row">
-                                    <h3 class="text-center mb-4">Provence-Alpes-Côte d'Azur</h3>
+                                <h3 class="text-center mb-4">Provence-Alpes-Côte d'Azur</h3>
                                     <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                         <h5>Vous pourrez déguster par exemple:</h5>
                                     </div>
@@ -1191,8 +1102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
@@ -1212,16 +1122,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -1230,17 +1138,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1252,7 +1157,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="row w-100">
 
                                 <div class="row">
-                                    <h3 class="text-center mb-4">Bretagne</h3>
+                                <h3 class="text-center mb-4">Bretagne</h3>
                                     <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
                                         <h5>Vous pourrez déguster par exemple:</h5>
                                     </div>
@@ -1278,8 +1183,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le Pays Basque.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                             <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
@@ -1299,16 +1203,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <p>Faites une virée en barque à travers cette jolie rivière appellée aussi la Venise verte.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/png/Pil" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan. Préparez vos mollets.</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -1317,17 +1219,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <p>Venez vous balader ou faire des activités sportives autour de ce magnifique lac.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
+                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
                                                 <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades et grotte au programme.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1477,8 +1376,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="col-md-12 col-lg-3 mt-5 mb-3 mx-auto">
                         <div class="card mx-auto" style="width: 18rem; background-color: transparent; border: none;">
-                            <img class="card-img-top mx-auto" src="./public/svg/Ecoresponsable.svg"
-                                alt="Card image cap">
+                            <img class="card-img-top mx-auto" src="./public/svg/Ecoresponsable.svg" alt="Card image cap">
                             <div class="card-body">
                                 <p class="card-text text-center text-white">Nous privilégions les
                                     voyages dans l’héxagone
@@ -1489,8 +1387,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="col-md-12 col-lg-3 mt-5 mb-3 mx-auto">
                         <div class="card mx-auto" style="width: 18rem; background-color: transparent; border: none;">
-                            <img class="card-img-top mx-auto" src="./public/svg/Meilleures-notes.svg"
-                                alt="Card image cap">
+                            <img class="card-img-top mx-auto" src="./public/svg/Meilleures-notes.svg" alt="Card image cap">
                             <div class="card-body">
                                 <p class="card-text text-center text-white">Nous sélectionnons les
                                     logements et restaurants
