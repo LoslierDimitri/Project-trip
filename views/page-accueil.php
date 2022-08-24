@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ?>
 
 
-    <section class="advanced_search py-4">
+    <section class="advanced_search py-4 mt-4">
         <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
 
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
