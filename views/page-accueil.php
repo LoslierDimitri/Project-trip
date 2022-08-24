@@ -804,35 +804,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/chevre_image.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/gratinee.jpeg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
+                                            <h6>Soupe gratinée à l'oignon</h6>
+                                            <p>Découvrez ce grand classique de la gastronomie française à déguster bien chaud.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/gibelote.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
+                                            <h6>la gibelotte de lapin</h6>
+                                            <p>C'est un ragoût de lapin traditionnellement cuisiné avec du vin blanc mais qui fonctionne tout aussi bien avec du vin rouge. </p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/potage.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <h6>Le potage Saint-Germain</h6>
+                                            <p>Le potage Saint-Germain est donc un fin mélange des trésors locaux où pois et lard se marient à merveille !</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mmt-4" src="./public/jpeg/vin.jpg" alt="">
+                                            <img class="region_img mmt-4" src="./public/jpg/bouchees.jpeg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
+                                            <h6>Bouchées à la Reine</h6>
+                                            <p>C’est le plat des fêtes de fin d’année par excellence ! Mais on peut en réalité les déguster en toutes saisons, accompagnées d'une bonne salade verte.
+
+</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -841,39 +842,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/Pyramide.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <h6>Musée du Louvre</h6>
+                                                <p>Ancien palais des rois, le Louvre épouse l’histoire de France depuis huit siècles. Conçu dès sa création en 1793 comme un musée universel, ses collections, qui figurent parmi les plus belles au monde.
+
+</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/pompidou.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <h6>Le Centre Pompidou</h6>
+                                                <p>Le Centre Pompidou est une merveille d’architecture du XXe siècle, reconnaissable à ses escalators extérieurs et à ses énormes tuyaux colorés. Il abrite le musée national d’Art moderne.</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/Musee-Orsay.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <h6>Musée d’orsay</h6>
+                                                <p>Connu dans le monde entier pour sa riche collection d'art impressionniste, le musée d'Orsay est aussi le musée de toute la création artistique du monde occidental de 1848 à 1914.</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
+                                                <img class="region_img mt-4" src="./public/jpg/Panthéon.jpg"
                                                     alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <h6>Le Panthéon</h6>
+                                                <p>Depuis 1885, date de l’entrée au Panthéon de Victor Hugo, l’édifice est devenu le lieu où reposent les grands Hommes de la patrie : Voltaire, Rousseau, Zola, Pierre et Marie Curie… et depuis le 1er Juillet 2018, Simone Veil.
+
+</p>
                                             </div>
                                         </div>
                                     </div>
