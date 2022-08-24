@@ -827,7 +827,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             <p>Le potage Saint-Germain est donc un fin mélange des trésors locaux où pois et lard se marient à merveille !</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mmt-4" src="./public/jpg/bouchees.jpeg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/bouchees.jpeg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
                                             <h6>Bouchées à la Reine</h6>
