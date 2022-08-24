@@ -979,35 +979,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/chevre_image.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/Escalope.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
+                                            <h6>Escalope normande</h6>
+                                            <p>De dinde, de poulet ou de veau, les escalopes de viande sont un plat traditionnel normand mêlant plusieurs produits du terroir incontournables de la région.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/Teurgoule.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
+                                            <h6>La Teurgoule traditionnelle</h6>
+                                            <p>Généreux, ce dessert est souvent servi dans un grand plat (terrine ou jatte à bec) pour être partagé en famille ou entre amis.</p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/tripes.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <h6>Tripes à la mode de Caen</h6>
+                                            <p>Cette recette remonte au 11ème siècle et plus précisément à l’époque de Guillaume le Conquérant. En effet, celui-ci était très friand de ce plat riche qui aurait été créé dans les cuisines de l’Abbaye aux Hommes de Caen par son cuisinier.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/confiture.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
+                                            <h6>La confiture de lait</h6>
+                                            <p>Savoureux mélange de lait de ferme et de sucre, la confiture de lait est originaire de Normandie.</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -1016,12 +1015,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/Mont-Saint-Michel.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <h6>Le Mont-Saint-Michel </h6>
+                                                <p>Le Mont-Saint-Michel a la particularité d’être érigé sur un îlot rocheux, entouré d’une magnifique baie, théâtre des plus grandes marées d’Europe continentale. </p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
                                                 <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
