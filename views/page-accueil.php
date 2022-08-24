@@ -633,35 +633,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/chevre_image.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/beignet_brocciu.jpeg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
+                                            <h6> Les beignets au brocciu</h6>
+                                            <p>Fromage frais de brebis, le brocciu est fabriqué de début novembre à fin juin et peut se manger aussi bien salé ou saupoudré d’un peu de sucre. </p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/aziminu.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
+                                            <h6>L’aziminu</h6>
+                                            <p>L’aziminu est une version corse de la bouillabaisse : composée de poissons de roche issus des eaux de l’île </p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/Civet_sanglier.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <h6>Le civet de sanglier</h6>
+                                            <p>L’ingrédient principal du civet de sanglier, c’est, contre toute attente… l’oignon ! Ce plat tient en effet son nom du latin caepa ou de l’occitan çeba, qui désignent la plante herbacée à la base du délicieux ragoût.</p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/saute-de-veau.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
+                                            <h6>Le veau aux olives</h6>
+                                            <p>Outre le veau, choisi d’une excellente qualité et de préférence corse, l’ingrédient phare de cette recette typique et ancestrale est l’olive verte,</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -670,39 +669,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/calvi.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <h6>Calvi et sa citadelle</h6>
+                                                <p>Au pied de la citadelle, le port de plaisance de Calvi figure parmi les escales les plus appréciées et fréquentées de Corse</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/bonifacio.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <h6>Les falaises de Bonifacio</h6>
+                                                <p>Bonifacio s’accroche toujours à ses spectaculaires falaises de calcaire blanc.</p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/iles_sanguinaires.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <h6>Îles Sanguinaires et pointe de la Parata</h6>
+                                                <p>À quelques kilomètres du centre d’Ajaccio, les 4 îlots protégés qui ponctuent la pointe de la Parata doivent leur nom à la couleur rouge de la roche qui les compose</p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
+                                                <img class="region_img mt-4" src="./public/jpg/scandola.jpeg"
                                                     alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <h6>La réserve de Scandola</h6>
+                                                <p>Inscrite par l’Unesco sur la Liste du patrimoine mondial de l’humanité, en même temps que les calanques de Piana et le site de Girolata. 
+
+</p>
                                             </div>
                                         </div>
                                     </div>
