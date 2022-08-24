@@ -150,14 +150,13 @@ svg {
 
 .slideshow {
   margin: 0 auto;
-  padding-top: 50px;
-  height: 600px;
+  padding-top: 30px;
   width: 100%;
   box-sizing: border-box;
   background-color: rgba(15, 171, 223, 0.2);
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  height: 70%;
+  height: 50vh;
   display: flex;
   flex-direction: column;
 }
