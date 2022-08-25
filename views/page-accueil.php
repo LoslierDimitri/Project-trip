@@ -1333,25 +1333,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <figure class="title d-flex align-items-center text-center w-100">
                         <h2>Vous propose</h2>
                     </figure>
-                    <figure class="shadow"><img src="./public/jpeg/Bretagne.jpg" />
+                    <figure class="shadow"><img src="./public/jpg/Bretagne.jpg" />
                         <p>Dégustez la Bretagne</p>
                     </figure>
-                    <figure class="shadow"><img src="./public/svg/Provence.svg" />
+                    <figure class="shadow"><img src="./public/jpg/provence.jpg" />
                         <p>Goûtez la Provence</p>
                     </figure>
-                    <figure class="shadow"><img src="./public/svg/Reunion.svg" />
+                    <figure class="shadow"><img src="./public/jpg/Reunion.jpg" />
                         <p>Savourez la Réunion</p>
                     </figure>
-                    <figure class="shadow"><img src="./public/svg/Pays_basque.svg" />
+                    <figure class="shadow"><img src="./public/jpg/pays-basque.jpg" />
                         <p>Croquez le Pays-Basque</p>
                     </figure>
-                    <figure class="shadow"><img src="./public/jpeg/Corse.jpg" />
+                    <figure class="shadow"><img src="./public/jpg/Corse.jpg" />
                         <p>Dévorez la Corse</p>
                     </figure>
-                    <figure class="shadow"><img src="./public/jpeg/Alsace.jpg" />
+                    <figure class="shadow"><img src="./public/jpg/Alsace.jpg" />
                         <p>Régalez-vous de l'Alsace</p>
                     </figure>
-                    <figure class="shadow guadeloupe"><img src="./public/jpeg/Guadeloupe.jpg" />
+                    <figure class="shadow guadeloupe"><img src="./public/jpg/Guadeloupe.jpg" />
                         <p>Mordez la Guadeloupe<br> à pleines dents</p>
                     </figure>
                 </div>
