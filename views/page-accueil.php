@@ -1235,35 +1235,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/chevre_image.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/la-crepe.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
+                                            <h6>La crêpe bretonne</h6>
+                                            <p>En Bretagne, toutes les occasions sont bonnes pour manger des crêpes ! Cuites sur une billig (grande plaque en fonte d’acier), la crêpe (froment ou blé noir) doit être fine et croustillante, accompagnée d’un verre de Chouchen ! </p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/kig-ha-farz.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
+                                            <h6>Le Kig-ha-Farz</h6>
+                                            <p>Le Kig-ha-Farz est composé de 2 farz que l’on fait cuire dans des sacs en toile : le far noir et le far blanc. On l’accompagne également d’une sauce appelée « Lipig » à base d’oignons ou d’échalotes et de beurre. </p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/Kouign-Amann.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
+                                            <h6>Le Kouign-Amann</h6>
+                                            <p>Le seul, l’unique, l’incontournable Kouign-Amann ! Réalisé à partir d’une pâte à pain, généreusement beurrée et sucrée puis pliée à la manière d’une pâte feuilletée. </p>
                                         </div>
                                         <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
+                                            <img class="region_img mt-4" src="./public/jpg/Chouchen.jpg" alt="">
                                         </div>
                                         <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
+                                            <h6>Le Chouchen</h6>
+                                            <p>Cette boisson historique de Bretagne est une boisson liquoreuse alcoolisée à base de miel.</p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -1272,39 +1271,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/carnac.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
+                                                <h6>Les Alignements de Carnac</h6>
+                                                <p>La ville recèle 3 sites en 1 ! Il y a bien sûr les célébrissimes champs de mégalithes, à admirer dans la lumière rasante du matin ou de la fin de journée. </p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Pil" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/cotegranitrose.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <h6>la Côte de Granit rose  </h6>
+                                                <p>Au nord de Lannion, la Côte de Granit rose est célèbre pour ses rochers colorés aux formes poétiques. Paradis des oiseaux et des promeneurs, elle sculpte le littoral de mille et une trouvailles minérales. </p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/foret-Broceliande.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <h6>La forêt de Brocéliande </h6>
+                                                <p>Qui n’a jamais entendu parler de la légende du roi Arthur ? C’est dans la magnifique forêt de Brocéliande, entre landes et étangs, qu’elle prend sa source dans ce site magique à découvrir lors de belles randonnées. </p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
+                                                <img class="region_img mt-4" src="./public/jpg/quiberon.jpg"
                                                     alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <h6>La presqu’île de Quiberon  </h6>
+                                                <p>Une côte sauvage spectaculaire à l’ouest, de belles plages de sable fin à l’est, la presqu’île de Quiberon offre sur 14 kilomètres une variété de paysages qui séduit immédiatement. </p>
                                             </div>
                                         </div>
                                     </div>
