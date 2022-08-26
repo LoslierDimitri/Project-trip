@@ -1022,31 +1022,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                 <p>Le Mont-Saint-Michel a la particularité d’être érigé sur un îlot rocheux, entouré d’une magnifique baie, théâtre des plus grandes marées d’Europe continentale. </p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/falaises.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <h6>Les Falaises D'Étretat</h6>
+                                                <p>Si ses falaises font partie des sites naturels les plus impressionnants en Europe, le patrimoine artistique et historique de la petite cité maritime vous réservera des surprises. </p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/tapisserie-de-bayeux.jpg" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <h6>La Tapisserie de BAYEUX</h6>
+                                                <p>Abriter l’une des plus impressionnantes œuvres de l’histoire dans un cadre authentique est un art. Bayeux le fait avec respect, forte d’un patrimoine varié, étonnant et préservé. </p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
+                                                <img class="region_img mt-4" src="./public/jpg/ville-deauville.jpg"
                                                     alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
+                                                <h6>DEAUVILLE</h6>
+                                                <p>Créée au 19ème siècle par le Duc de Morny pour être le « royaume de l’élégance » proche de Paris, Deauville a su garder toute sa splendeur et son élégance : architecture de villégiature typique, plage de sable fin… </p>
                                             </div>
                                         </div>
                                     </div>
