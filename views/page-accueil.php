@@ -29,8 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/css/navbar.css">
     <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/css/page-accueil.css">
@@ -85,14 +84,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="text" name="voyage_lieu_depart" id="voyage_lieu_depart"
-                                        placeholder="Depart">
+                                    <input type="text" name="voyage_lieu_depart" id="voyage_lieu_depart" placeholder="Depart">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="text" name="voyage_lieu_arrive" id="voyage_lieu_arrive"
-                                        placeholder="Arrivée">
+                                    <input type="text" name="voyage_lieu_arrive" id="voyage_lieu_arrive" placeholder="Arrivée">
                                 </div>
                             </div>
                         </div>
@@ -106,14 +103,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="date" name="voyage_date_aller" id="voyage_date_aller"
-                                        placeholder="Date aller">
+                                    <input type="date" name="voyage_date_aller" id="voyage_date_aller" placeholder="Date aller">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="date" name="voyage_date_retour" id="voyage_date_retour"
-                                        placeholder="Date retour">
+                                    <input type="date" name="voyage_date_retour" id="voyage_date_retour" placeholder="Date retour">
                                 </div>
                             </div>
                         </div>
@@ -127,14 +122,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="number" name="voyage_nombre_personne_adulte"
-                                        id="voyage_nombre_personne_adulte" placeholder="Nombre d'adulte">
+                                    <input type="number" name="voyage_nombre_personne_adulte" id="voyage_nombre_personne_adulte" placeholder="Nombre d'adulte">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="number" name="voyage_nombre_personne_enfant"
-                                        id="voyage_nombre_personne_enfant" placeholder="Nombre d'enfant">
+                                    <input type="number" name="voyage_nombre_personne_enfant" id="voyage_nombre_personne_enfant" placeholder="Nombre d'enfant">
                                 </div>
                             </div>
                         </div>
@@ -148,8 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 mt-3 mb-3 d-flex justify-content-around">
-                                    <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre"
-                                        placeholder="Nombre de chambre">
+                                    <input type="number" name="voyage_nombre_chambre" id="voyage_nombre_chambre" placeholder="Nombre de chambre">
                                 </div>
                             </div>
                         </div>
@@ -193,1119 +185,307 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                             </div>
                         </div>
-                        <div id="region_panel_1" class="hidden_item">
-                            <div class="row w-100">
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Grand-Est</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <?php
+                        require("./projet/back/database/database_connect.php");
+                        require("./projet/back/database/database_disconnect.php");
+                        require("./projet/back/database/database_request.php");
+                        $connection = database_connect();
+                        $result_region_name = database_get_region_information($connection, "noms");
+                        // if ($result_region_name!=[]){
+                        //     print_r($result_region_name);
+                        //     }
+                        $connection = database_disconnect();
+
+
+                        for ($i = 1; $i < count($result_region_name) + 1; $i++) {
+                            $connection = database_connect();
+                            $result_specialities_name = database_get_specialities_information($connection, 'noms', $i);
+                            $result_specialities_images = database_get_specialities_information($connection, 'images', $i);
+                            $result_specialities_descriptions = database_get_specialities_information($connection, 'descriptions', $i);
+                            $result_visits_name = database_get_visits_information($connection, "noms", $i);
+                            $result_visits_images = database_get_visits_information($connection, "images", $i);
+                            $result_visits_descriptions = database_get_visits_information($connection, "descriptions", $i);
+                            $connection = database_disconnect();
+
+                            // echo $i."<br>";
+                            // echo $result_specialities_name[0]["noms"];
+
+                            // if ($result_specialities_name != []) {
+                            //     print_r($result_specialities_name[$i]);
+                            // }
+                            // if ($result_specialities_images != []) {
+                            //     print_r($result_specialities_images[$i]);
+                            // }
+                            // if ($result_specialities_descriptions != []) {
+                            //     print_r($result_specialities_descriptions[$i]);
+                            // }
+                        ?>
+
+                            <div id="region_panel_<?= $i ?>" class="hidden_item">
+                                <div class="row w-100">
                                     <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/choucroute.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>La choucroute</h6>
-                                            <p>Plat à base de charcuterie, servie avec du chou fermenté et des pommes de
-                                                terre. Accompagnée généralement d'une bonne bière.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/flammekueche.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>La flammekueche</h6>
-                                            <p>Tarte fine flambée, garnit de crème fraîche, de lardons et d'oignons pour
-                                                la recette classique.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/andouillette.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>L'andouillette de Troyes</h6>
-                                            <p>Une charcuterie artisanale en forme de saucisse faite à partir d'abats.
-                                            </p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/kougelhopf.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le kougelhopf</h6>
-                                            <p>Sans doute le plaisir sucré le plus connu du Grand-Est. Une brioche aux
-                                                fruits secs(génralement des raisins) et amandes.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
+                                        <h3 class="text-center mb-4"><?php if ($result_region_name != []) {
+                                                                            echo $result_region_name[$i - 1]["noms"];
+                                                                        } ?></h3>
                                         <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
+                                            <h5>Vous pourrez déguster par exemple:</h5>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/Colmar.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/<?php if ($result_specialities_images != []) {
+                                                                                                    echo $result_specialities_images[0]["images"];
+                                                                                                } ?>" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>La vieille ville de Colmar</h6>
-                                                <p>Petite ville pittoresque, très agréable avec ses maisons colorées et
-                                                    sa rivière la traversant.</p>
+                                                <h6><?php if ($result_specialities_name != []) {
+                                                        echo $result_specialities_name[0]["noms"];
+                                                    } ?></h6>
+                                                <p><?php if ($result_specialities_descriptions != []) {
+                                                        echo $result_specialities_descriptions[0]["descriptions"];
+                                                    } ?></p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/Sundgau.jpg" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/<?php if ($result_specialities_images != []) {
+                                                                                                    echo $result_specialities_images[1]["images"];
+                                                                                                } ?>" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le Sundgau</h6>
-                                                <p>Parcourez ce magnifique petit coin de nature sauvage et visitez ses
-                                                    villages tous authentiques.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/Verdun.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Les champs de bataille de Verdun</h6>
-                                                <p>Mettez un peu d'histoire dans votre voyage et venez visiter ce lieu
-                                                    qui aura marqué la France.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4"
-                                                    src="./public/jpg/Château-du-Haut-Koenigsbourg.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le château du Haut-Koenigsbourg</h6>
-                                                <p>Plongez en plein Moyen-Âge avec le seul château fort entièrement
-                                                    reconstitué en France.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="region_panel_2" class="hidden_item">
-                            <div class="row w-100">
-
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Nouvelle Aquitaine</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/fromage-chevre.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Magret.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Vin.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Marais-Poitevin.png"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Pilat.png" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
+                                                <h6><?php if ($result_specialities_name != []) {
+                                                        echo $result_specialities_name[1]["noms"];
+                                                    } ?></h6>
+                                                <p><?php if ($result_specialities_descriptions != []) {
+                                                        echo $result_specialities_descriptions[1]["descriptions"];
+                                                    } ?></p>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Lac-Hossegor.png" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/<?php if ($result_specialities_images != []) {
+                                                                                                    echo $result_specialities_images[2]["images"];
+                                                                                                } ?>" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
+                                                <h6><?php if ($result_specialities_name != []) {
+                                                        echo $result_specialities_name[2]["noms"];
+                                                    } ?></h6>
+                                                <p><?php if ($result_specialities_descriptions != []) {
+                                                        echo $result_specialities_descriptions[2]["descriptions"];
+                                                    } ?></p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Kakuetta.png" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/<?php if ($result_specialities_images != []) {
+                                                                                                    echo $result_specialities_images[3]["images"];
+                                                                                                } ?>" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div id="region_panel_3" class="hidden_item">
-                            <div class="row w-100">
-
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Auvergne-Rhône-Alpes</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Tartiflette.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>La Tartiflette</h6>
-                                            <p>Tout le monde connaît ce plat emblématique du pays Savoyard, mais rien ne vaut de le déguster chez lui avec vue sur les Montagnes. Parfait en hiver.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Truffade.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>La Truffade</h6>
-                                            <p>La concurrente Auvergnate de la Tartiflette car les recettes se resemble mais la préparation est la cuisson est différente. À "taster" !</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Nantua.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Les quenelles sauce Nantua</h6>
-                                            <p>Recette de quenelle Lyonnaise arrosée d'une sauce onctueuse à la bisque de homard.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Creme-marrons.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>La crème de marrons</h6>
-                                            <p>Dégustez cette délicieuse pâte de chataîgnes glacées venant d'Ardèche. En gâteau, sur des tartines ou même à la cuillère, cette friandise vous fera fondre.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Aiguille-midi.png" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>L'Aiguille du Midi</h6>
-                                                <p>Si vous aimez la randonnée en montagne ce lieu est fait pour vous. Vous y trouverez un spectacle à couper le souffle.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Lac-leman.png" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac Léman</h6>
-                                                <p>Visitez le plus grand lac de France (et d'Europe). Il traverse également la Suisse. Vous pourrez vous promener, vous baigner et même naviguer.</p>
+                                                <h6><?php if ($result_specialities_name != []) {
+                                                        echo $result_specialities_name[3]["noms"];
+                                                    } ?></h6>
+                                                <p><?php if ($result_specialities_descriptions != []) {
+                                                        echo $result_specialities_descriptions[3]["descriptions"];
+                                                    } ?></p>
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
+                                                <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 col-lg-3 d-flex justify-content-center">
+                                                    <img class="region_img mt-4" src="./public/jpg/<?php if ($result_visits_images != []) {
+                                                                                                        echo $result_visits_images[0]["images"];
+                                                                                                    } ?>" alt="">
+                                                </div>
+                                                <div class="col-md-12 col-lg-3">
+                                                    <h6><?php if ($result_visits_name != []) {
+                                                            echo $result_visits_name[0]["noms"];
+                                                        } ?></h6>
+                                                    <p><?php if ($result_visits_descriptions != []) {
+                                                            echo $result_visits_descriptions[0]["descriptions"];
+                                                        } ?></p>
+                                                </div>
+                                                <div class="col-md-12 col-lg-3 d-flex justify-content-center">
+                                                    <img class="region_img mt-4" src="./public/jpg/<?php if ($result_visits_images != []) {
+                                                                                                        echo $result_visits_images[1]["images"];
+                                                                                                    } ?>" alt="">
+                                                </div>
+                                                <div class="col-md-12 col-lg-3">
+                                                    <h6><?php if ($result_visits_name != []) {
+                                                            echo $result_visits_name[1]["noms"];
+                                                        } ?></h6>
+                                                    <p><?php if ($result_visits_descriptions != []) {
+                                                            echo $result_visits_descriptions[1]["descriptions"];
+                                                        } ?></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Palais-facteur-cheval.png" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/<?php if ($result_visits_images != []) {
+                                                                                                    echo $result_visits_images[2]["images"];
+                                                                                                } ?>" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le palais du Facteur Cheval</h6>
-                                                <p>Un facteur, M.Cheval, ramassait durant ses tournée des pierres afin de construire de ses mains un palais à l'architecture étonnante.</p>
+                                                <h6><?php if ($result_visits_name != []) {
+                                                        echo $result_visits_name[2]["noms"];
+                                                    } ?></h6>
+                                                <p><?php if($result_visits_descriptions != []){
+                                                    echo $result_visits_descriptions[2]["descriptions"];
+                                                } ?></p>
                                             </div>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/png/Puy-de-dome.png" alt="">
+                                                <img class="region_img mt-4" src="./public/jpg/<?php if ($result_visits_images != []) {
+                                                                                                    echo $result_visits_images[3]["images"];
+                                                                                                } ?>" alt="">
                                             </div>
                                             <div class="col-md-12 col-lg-3">
-                                                <h6>Le Puy-de-Dôme et ses volcans</h6>
-                                                <p>Le Puy-de-Dôme est composé de plus de 80 volcans, ils sont tous endormis donc il est très facile de venir visiter cet endroit spectaculaire.</p>
+                                                <h6><?php if ($result_visits_name != []) {
+                                                        echo $result_visits_name[3]["noms"];
+                                                    } ?></h6>
+                                                <p><?php if($result_visits_descriptions != []){
+                                                    echo $result_visits_descriptions[3]["descriptions"];
+                                                } ?></p>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div id="region_panel_4" class="hidden_item">
-                            <div class="row w-100">
-
-                                <div class="row">
-                                <h3 class="text-center mb-4">Bourgogne-Franche-Comté</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/boeuf_bourgignon.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le bœuf bourguignon</h6>
-                                            <p>Voilà un fameux plat traditionnel apprécié des grands comme des petits !</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/escargot.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>L'escargot de Bourgogne</h6>
-                                            <p>Egalement appelé "Gros blanc", est un mets consommé depuis toujours.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/coq-au-vin-jaune.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le coq au vin jaune</h6>
-                                            <p>Le coq au vin jaune est l'une des spécialités culinaires les plus célèbres du Jura, c'est même un fleuron de la gastronomie française ! </p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/potee-franc-comtoise.jpeg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>la potée franc-comtoise</h6>
-                                            <p>A l'origine, la potée était cuisinée dans un pot, ce qui a donné son nom aux différents plats dégustés dans toute la France. </p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/abbaye.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>L'abbaye de Fontenay</h6>
-                                                <p>Fondée en 1118 par saint Bernard, l’abbaye de Fontenay est l’un des plus anciens monastères cisterciens de France.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/colline.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Basilique et colline de Vézelay</h6>
-                                                <p>Fondé au IXe siècle, le monastère bénédictin acquiert les reliques de sainte Marie-Madeleine et devient un haut-lieu de pèlerinage.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/roche.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>La Roche de Solutré</h6>
-                                                <p>Culminant à 495 mètres, la Roche de Solutré se situe au coeur du Grand Site de France, constitué de Solutré, Pouilly et Vergisson</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/musee.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le MuséoParc Alésia</h6>
-                                                <p>De loin, le MuséoParc Alésia apparaît comme un ovni posé au milieu des paysages vallonnés de l’Auxois. Sa configuration circulaire se veut un clin d’œil à l’encerclement des Gaulois par les Romains.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div id="region_panel_5" class="hidden_item">
-                            <div class="row w-100">
-                            </div>
-
-                            <div class="row">
-                                <h3 class="text-center mb-4">Centre-Val de Loire</h3>
-                                <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                    <h5>Vous pourrez déguster par exemple:</h5>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                        <img class="region_img mt-4" src="./public/jpg/Beuchelle.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-12 col-lg-3">
-                                        <h6>La Beuchelle</h6>
-                                        <p>Pâte feuilletée à base de ris et de rognons de veau dans une sauce crèmeuse
-                                            aux champignons</p>
-                                    </div>
-                                    <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                        <img class="region_img mt-4" src="./public/jpg/fouees.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-12 col-lg-3">
-                                        <h6>Les fouées</h6>
-                                        <p>Ce sont de petits pains ronds farcies. La recette originale est farcie de
-                                            mogettes (sortes de gros haricots blancs) et de viande de porc.</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                        <img class="region_img mt-4" src="./public/jpg/Rillettes_Tours.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-12 col-lg-3">
-                                        <h6>Les rillettes de Tours</h6>
-                                        <p>Vous connaissez sans doute les rillettes du Mans mais c'est bien en Touraine
-                                            qu'elles sont nées. Moins grasses et moins hachées vous allez vous régaler.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                        <img class="region_img mt-4" src="./public/jpg/Tarte_tatin.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-12 col-lg-3">
-                                        <h6>La tarte Tatin</h6>
-                                        <p>La fameuse tarte créée à partir d'une erreur de recette, cette tarte aux
-                                            pommes inversée est originaire de Sologne. Avec une boule de glace vanille,
-                                            un régal.</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Visite des châteaux de Touraine</h6>
-                                            <p>Faites une virée en barque à travers cette jolie rivière appellée aussi
-                                                la Venise verte.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>La Dune du Pilat</h6>
-                                            <p>Magnifique Dune de sable donnant accès à une vue magnifique sur l\'Océan.
-                                                Préparez vos mollets.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le lac d\'Hossegor</h6>
-                                            <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                magnifique lac.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Les gorges de Kakuetta</h6>
-                                            <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère, cascades
-                                                et grotte au programme.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div id="region_panel_6" class="hidden_item">
-                            <div class="row w-100">
-
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Corse</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/beignet_brocciu.jpeg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6> Les beignets au brocciu</h6>
-                                            <p>Fromage frais de brebis, le brocciu est fabriqué de début novembre à fin juin et peut se manger aussi bien salé ou saupoudré d’un peu de sucre. </p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/aziminu.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>L’aziminu</h6>
-                                            <p>L’aziminu est une version corse de la bouillabaisse : composée de poissons de roche issus des eaux de l’île </p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/Civet_sanglier.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le civet de sanglier</h6>
-                                            <p>L’ingrédient principal du civet de sanglier, c’est, contre toute attente… l’oignon ! Ce plat tient en effet son nom du latin caepa ou de l’occitan çeba, qui désignent la plante herbacée à la base du délicieux ragoût.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/saute-de-veau.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le veau aux olives</h6>
-                                            <p>Outre le veau, choisi d’une excellente qualité et de préférence corse, l’ingrédient phare de cette recette typique et ancestrale est l’olive verte,</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/calvi.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Calvi et sa citadelle</h6>
-                                                <p>Au pied de la citadelle, le port de plaisance de Calvi figure parmi les escales les plus appréciées et fréquentées de Corse</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/bonifacio.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Les falaises de Bonifacio</h6>
-                                                <p>Bonifacio s’accroche toujours à ses spectaculaires falaises de calcaire blanc.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/iles_sanguinaires.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Îles Sanguinaires et pointe de la Parata</h6>
-                                                <p>À quelques kilomètres du centre d’Ajaccio, les 4 îlots protégés qui ponctuent la pointe de la Parata doivent leur nom à la couleur rouge de la roche qui les compose</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/scandola.jpeg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>La réserve de Scandola</h6>
-                                                <p>Inscrite par l’Unesco sur la Liste du patrimoine mondial de l’humanité, en même temps que les calanques de Piana et le site de Girolata. 
-
-</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div id="region_panel_7" class="hidden_item">
-                            <div class="row w-100">
-
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Occitanie</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/chevre_image.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div id="region_panel_8" class="hidden_item">
-                            <div class="row w-100">
-
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Île-de-France</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/gratinee.jpeg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Soupe gratinée à l'oignon</h6>
-                                            <p>Découvrez ce grand classique de la gastronomie française à déguster bien chaud.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/gibelote.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>la gibelotte de lapin</h6>
-                                            <p>C'est un ragoût de lapin traditionnellement cuisiné avec du vin blanc mais qui fonctionne tout aussi bien avec du vin rouge. </p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/potage.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le potage Saint-Germain</h6>
-                                            <p>Le potage Saint-Germain est donc un fin mélange des trésors locaux où pois et lard se marient à merveille !</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/bouchees.jpeg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Bouchées à la Reine</h6>
-                                            <p>C’est le plat des fêtes de fin d’année par excellence ! Mais on peut en réalité les déguster en toutes saisons, accompagnées d'une bonne salade verte.
-
-</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/Pyramide.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Musée du Louvre</h6>
-                                                <p>Ancien palais des rois, le Louvre épouse l’histoire de France depuis huit siècles. Conçu dès sa création en 1793 comme un musée universel, ses collections, qui figurent parmi les plus belles au monde.
-
-</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/pompidou.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le Centre Pompidou</h6>
-                                                <p>Le Centre Pompidou est une merveille d’architecture du XXe siècle, reconnaissable à ses escalators extérieurs et à ses énormes tuyaux colorés. Il abrite le musée national d’Art moderne.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/Musee-Orsay.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Musée d’orsay</h6>
-                                                <p>Connu dans le monde entier pour sa riche collection d'art impressionniste, le musée d'Orsay est aussi le musée de toute la création artistique du monde occidental de 1848 à 1914.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/Panthéon.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le Panthéon</h6>
-                                                <p>Depuis 1885, date de l’entrée au Panthéon de Victor Hugo, l’édifice est devenu le lieu où reposent les grands Hommes de la patrie : Voltaire, Rousseau, Zola, Pierre et Marie Curie… et depuis le 1er Juillet 2018, Simone Veil.
-
-</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div id="region_panel_9" class="hidden_item">
-                            <div class="row w-100">
-
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Hauts-de-France</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/chevre_image.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div id="region_panel_10" class="hidden_item">
-                            <div class="row w-100">
-
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Normandie</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/Escalope.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Escalope normande</h6>
-                                            <p>De dinde, de poulet ou de veau, les escalopes de viande sont un plat traditionnel normand mêlant plusieurs produits du terroir incontournables de la région.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/Teurgoule.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>La Teurgoule traditionnelle</h6>
-                                            <p>Généreux, ce dessert est souvent servi dans un grand plat (terrine ou jatte à bec) pour être partagé en famille ou entre amis.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/tripes.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Tripes à la mode de Caen</h6>
-                                            <p>Cette recette remonte au 11ème siècle et plus précisément à l’époque de Guillaume le Conquérant. En effet, celui-ci était très friand de ce plat riche qui aurait été créé dans les cuisines de l’Abbaye aux Hommes de Caen par son cuisinier.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/confiture.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>La confiture de lait</h6>
-                                            <p>Savoureux mélange de lait de ferme et de sucre, la confiture de lait est originaire de Normandie.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/Mont-Saint-Michel.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le Mont-Saint-Michel </h6>
-                                                <p>Le Mont-Saint-Michel a la particularité d’être érigé sur un îlot rocheux, entouré d’une magnifique baie, théâtre des plus grandes marées d’Europe continentale. </p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/falaises.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Les Falaises D'Étretat</h6>
-                                                <p>Si ses falaises font partie des sites naturels les plus impressionnants en Europe, le patrimoine artistique et historique de la petite cité maritime vous réservera des surprises. </p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/tapisserie-de-bayeux.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>La Tapisserie de BAYEUX</h6>
-                                                <p>Abriter l’une des plus impressionnantes œuvres de l’histoire dans un cadre authentique est un art. Bayeux le fait avec respect, forte d’un patrimoine varié, étonnant et préservé. </p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/ville-deauville.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>DEAUVILLE</h6>
-                                                <p>Créée au 19ème siècle par le Duc de Morny pour être le « royaume de l’élégance » proche de Paris, Deauville a su garder toute sa splendeur et son élégance : architecture de villégiature typique, plage de sable fin… </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                        </div>
-                        <div id="region_panel_11" class="hidden_item">
-                            <div class="row w-100">
+                        <?php
+                        }
+                        ?>
 
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Pays de la Loire</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/chevre_image.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="region_panel_12" class="hidden_item">
-                            <div class="row w-100">
 
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Provence-Alpes-Côte d'Azur</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/chevre_image.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le fromage de chèvre</h6>
-                                            <p>Fromage emblématique de la région Poitou Charentes.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/png/Canneles.png" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Les cannelés</h6>
-                                            <p>Petite patisserie Bordelaise à la vanille.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le Magret de canard</h6>
-                                            <p>Bien que Gersois, le magret reste très consommé dans les Landes et le
-                                                Pays Basque.</p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpeg/vin.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le vin de Bordeaux</h6>
-                                            <p>Le mythic vin de Bordeaux célèbre dans le monde entier.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/charcuterie.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le Marais Poitevin</h6>
-                                                <p>Faites une virée en barque à travers cette jolie rivière appellée
-                                                    aussi la Venise verte.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/axoa.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>La Dune du Pilat</h6>
-                                                <p>Magnifique Dune de sable donnant accès à une vue magnifique sur
-                                                    l\'Océan. Préparez vos mollets.</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/magret.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Le lac d\'Hossegor</h6>
-                                                <p>Venez vous balader ou faire des activités sportives autour de ce
-                                                    magnifique lac.</p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpeg/salade-landaise.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Les gorges de Kakuetta</h6>
-                                                <p>Une bonne dose de nature sauvages en ce lieu, randonnée légère,
-                                                    cascades et grotte au programme.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </div>
-                        <div id="region_panel_13" class="hidden_item">
-                            <div class="row w-100">
 
-                                <div class="row">
-                                    <h3 class="text-center mb-4">Bretagne</h3>
-                                    <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                        <h5>Vous pourrez déguster par exemple:</h5>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/la-crepe.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>La crêpe bretonne</h6>
-                                            <p>En Bretagne, toutes les occasions sont bonnes pour manger des crêpes ! Cuites sur une billig (grande plaque en fonte d’acier), la crêpe (froment ou blé noir) doit être fine et croustillante, accompagnée d’un verre de Chouchen ! </p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/kig-ha-farz.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le Kig-ha-Farz</h6>
-                                            <p>Le Kig-ha-Farz est composé de 2 farz que l’on fait cuire dans des sacs en toile : le far noir et le far blanc. On l’accompagne également d’une sauce appelée « Lipig » à base d’oignons ou d’échalotes et de beurre. </p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/Kouign-Amann.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le Kouign-Amann</h6>
-                                            <p>Le seul, l’unique, l’incontournable Kouign-Amann ! Réalisé à partir d’une pâte à pain, généreusement beurrée et sucrée puis pliée à la manière d’une pâte feuilletée. </p>
-                                        </div>
-                                        <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                            <img class="region_img mt-4" src="./public/jpg/Chouchen.jpg" alt="">
-                                        </div>
-                                        <div class="col-md-12 col-lg-3">
-                                            <h6>Le Chouchen</h6>
-                                            <p>Cette boisson historique de Bretagne est une boisson liquoreuse alcoolisée à base de miel.</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 mb-3 d-flex justify-content-center">
-                                            <h5 class="mt-3">Vous pourrez visiter par exemple:</h5>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/carnac.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>Les Alignements de Carnac</h6>
-                                                <p>La ville recèle 3 sites en 1 ! Il y a bien sûr les célébrissimes champs de mégalithes, à admirer dans la lumière rasante du matin ou de la fin de journée. </p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/cotegranitrose.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>la Côte de Granit rose  </h6>
-                                                <p>Au nord de Lannion, la Côte de Granit rose est célèbre pour ses rochers colorés aux formes poétiques. Paradis des oiseaux et des promeneurs, elle sculpte le littoral de mille et une trouvailles minérales. </p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/foret-Broceliande.jpg" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>La forêt de Brocéliande </h6>
-                                                <p>Qui n’a jamais entendu parler de la légende du roi Arthur ? C’est dans la magnifique forêt de Brocéliande, entre landes et étangs, qu’elle prend sa source dans ce site magique à découvrir lors de belles randonnées. </p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/quiberon.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6>La presqu’île de Quiberon  </h6>
-                                                <p>Une côte sauvage spectaculaire à l’ouest, de belles plages de sable fin à l’est, la presqu’île de Quiberon offre sur 14 kilomètres une variété de paysages qui séduit immédiatement. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -1372,8 +552,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="col-md-12 col-lg-3 mt-5 mb-3 mx-auto">
                         <div class="card mx-auto" style="width: 18rem; background-color: transparent; border: none;">
-                            <img class="card-img-top mx-auto" src="./public/svg/Ecoresponsable.svg"
-                                alt="Card image cap">
+                            <img class="card-img-top mx-auto" src="./public/svg/Ecoresponsable.svg" alt="Card image cap">
                             <div class="card-body">
                                 <p class="card-text text-center text-white">Nous privilégions les
                                     voyages dans l’héxagone
@@ -1384,8 +563,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="col-md-12 col-lg-3 mt-5 mb-3 mx-auto">
                         <div class="card mx-auto" style="width: 18rem; background-color: transparent; border: none;">
-                            <img class="card-img-top mx-auto" src="./public/svg/Meilleures-notes.svg"
-                                alt="Card image cap">
+                            <img class="card-img-top mx-auto" src="./public/svg/Meilleures-notes.svg" alt="Card image cap">
                             <div class="card-body">
                                 <p class="card-text text-center text-white">Nous sélectionnons les
                                     logements et restaurants

@@ -14,7 +14,7 @@ connection = database_disconnect(); -> connection is now null
 */
 
 function database_disconnect() {
-    echo "database disconnected <br>";
+    // echo "database disconnected <br>";
 
 return null;
 }
