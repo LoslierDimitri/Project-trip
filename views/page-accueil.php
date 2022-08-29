@@ -388,32 +388,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                 </div>
                                             </div>
                                             <div class="row">
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/<?php if ($result_visits_images != []) {
-                                                                                                    echo $result_visits_images[2]["images"];
-                                                                                                } ?>" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6><?php if ($result_visits_name != []) {
-                                                        echo $result_visits_name[2]["noms"];
-                                                    } ?></h6>
-                                                <p><?php if($result_visits_descriptions != []){
-                                                    echo $result_visits_descriptions[2]["descriptions"];
-                                                } ?></p>
-                                            </div>
-                                            <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="./public/jpg/<?php if ($result_visits_images != []) {
-                                                                                                    echo $result_visits_images[3]["images"];
-                                                                                                } ?>" alt="">
-                                            </div>
-                                            <div class="col-md-12 col-lg-3">
-                                                <h6><?php if ($result_visits_name != []) {
-                                                        echo $result_visits_name[3]["noms"];
-                                                    } ?></h6>
-                                                <p><?php if($result_visits_descriptions != []){
-                                                    echo $result_visits_descriptions[3]["descriptions"];
-                                                } ?></p>
-                                            </div>
+                                                <div class="col-md-12 col-lg-3 d-flex justify-content-center">
+                                                    <img class="region_img mt-4" src="./public/jpg/<?php if ($result_visits_images != []) {
+                                                                                                        echo $result_visits_images[2]["images"];
+                                                                                                    } ?>" alt="">
+                                                </div>
+                                                <div class="col-md-12 col-lg-3">
+                                                    <h6><?php if ($result_visits_name != []) {
+                                                            echo $result_visits_name[2]["noms"];
+                                                        } ?></h6>
+                                                    <p><?php if ($result_visits_descriptions != []) {
+                                                            echo $result_visits_descriptions[2]["descriptions"];
+                                                        } ?></p>
+                                                </div>
+                                                <div class="col-md-12 col-lg-3 d-flex justify-content-center">
+                                                    <img class="region_img mt-4" src="./public/jpg/<?php if ($result_visits_images != []) {
+                                                                                                        echo $result_visits_images[3]["images"];
+                                                                                                    } ?>" alt="">
+                                                </div>
+                                                <div class="col-md-12 col-lg-3">
+                                                    <h6><?php if ($result_visits_name != []) {
+                                                            echo $result_visits_name[3]["noms"];
+                                                        } ?></h6>
+                                                    <p><?php if ($result_visits_descriptions != []) {
+                                                            echo $result_visits_descriptions[3]["descriptions"];
+                                                        } ?></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
