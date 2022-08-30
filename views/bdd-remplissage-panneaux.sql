@@ -1,3 +1,30 @@
+USE projet_trip;
+
+CREATE TABLE `regions` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `noms` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `specialities` (
+  `idspecialities` int NOT NULL AUTO_INCREMENT,
+  `noms` varchar(255) NOT NULL,
+  `images` varchar(255) NOT NULL,
+  `descriptions` varchar(255) NOT NULL,
+  `idregions` int NOT NULL,
+  PRIMARY KEY (`idspecialities`)
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `visits` (
+  `idvisits` int NOT NULL AUTO_INCREMENT,
+  `noms` varchar(255) NOT NULL,
+  `images` varchar(255) NOT NULL,
+  `descriptions` varchar(255) NOT NULL,
+  `idregions` int NOT NULL,
+  PRIMARY KEY (`idvisits`)
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
 truncate projet_trip.regions;
 truncate projet_trip.specialities;
 truncate projet_trip.visits;
