@@ -40,17 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
     <?php
-    // include ("test_include.php");
-    ?>
-
-    <?php
     include("./include/navbar.php");
     ?>
 
 
     <section class="advanced_search py-4 mt-4">
         <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
-
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
             <div class="formule">
                 <label for="voyage_formule">Formules</label>
@@ -59,18 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <option value="voyage_formule_touristique">Touristique</option>
                     <select><br>
             </div>
-
             <input type="text" name="type_search" value="france" hidden>
-
-            <!-- <label for="voyage_region">region</label>
-                <select id="voyage_region" name="voyage_region">
-                    <option value="bretagne">bretagne</option>
-                    <option value="corse">corse</option>
-                    <option value="normandie">normandie</option>
-                    <option value="aquitaine">aquitaine</option>
-                 <select><br> -->
-
-
             <div class="icons-form">
                 <div class="row">
                     <div class="col-md-12 col-lg-2 mt-3 mb-3 d-flex justify-content-around">
@@ -172,11 +156,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="map">
                 <div class="row">
-
                     <?php
                     include("./include/map.php");
                     ?>
-
                     <div class="col-lg-6">
                         <div id="details_map" class="h-100">
                             <div class="row h-100">
@@ -186,108 +168,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <?php
-                        require("./projet/back/database/database_connect.php");
-                        require("./projet/back/database/database_disconnect.php");
-                        require("./projet/back/database/database_request.php");
-                        $connection = database_connect();
-                        $result_region_name = database_get_region_information($connection, "noms");
-                        // if ($result_region_name!=[]){
-                        //     print_r($result_region_name);
-                        //     }
-                        $connection = database_disconnect();
+                        require("./projet/back/function/result_map.php");
 
+                        $result_region_name = get_regions("noms");
 
                         for ($i = 1; $i < count($result_region_name) + 1; $i++) {
-                            $connection = database_connect();
-                            $result_specialities_name = database_get_specialities_information($connection, 'noms', $i);
-                            $result_specialities_images = database_get_specialities_information($connection, 'images', $i);
-                            $result_specialities_descriptions = database_get_specialities_information($connection, 'descriptions', $i);
-                            $result_visits_name = database_get_visits_information($connection, "noms", $i);
-                            $result_visits_images = database_get_visits_information($connection, "images", $i);
-                            $result_visits_descriptions = database_get_visits_information($connection, "descriptions", $i);
-                            $connection = database_disconnect();
-
-                            // echo $i."<br>";
-                            // echo $result_specialities_name[0]["noms"];
-
-                            // if ($result_specialities_name != []) {
-                            //     print_r($result_specialities_name[$i]);
-                            // }
-                            // if ($result_specialities_images != []) {
-                            //     print_r($result_specialities_images[$i]);
-                            // }
-                            // if ($result_specialities_descriptions != []) {
-                            //     print_r($result_specialities_descriptions[$i]);
-                            // }
+                            $result_specialities_name = get_informations("specialities", "noms", $i);
+                            $result_specialities_images = get_informations("specialities", "images", $i);
+                            $result_specialities_descriptions = get_informations("specialities", "descriptions", $i);
+                            $result_visits_name = get_informations("visits", "noms", $i);
+                            $result_visits_images = get_informations("visits", "images", $i);
+                            $result_visits_descriptions = get_informations("visits", "descriptions", $i);
                         ?>
 
                             <div id="region_panel_<?= $i ?>" class="hidden_item">
@@ -357,69 +249,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <?php
                         }
                         ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     </div>
                 </div>
             </div>
