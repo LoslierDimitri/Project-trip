@@ -25,15 +25,16 @@ how tu use this request
 
 $value = dadabase_select(<connection>, <string selected attribute>)
 */
-function database_select($connection, $select) {
+function database_select($connection, $select)
+{
     echo "request select... <br>";
     if ($connection != null) {
-    $stmt = $connection->prepare("select " . $select . " from users");
-    //$stmt->bindValue(':select', $select);
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-    echo "request select done <br>";
-    return $result;
+        $stmt = $connection->prepare("select " . $select . " from users");
+        //$stmt->bindValue(':select', $select);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        echo "request select done <br>";
+        return $result;
     }
     return "error to database request select <br>";
 }
@@ -45,17 +46,18 @@ how tu use this request
 
 $value = dadabase_select(<connection>, <string selected attribute>, <select column>, <value>)
 */
-function database_select_where($connection, $select, $where, $element) {
+function database_select_where($connection, $select, $where, $element)
+{
     echo "request select... <br>";
     if ($connection != null) {
-    $stmt = $connection->prepare("select " . $select . " from users where " . $where . " = :element");
-/*/$stmt->bindValue(':select', $select);
+        $stmt = $connection->prepare("select " . $select . " from users where " . $where . " = :element");
+        /*/$stmt->bindValue(':select', $select);
     $stmt->bindValue(':where', $where);*/
-    $stmt->bindValue(':element', $element);
-    $stmt->execute();
-    $result = $stmt->fetchAll();
-    echo "request select done <br>";
-    return $result;
+        $stmt->bindValue(':element', $element);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        echo "request select done <br>";
+        return $result;
     }
     return "error to database request select <br>";
 }
@@ -67,7 +69,8 @@ how tu use this request
 
 dadabase_insert(<connection>, <string for each data type>)
 */
-function database_insert($connection, $type, $nom, $prenom, $age, $sexe, $pseudo, $mot_de_passe, $email, $telephone, $pays, $adresse) {
+function database_insert($connection, $type, $nom, $prenom, $age, $sexe, $pseudo, $mot_de_passe, $email, $telephone, $pays, $adresse)
+{
     echo "request insert... <br>";
     if ($connection != null) {
         //$stmt = $connection->prepare("insert into projet_trip.users (type, nom, prenom, age, sexe, pseudo, mot_de_passe, email, telephone, pays, adresse) values ( " . $type . ", " . $nom . ", " . $prenom . ", " . $age . ", " . $sexe . ", " . $pseudo . ", " . $mot_de_passe . ", " . $email . ", " . $telephone . ", " . $pays . ", " . $adresse . " )");
@@ -84,14 +87,13 @@ function database_insert($connection, $type, $nom, $prenom, $age, $sexe, $pseudo
         $stmt->bindValue(":pays", $pays);
         $stmt->bindValue(":adresse", $adresse);
         $stmt->execute();
-       // $result = $stmt->fetchAll();
-    
+        // $result = $stmt->fetchAll();
+
         //return $result;
-        }
-        else {
+    } else {
         echo "error to database request insert <br>";
-        }
-        echo "request insert done <br>";
+    }
+    echo "request insert done <br>";
 }
 
 /*
@@ -101,19 +103,61 @@ how tu use this request
 
 dadabase_update(<connection>, <string selected attribute>, <string new value>, <int id of the user>)
 */
-function database_update($connection, $name, $value, $where, $element) {
+function database_update($connection, $name, $value, $where, $element)
+{
     echo "request update... <br>";
     if ($connection != null) {
-        $stmt = $connection->prepare("update users set ".$name."=:".$name." where " . $where . " = :element");
-        $stmt->bindValue(":".$name."", $value);
+        $stmt = $connection->prepare("update users set " . $name . "=:" . $name . " where " . $where . " = :element");
+        $stmt->bindValue(":" . $name . "", $value);
         $stmt->bindValue(':element', $element);
         $stmt->execute();
-    
-        }
-        else {
+    } else {
         echo "error to database request update <br>";
-        }
-        echo "request update done <br>";
+    }
+    echo "request update done <br>";
 }
 
-?>
+/////////////////////////////////////////////////////////////////////////////////////////////
+function database_get_region_information($connection, $info)
+{
+    // echo "request update... <br>";
+    if ($connection != null) {
+        $stmt = $connection->prepare("select " . $info . " from regions");
+        // $stmt->bindValue(":".$name."", $value);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result;
+    } else {
+        // echo "error to database request update <br>";
+    }
+    // echo "request update done <br>";
+}
+
+function database_get_specialities_information($connection, $info, $id_regions)
+{
+    // echo "request update... <br>";
+    if ($connection != null) {
+        $stmt = $connection->prepare("select " . $info . " from specialities where idregions = :id_regions");
+        $stmt->bindValue(":id_regions", $id_regions);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result;
+    } else {
+        // echo "error to database request update <br>";
+    }
+    // echo "request update done <br>";
+}
+function database_get_visits_information($connection, $info, $id_regions)
+{
+    // echo "request update... <br>";
+    if ($connection != null) {
+        $stmt = $connection->prepare("select " . $info . " from visits where idregions = :id_regions");
+        $stmt->bindValue(":id_regions", $id_regions);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result;
+    } else {
+        // echo "error to database request update <br>";
+    }
+    // echo "request update done <br>";
+}
