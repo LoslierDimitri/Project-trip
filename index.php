@@ -26,9 +26,6 @@ switch ($page) {
     case 'inscription':
         require __DIR__ . './views/inscription.php';
         break;
-    case 'logout':
-        require __DIR__ . './views/inscription.php';
-        break;
     case 'concept':
         require __DIR__ . './views/concept.php';
         break;
