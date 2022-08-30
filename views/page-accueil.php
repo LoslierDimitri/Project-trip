@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="./public/css/navbar.css">
     <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/css/page-accueil.css">
+    <link rel="stylesheet" href="./public/css/map.css">
     <link rel="shortcut icon" type="image/x-icon" href="./public/png/favicon.ico" />
     <title>Culin'Air</title>
 </head>
