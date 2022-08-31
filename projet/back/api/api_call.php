@@ -213,7 +213,9 @@ function api_call_travel_advisor($voyage_lieu_depart, $voyage_lieu_arrive, $voya
     $file_array = (array) $file_decode;
 
     for ($i = 0; $i < 5; $i++) {
-        $result_hotel_location_id = $file_decode->data[$i]->location_id;
+        if (isset($file_decode->data[$i]->location_id)) {
+            $result_hotel_location_id = $file_decode->data[$i]->location_id;
+        }
         // $result_hotel_nom = $file_decode->data[$i]->name;
         // $result_hotel_adresse = "";
         // $result_hotel_prix = $file_decode->data[$i]->price;
