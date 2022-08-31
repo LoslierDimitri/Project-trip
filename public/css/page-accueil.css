@@ -106,10 +106,14 @@ h2 {
   font-family: Mali-SB;
   color: #0fabdf;
 }
+.region_search h4 {
+  font-family: Signika-Regular;
+  color: #0fabdf;
+}
 
 .region_search h6 {
   font-family: Signika-SB;
-  color: #0fabdf;
+  color: #ed6e38;
 }
 
 .region_search h5 {
