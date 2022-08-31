@@ -1,8 +1,21 @@
 <?php
-$file = file_get_contents("./projet/back/data/result_search/result_search_format.json");
-$file_decode = json_decode($file);
+// $file = file_get_contents("./projet/back/data/result_search/result_search_format.json");
+// $file_decode = json_decode($file);
 
-print_array($file_decode[2]);
+// print_array($file_decode[1][0][0]);
+?>
+
+<?php
+require("./projet/back/database/database_connect.php");
+require("./projet/back/database/database_disconnect.php");
+require("./projet/back/database/database_request.php");
+$connection = database_connect();
+$result_specialities_name = database_get_specialities_information($connection, "noms", 13);
+$connection = database_disconnect();
+if ($result_specialities_name != []) {
+    print_array($result_specialities_name[0]["noms"]);
+}
+// echo($result);
 ?>
 
 <?php
@@ -12,7 +25,14 @@ function print_array($x_array)
     print_r($x_array);
     echo ("</pre>");
 }
+
+function add($a, $b)
+{
+    return ($a + $b);
+}
 ?>
+
+
 
 <?php
 /*

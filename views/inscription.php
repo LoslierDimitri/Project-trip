@@ -2,9 +2,6 @@
 // include("test_inscription_check.php");
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
-    echo ("pseudo: ". $_SESSION['pseudo']);
-    echo ("<br>");
-    echo ("mot de passe: ". $_SESSION['mot_de_passe']);
 }
 ?>
 
@@ -24,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     registration();
-
+    header("Location: ./");
     // header("Location: /Project-trip");
 }
 ?>

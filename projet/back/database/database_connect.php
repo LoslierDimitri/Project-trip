@@ -47,7 +47,7 @@ connection = database_connect(); -> return the database connection
 function database_connect() {
 $database_name = "mysql:host=localhost;dbname=projet_trip";
 
-    echo "connect to database: [" . $database_name . "]... <br>";
+    // echo "connect to database: [" . $database_name . "]... <br>";
 try {
     $pdo = new PDO('mysql:host=localhost;dbname=projet_trip', 'root', 'root',[
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -55,13 +55,13 @@ try {
     
 ]);
 if ($pdo != null) {
-    echo "database connected <br>";
+    // echo "database connected <br>";
 
     return $pdo;
 }
     
 } catch (PDOException $e) {
-    echo 'Erreur : ' . $e->getMessage();
+    // echo 'Erreur : ' . $e->getMessage();
 }
 return;
 }

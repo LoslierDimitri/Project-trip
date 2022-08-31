@@ -56,4 +56,15 @@
                     <!-- <text transform="matrix(1 0 0 1 232.5 172)" >8</text> -->
                 </a>
     </svg>
+
 </div>
+
+<?php
+
+try {
+    $panel = new PDO('mysql:host=localhost;dbname=projet_trip;charset=utf8', 'root', 'root');
+} catch (error) {
+    die("Erreur d'affichage");
+}
+
+?>
