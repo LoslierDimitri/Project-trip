@@ -52,14 +52,14 @@ function display_panel(region_name, panel_name, details) {
   let panel;
   let panel_details;
 
-  for (let i = 0; i < 13; i++) {
+  for (let i = 0; i < 17; i++) {
     zone = document.getElementById("region_name_" + (i + 1) + "");
     zone.setAttribute("fill", "#ffffff");
   }
   zone = document.getElementById(region_name);
   zone.setAttribute("fill", "#0FABDF");
 
-  for (let i = 0; i < 13; i++) {
+  for (let i = 0; i < 17; i++) {
     panel = document.getElementById("region_panel_" + (i + 1) + "");
     panel.classList.add("hidden_item");
   }
@@ -69,10 +69,9 @@ function display_panel(region_name, panel_name, details) {
 
   panel_details = document.getElementById(details);
   panel_details.classList.add("show_item");
+
+  //France map functions end
+
+  //dom-tom map functions start
 }
-
-//France map functions end
-
-//dom-tom map functions start
-
 //dom-tom map functions end

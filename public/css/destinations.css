@@ -1,21 +1,43 @@
-#carouselExampleControls{
-   width: 50%; 
-   margin: auto;
+* {
+  box-sizing: border-box;
 }
 
-.carousel-item img{
-width: 100%;
-height: auto;
+.ext-border {
+  border: 2px solid #0fabdf;
+  border-radius: 20px;
 }
 
-.carousel-control-prev:hover{
-   opacity: 1 ;
-   background-color: transparent;
-   border: none;
+.carousel-item img {
+  border-radius: 20px;
 }
 
-.carousel-control-next:hover{
-   opacity: 1 ;
-   background-color: transparent;
-   border: none;
+.carousel-control-prev {
+  width: 10%;
+}
+.carousel-control-next {
+  width: 10%;
+}
+
+.carousel-control-prev:hover {
+  opacity: 1;
+  background-color: transparent;
+  border: none;
+}
+
+.carousel-control-next:hover {
+  opacity: 1;
+  background-color: transparent;
+  border: none;
+}
+
+h2 {
+  font-family: Mali-Regular;
+}
+
+h4 {
+  font-family: Mali-Regular;
+}
+
+.carousel p {
+  font-family: Signika-Regular;
 }

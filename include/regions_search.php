@@ -122,14 +122,7 @@
                     <?php
                     include("./include/map_dom-tom.php");
                     ?>
-                    <div class="col-lg-6">
-                        <div id="details_map" class="h-100">
-                            <div class="row h-100">
-                                <div class="d-flex align-items-center">
-                                    <h6>Cliquez sur une région pour avoir le détail</h6>
-                                </div>
-                            </div>
-                        </div>
+
 
                         <?php
                         // require("./projet/back/function/result_map.php");
