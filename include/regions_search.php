@@ -24,7 +24,7 @@
                         <?php
                         require("./projet/back/function/result_map.php");
 
-                        $result_region_name = get_regions("noms");
+                        $result_region_name = get_regions("noms", "images", "descriptions", "prix");
 
                         for ($i = 1; $i < count($result_region_name) + 1; $i++) {
                             $result_specialities_name = get_informations("specialities", "noms", $i);
