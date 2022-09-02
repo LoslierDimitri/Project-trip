@@ -69,9 +69,8 @@ function display_panel(region_name, panel_name, details) {
 
   panel_details = document.getElementById(details);
   panel_details.classList.add("show_item");
-
-  //France map functions end
-
-  //dom-tom map functions start
 }
+//France map functions end
+
+//dom-tom map functions start
 //dom-tom map functions end

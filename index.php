@@ -35,6 +35,9 @@ switch ($page) {
     case 'my_account':
         require __DIR__ . './views/my-account.php';
         break;
+    case 'my_trips':
+        require __DIR__ . './views/my_trips.php';
+        break;
     default:
         http_response_code(404);
         require __DIR__ . './views/page-404.php';
