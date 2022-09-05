@@ -37,9 +37,9 @@ echo "</style>";
       <div class="follow links col-lg-4 col-md-12 col-sm-12 mt-4 mb-3">
         <h3 class="text-center">Suivez-nous :</h3>
         <div class="logo_reseaux mx-3 d-flex justify-content-center">
-          <a href="" class="mx-1"><img src="./public/svg/Facebook.svg" alt=""></a>
-          <a href="" class="mx-1"><img src="./public/svg/Instagram.svg" alt=""></a>
-          <a href="" class="mx-2"><img src="./public/svg/Twitter.svg" alt=""></a>
+          <a href="https://fr-fr.facebook.com/" target="_blank" class="mx-1"><img src="./public/svg/Facebook.svg" alt=""></a>
+          <a href="https://www.instagram.com/?hl=fr" target="_blank" class="mx-1"><img src="./public/svg/Instagram.svg" alt=""></a>
+          <a href="https://twitter.com/?lang=fr" target="_blank" class="mx-2"><img src="./public/svg/Twitter.svg" alt=""></a>
         </div>
       </div>
       <!--Grid column-->

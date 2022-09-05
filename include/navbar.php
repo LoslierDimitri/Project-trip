@@ -35,7 +35,6 @@ echo "</style>";
                     <div class="container-login-logout">
                         <img class="logo-login-logout" style="width: 70px" src="./public/svg/Picto-compte.svg" alt="">
                         <p class="text-login-logout"><?= $_SESSION['pseudo'] ?></p>
-
                     </div>
                 </div>
 

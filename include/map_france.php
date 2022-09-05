@@ -62,10 +62,10 @@
 
 <?php
 
-try {
-    $panel = new PDO('mysql:host=localhost;dbname=projet_trip;charset=utf8', 'root', 'root');
-} catch (error) {
-    die("Erreur d'affichage");
-}
+// try {
+//     $panel = new PDO('mysql:host=localhost;dbname=projet_trip;charset=utf8', 'root', 'root');
+// } catch (error) {
+//     die("Erreur d'affichage");
+// }
 
 ?>
