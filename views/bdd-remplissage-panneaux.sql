@@ -42,6 +42,10 @@ insert into projet_trip.regions(noms, images, descriptions, prix) values("Norman
 insert into projet_trip.regions(noms, images, descriptions, prix) values("Pays de la Loire", "", "", "");
 insert into projet_trip.regions(noms, images, descriptions, prix) values("Provences-Alpes-Côte d'Azur", "", "", "");
 insert into projet_trip.regions(noms, images, descriptions, prix) values("Bretagne", "", "", "");
+insert into projet_trip.regions(noms, images, descriptions, prix) values("Guadeloupe", "", "", "");
+insert into projet_trip.regions(noms, images, descriptions, prix) values("Martinique", "", "", "");
+insert into projet_trip.regions(noms, images, descriptions, prix) values("La Réunion", "", "", "");
+insert into projet_trip.regions(noms, images, descriptions, prix) values("Polynésie Française", "", "", "");
 
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("La choucroute", "choucroute.jpg", "Plat à base de charcuterie, servie avec du chou fermenté et des pommes de terre. Accompagnée généralement d'une bonne bière.", 1);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("La flammekueche", "flammekueche.jpg", "Tarte fine flambée, garnit de crème fraîche, de lardons et d'oignons pour la recette classique.", 1);
@@ -58,7 +62,7 @@ insert into projet_trip.specialities(noms, images, descriptions, idregions) valu
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Le bœuf bourguignon", "boeuf_bourgignon.jpg", "Voilà un fameux plat traditionnel apprécié des grands comme des petits !", 4);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("L'escargot de Bourgogne", "escargot.jpg", 'Egalement appelé "Gros blanc", est un mets consommé depuis toujours.', 4);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Le coq au vin jaune", "coq-au-vin-jaune.jpg", "Le coq au vin jaune est l'une des spécialités culinaires les plus célèbres du Jura, c'est même un fleuron de la gastronomie française !", 4);
-insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("la potée franc-comtoise", "potee-franc-comtoise.jpeg", "A l'origine, la potée était cuisinée dans un pot, ce qui a donné son nom aux différents plats dégustés dans toute la France.", 4);
+insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("la potée franc-comtoise", "potee-franc-comtoise.jpg", "A l'origine, la potée était cuisinée dans un pot, ce qui a donné son nom aux différents plats dégustés dans toute la France.", 4);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("La Beuchelle", "Beuchelle.jpg", "Pâte feuilletée à base de ris et de rognons de veau dans une sauce crèmeuse aux champignons.", 5);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Les fouées", "fouees.jpg", "Ce sont de petits pains ronds farcies. La recette originale est farcie de mogettes (sortes de gros haricots blancs) et de viande de porc.", 5);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Les rillettes de Tours", "Rillettes_Tours.jpg", "Vous connaissez sans doute les rillettes du Mans mais c'est bien en Touraine qu'elles sont nées. Moins grasses et moins hachées vous allez vous régaler.", 5);
@@ -72,9 +76,9 @@ insert into projet_trip.specialities(noms, images, descriptions, idregions) valu
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("La brandade de Morue", "brandade.jpg", "La brandade est une purée de chair de morue émulsionnée à l'huile d'olive et au lait. La morue à souvent mauvaise réputation mais il s'agit de cabillaud séché et salé.", 7);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("La garbure des Midi-Pyrénées", "Garbure.jpg", "Typique et authentique, cette soupe montagnarde, à base de choux, de pommes de terre, de haricots et de viandes qui réhaussent sa saveur, est parfaite pour réchauffer vos hivers.", 7);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Soupe gratinée à l'oignon", "gratinee.jpeg", "Découvrez ce grand classique de la gastronomie française à déguster bien chaud.", 8);
-insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("la gibelotte de lapin", "gibelote.jpg", "C'est un ragoût de lapin traditionnellement cuisiné avec du vin blanc mais qui fonctionne tout aussi bien avec du vin rouge.", 8);
+insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("la gibelotte de lapin", "gibelote.jpeg", "C'est un ragoût de lapin traditionnellement cuisiné avec du vin blanc mais qui fonctionne tout aussi bien avec du vin rouge.", 8);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Le potage Saint-Germain", "potage.jpg", "Le potage Saint-Germain est donc un fin mélange des trésors locaux où pois et lard se marient à merveille !", 8);
-insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Bouchées à la Reine", "bouchees.jpeg", "C’est le plat des fêtes de fin d’année par excellence ! Mais on peut en réalité les déguster en toutes saisons, accompagnées d'une bonne salade verte.", 8);
+insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Bouchées à la Reine", "bouchees.jpg", "C’est le plat des fêtes de fin d’année par excellence ! Mais on peut en réalité les déguster en toutes saisons, accompagnées d'une bonne salade verte.", 8);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Le Welsh", "welsh.jpg", "Le welsh est une spécialité du nord : pain, jambon, moutarde, fromage fondu dans la bière, accompagné de frites bien sûr.", 9);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("La flamiche au Maroilles", "flamiche-au-maroilles.jpg", "Il s'agit d'une tarte avec du beurre, de la crème, de l'œuf et bien sûr du Maroilles.", 9);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("La ficelle picarde", "ficelle-picarde.jpg", "La ficelle picarde est une crêpe garnie de jambon, de champignons de Paris, d'échalotes, d'oignons, de crème fraîche, de noix de muscade et de gruyère râpé. Elle est ensuite cuite au four.", 9);
@@ -94,7 +98,7 @@ insert into projet_trip.specialities(noms, images, descriptions, idregions) valu
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("La crêpe bretonne", "la-crepe.jpg", "En Bretagne, toutes les occasions sont bonnes pour manger des crêpes ! Cuites sur une billig (grande plaque en fonte d’acier), la crêpe (froment ou blé noir) doit être fine et croustillante, accompagnée d’un verre de Chouchen ! ", 13);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Le Kig-ha-Farz", "kig-ha-farz.jpg", "Le Kig-ha-Farz est composé de 2 farz que l’on fait cuire dans des sacs en toile : le far noir et le far blanc. On l’accompagne également d’une sauce appelée « Lipig » à base d’oignons ou d’échalotes et de beurre.", 13);
 insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Le Kouign-Amann", "Kouign-Amann.jpg", "Le seul, l’unique, l’incontournable Kouign-Amann ! Réalisé à partir d’une pâte à pain, généreusement beurrée et sucrée puis pliée à la manière d’une pâte feuilletée. ", 13);
-insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Le Chouchen", "Kouign-Amann.jpg", "Cette boisson historique de Bretagne est une boisson liquoreuse alcoolisée à base de miel.", 13);
+insert into projet_trip.specialities(noms, images, descriptions, idregions) values ("Le Chouchen", "Chouchen.jpg", "Cette boisson historique de Bretagne est une boisson liquoreuse alcoolisée à base de miel.", 13);
 
 
 
