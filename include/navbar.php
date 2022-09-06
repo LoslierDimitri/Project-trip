@@ -24,7 +24,7 @@ echo "</style>";
                     <a class="nav-link" href="destinations">Destinations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Témoignages</a>
+                    <a class="nav-link" href="temoignages">Témoignages</a>
                 </li>
             </ul>
             <!-- Si la personne est connecté -->

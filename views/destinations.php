@@ -18,7 +18,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <!-- <link rel="stylesheet" href="./public/css/page-404.css"> -->
   <link rel="stylesheet" href="./public/css/destinations.css">
   <link rel="shortcut icon" type="image/png" href="./public/svg/pointer.svg" />
-  <title>destinations</title>
+  <title>Culin'Air - Destinations</title>
 </head>
 
 <body>
