@@ -51,12 +51,13 @@ echo "</style>";
                                 </a>
                             </ul>
                             <div class="d-flex justify-content-center">
+                                <a href="logout">
                                 <button class="h-50 w-75 disconnect">
                                     <?php
                                     // $connection = database_disconnect();
                                     ?>
                                     <p class="mb-0 text-white">Deconnexion</p>
-                                </button>
+                                </button></a>
                             </div>
                         </div>
                     </div>
