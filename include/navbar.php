@@ -24,7 +24,7 @@ echo "</style>";
                     <a class="nav-link" href="destinations">Destinations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Témoignages</a>
+                    <a class="nav-link" href="temoignages">Témoignages</a>
                 </li>
             </ul>
             <!-- Si la personne est connecté -->
@@ -51,12 +51,13 @@ echo "</style>";
                                 </a>
                             </ul>
                             <div class="d-flex justify-content-center">
+                                <a href="logout">
                                 <button class="h-50 w-75 disconnect">
                                     <?php
                                     // $connection = database_disconnect();
                                     ?>
                                     <p class="mb-0 text-white">Deconnexion</p>
-                                </button>
+                                </button></a>
                             </div>
                         </div>
                     </div>

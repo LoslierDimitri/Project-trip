@@ -37,7 +37,7 @@ if (session_status() === PHP_SESSION_NONE) {
             </div>
             <div class="contents mb-5">
                 <p class="text-dark text-justify">
-                    Cette aventure commence par l’idée de 4 amis qui voulaient partir en vacance, 2 voulaientgoûter à des spécialités qu’ils ne connaissaient pas et les 2 autres rêvaient de découvrir le monde et toutes ses merveilles.
+                    Cette aventure commence par l’idée de 4 amis qui voulaient partir en vacance, 2 voulaient goûter à des spécialités qu’ils ne connaissaient pas et les 2 autres rêvaient de découvrir le monde et toutes ses merveilles.
                     2 points différents mais les 4 s’accordaient sur 1 point, ils n’avaient pas beaucoup d’argent et ne parlaient pas (ou presque) un mot d’une autre langue que le français.
                 </p>
 
