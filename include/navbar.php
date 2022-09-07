@@ -52,10 +52,7 @@ echo "</style>";
                             </ul>
                             <div class="d-flex justify-content-center">
                                 <a href="logout">
-                                <button class="h-50 w-75 disconnect">
-                                    <?php
-                                    // $connection = database_disconnect();
-                                    ?>
+                                <button class="disconnect">
                                     <p class="mb-0 text-white">Deconnexion</p>
                                 </button></a>
                             </div>
