@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.ext-border {
+  border: 2px solid #0fabdf;
+  border-radius: 20px;
+}
+
+.carousel-item img {
+  border-radius: 20px;
+}
+
+.carousel-control-prev {
+  width: 10%;
+}
+.carousel-control-next {
+  width: 10%;
+}
+
+.carousel-control-prev:hover {
+  opacity: 1;
+  background-color: transparent;
+  border: none;
+}
+
+.carousel-control-next:hover {
+  opacity: 1;
+  background-color: transparent;
+  border: none;
+}
+
+h2 {
+  font-family: Mali-Regular;
+}
+
+h4 {
+  font-family: Mali-Regular;
+}
+
+.carousel p {
+  font-family: Signika-Regular;
+}

@@ -1,0 +1,64 @@
+@font-face {
+  font-family: Mali-Regular;
+  src: url(./public/fonts/Mali-Regular.ttf);
+}
+
+@font-face {
+  font-family: Mali-SB;
+  src: url(./public/fonts/Mali-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Signika-Regular;
+  src: url(./public/fonts/Signika-Regular.ttf);
+}
+
+@font-face {
+  font-family: Signika-SB;
+  src: url(./public/fonts/Signika-SemiBold.ttf);
+}
+
+.copyright {
+  background-color: #0fabdf;
+}
+
+.copyright a:hover {
+  color: rgba(15, 171, 223, 0.2);
+}
+
+footer {
+  background-color: rgba(15, 171, 223, 0.2);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+footer li:hover {
+  color: rgba(15, 171, 223, 0.2);
+  transition: all 0.5s;
+}
+
+p {
+  font-family: Signika-SB;
+  color: #0fabdf;
+}
+
+a {
+  font-family: Signika-SB;
+  list-style-type: none;
+  text-decoration: none;
+  color: #0fabdf;
+}
+
+.links {
+  font-family: Signika-SB;
+  color: #0fabdf;
+}
+
+.logo_reseaux img {
+  width: 30px;
+  height: 30px;
+}
+
+.follow {
+  border-left: 2px solid #0fabdf;
+}

@@ -1,0 +1,215 @@
+@font-face {
+  font-family: Mali-Regular;
+  src: url(/project_trip_redone/View/fonts/Mali-Regular.ttf);
+}
+
+@font-face {
+  font-family: Mali-SB;
+  src: url(/project_trip_redone/View/fonts/Mali-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Signika-Regular;
+  src: url(/project_trip_redone/View/fonts/Signika-Regular.ttf);
+}
+
+@font-face {
+  font-family: Signika-SB;
+  src: url(/project_trip_redone/View/fonts/Signika-SemiBold.ttf);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_content {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.form_info {
+  border: 2px solid #0fabdf;
+  padding: 10px;
+  min-width: 500px;
+}
+
+input {
+  margin-left: 50px;
+  width: 30px;
+}
+
+input::after {
+  background-color: #ed6e38;
+}
+
+.adress {
+  display: flex;
+  align-items: center;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+}
+
+.rate p {
+  margin: 0 10px;
+  color: white;
+}
+
+.rate_level {
+  background-color: #8cc04e;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 5px;
+}
+
+.adress img {
+  width: 15px;
+  margin-right: 10px;
+}
+
+.place_image {
+  width: 150px;
+  height: 150px;
+}
+
+.name_class {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo_price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.price {
+  align-self: flex-end;
+}
+
+.price p {
+  margin: 0;
+}
+
+span p {
+  font-size: 1.3rem;
+  color: #ed6e38;
+}
+
+p {
+  font-family: Signika-Regular;
+}
+
+.form_info_fly {
+  border: 2px solid #0fabdf;
+  padding: 10px;
+  min-width: 900px;
+  display: flex;
+}
+
+.fly {
+  display: flex;
+}
+
+.fly_content {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.airline {
+  display: flex;
+  align-items: center;
+}
+
+.airline p {
+  display: flex;
+  align-items: center;
+  margin: 0 20px 0 10px;
+}
+
+.departure {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+}
+
+.arrival {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+}
+
+.date_time_airport {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.date_time_airport p {
+  margin: 0;
+  font-family: Signika-Regular;
+}
+
+.airline {
+  margin-right: 20px;
+}
+
+.airline_logo {
+  width: 50px;
+  height: 50px;
+}
+
+.duration_price {
+  display: flex;
+}
+
+.duration {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  justify-content: space-evenly;
+}
+.price {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  justify-content: space-evenly;
+}
+
+.duration p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.price {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background-color: #ed6e38;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-family: Signika-Regular;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: white;
+  color: #ed6e38;
+  border: 2px solid #ed6e38;
+  cursor: pointer;
+}

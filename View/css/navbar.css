@@ -1,0 +1,86 @@
+@font-face {
+  font-family: Mali-Regular;
+  src: url(../fonts/Mali-Regular.ttf);
+}
+
+@font-face {
+  font-family: Mali-SB;
+  src: url(../fonts/Mali-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Signika-Regular;
+  src: url(../fonts/Signika-Regular.ttf);
+}
+
+@font-face {
+  font-family: Signika-SB;
+  src: url(../fonts/Signika-SemiBold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  padding: 0;
+  width: 100%;
+}
+
+.container-fluid {
+  background-color: rgba(15, 171, 223, 0.2);
+  padding: 5px 0;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.navbar-brand {
+  width: 200px;
+  margin-left: 20px;
+  margin-top: -20px;
+}
+
+.navbar-nav {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.nav-link {
+  color: #0fabdf;
+  font-family: Signika-SB;
+  font-size: 1.4rem;
+}
+
+.nav-link:hover {
+  color: rgba(15, 171, 223, 0.2);
+  transition: all 0.5s;
+}
+
+.container-login-logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+.logo-login-logout {
+  width: 50px;
+  margin-bottom: 0;
+}
+
+.text-login-logout {
+  width: 200px;
+  text-align: center;
+  font-family: Signika-Regular;
+}
+
+.list-collapse:hover {
+  color: rgba(15, 171, 223, 0.2);
+  transition: all 0.5s;
+}
+
+.disconnect:hover {
+  opacity: 0.5;
+  transition: all 0.5s;
+}

@@ -1,0 +1,390 @@
+@font-face {
+  font-family: Mali-Regular;
+  src: url(../fonts/Mali-Regular.ttf);
+}
+
+@font-face {
+  font-family: Mali-SB;
+  src: url(../fonts/Mali-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Signika-Regular;
+  src: url(../fonts/Signika-Regular.ttf);
+}
+
+@font-face {
+  font-family: Signika-SB;
+  src: url(../fonts/Signika-SemiBold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/*advanced search start*/
+
+.advanced_search {
+  background-color: rgba(15, 171, 223, 0.2);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.advanced_search h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: Mali-SB;
+  color: #ed6e38;
+  margin-bottom: 50px;
+}
+
+form {
+  background-color: #8cc04e;
+  border-radius: 20px;
+  margin: 0 200px;
+}
+
+.formule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formule select {
+  width: 250px;
+  font-family: Signika-Regular;
+  color: #8cc04e;
+}
+
+.formule label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-family: Mali-SB;
+  color: #ed6e38;
+}
+
+input {
+  color: #8cc04e;
+  font-family: Signika-Regular;
+  width: 100%;
+  height: 35px;
+}
+
+input::placeholder {
+  color: #8cc04e;
+}
+
+button {
+  background-color: #ed6e38;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+  font-family: Signika-Regular;
+}
+
+button:hover {
+  background-color: white;
+  color: #ed6e38;
+  border: 2px solid #ed6e38;
+  cursor: pointer;
+}
+
+button img {
+  width: 30px;
+}
+
+/*advanced search end*/
+
+/*region search start*/
+
+h2 {
+  font-family: Mali-Regular;
+  color: #ed6e38;
+}
+
+.region_search h3 {
+  font-family: Mali-SB;
+  color: #0fabdf;
+}
+.region_search h4 {
+  font-family: Signika-Regular;
+  color: #0fabdf;
+}
+
+.region_search h6 {
+  font-family: Signika-SB;
+  color: #ed6e38;
+}
+
+.region_search h5 {
+  font-family: Signika-Regular;
+  color: #0fabdf;
+}
+
+.region_search p {
+  font-family: Signika-Regular;
+  color: #000;
+}
+
+svg {
+  height: 100%;
+}
+
+#arrondissements a:hover path {
+  fill: rgba(15, 171, 223, 0.2);
+}
+
+.hidden_item {
+  display: none;
+}
+
+.show_item {
+  display: none;
+}
+
+.region_img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+/*region search end*/
+
+/* 3D Slideshow start*/
+
+.slideshow {
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(15, 171, 223, 0.2);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.slideshow h2 {
+  color: #0fabdf;
+  font-family: Mali-SB;
+  display: flex;
+  margin-bottom: 0;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.shadow {
+  border: none;
+}
+
+.slideshow img {
+  width: 100%;
+  margin-right: 15px;
+}
+
+.slideshow p {
+  position: relative;
+  bottom: 40px;
+  left: 5px;
+  color: white;
+  font-family: Signika-SB;
+}
+
+.guadeloupe p {
+  position: relative;
+  bottom: 65px;
+}
+
+.slideshow .title {
+  display: flex;
+}
+
+.figure {
+  border: none;
+}
+
+.slideshow-title {
+  font-family: "Allerta Stencil";
+  font-size: 62px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 25%;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.content-carrousel img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.sub-heading {
+  padding-top: 50px;
+  font-size: 18px;
+}
+
+.sub-heading-two {
+  font-size: 15px;
+}
+
+.sub-heading-three {
+  font-size: 13px;
+}
+
+.sub-heading-four {
+  font-size: 11px;
+}
+
+.sub-heading-five {
+  font-size: 9px;
+}
+
+.sub-heading-six {
+  font-size: 7px;
+}
+
+.sub-heading-seven {
+  font-size: 5px;
+}
+
+.sub-heading-eight {
+  font-size: 3px;
+}
+
+.sub-heading-nine {
+  font-size: 1px;
+}
+
+.entire-content {
+  margin: auto;
+  width: 190px;
+  perspective: 1000px;
+  position: relative;
+  padding-top: 80px;
+}
+
+.entire-content .title {
+  width: 250px;
+}
+
+.content-carrousel {
+  width: 100%;
+  position: absolute;
+  float: right;
+  animation: rotar 60s infinite linear;
+  transform-style: preserve-3d;
+}
+
+.content-carrousel:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.content-carrousel figure {
+  width: 100%;
+  height: 146px;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.content-carrousel figure:nth-child(1) {
+  transform: rotateY(0deg) translateZ(450px);
+}
+
+.content-carrousel figure:nth-child(2) {
+  transform: rotateY(40deg) translateZ(450px);
+}
+
+.content-carrousel figure:nth-child(3) {
+  transform: rotateY(80deg) translateZ(450px);
+}
+
+.content-carrousel figure:nth-child(4) {
+  transform: rotateY(120deg) translateZ(450px);
+}
+
+.content-carrousel figure:nth-child(5) {
+  transform: rotateY(160deg) translateZ(450px);
+}
+
+.content-carrousel figure:nth-child(6) {
+  transform: rotateY(200deg) translateZ(450px);
+}
+
+.content-carrousel figure:nth-child(7) {
+  transform: rotateY(240deg) translateZ(450px);
+}
+
+.content-carrousel figure:nth-child(8) {
+  transform: rotateY(280deg) translateZ(450px);
+}
+
+.content-carrousel figure:nth-child(9) {
+  transform: rotateY(320deg) translateZ(450px);
+}
+
+.content-carrousel figure:nth-child(10) {
+  transform: rotateY(360deg) translateZ(450px);
+}
+
+.shadow {
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px #000;
+  border-radius: 1px;
+}
+
+.content-carrousel img {
+  image-rendering: auto;
+  transition: all 300ms;
+  width: 100%;
+  height: 100%;
+}
+
+.content-carrousel img:hover {
+  transform: scale(1.2);
+  transition: all 300ms;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+/* 3D Slideshow End*/
+
+.advantages h2 {
+  color: black;
+  font-family: Mali-SB;
+  margin-bottom: 0;
+}
+
+.advantages img {
+  width: 150px;
+}
+
+.advantages .contents {
+  background-color: #0fabdf;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.advantages p {
+  font-family: Mali-Regular;
+  font-size: 1.5rem;
+}

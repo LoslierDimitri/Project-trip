@@ -1,0 +1,26 @@
+section {
+  margin-top: 89px;
+  margin-bottom: 105px;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+  background-color: #ed6e38;
+  padding: 10px 35px 10px 35px;
+  color: white;
+  font-family: Signika-SB;
+  font-size: 1.4rem;
+  border: 2px solid transparent;
+}
+
+.bouton {
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: white;
+  border: 2px solid #ed6e38;
+  color: #ed6e38;
+}
