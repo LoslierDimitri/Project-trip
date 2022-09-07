@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="/project_trip_redone/View/css/navbar.css">
-    <link rel="stylesheet" href="/project_trip_redone/View/css/footer.css">
-    <link rel="stylesheet" href="/project_trip_redone/View/css/concept.css">
+    <link rel="stylesheet" href="../View/css/navbar.css">
+    <link rel="stylesheet" href="../View/css/footer.css">
+    <link rel="stylesheet" href="../View/css/concept.css">
     <title>Page concept</title>
 </head>
 
@@ -16,25 +16,25 @@
 
     <?php
     $path = $_SERVER["DOCUMENT_ROOT"];
-    $path_new = $path . "/project_trip_redone/View/component/navbar.php";
+    $path_new = $path . "/Project-trip/View/component/navbar.php";
     include($path_new);
     ?>
 
     <?php
     $path = $_SERVER["DOCUMENT_ROOT"];
-    $path_new = $path . "/project_trip_redone/View/component/all_controller.php";
+    $path_new = $path . "/Project-trip/View/component/all_controller.php";
     include($path_new);
     ?>
 
     <section class="banner">
-        <img src="/project_trip_redone/View/svg/img-concept.svg" alt="">
+        <img src="/Project-trip/View/svg/img-concept.svg" alt="">
     </section>
 
 
     <section class="w-100 d-flex justify-content-center">
         <div class="column w-50">
             <div class="title mt-5 mb-3">
-                <h3><img src="/project_trip_redone/View/svg/Logo-text.svg" alt="">, qu'est ce que c'est au juste?</h3>
+                <h3><img src="/Project-trip/View/svg/Logo-text.svg" alt="">, qu'est ce que c'est au juste?</h3>
             </div>
             <div class="contents mb-5">
                 <p class="text-dark text-justify">
@@ -63,7 +63,7 @@
 
     <?php
     $path = $_SERVER["DOCUMENT_ROOT"];
-    $path_new = $path . "/project_trip_redone/View/component/footer.php";
+    $path_new = $path . "/Project-trip/View/component/footer.php";
     include($path_new);
     ?>
 

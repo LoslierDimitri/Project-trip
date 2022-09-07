@@ -16,7 +16,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <?php
 //view
 $path = $_SERVER["DOCUMENT_ROOT"];
-$path_new = $path . "/project_trip_redone/View/page/page_concept.php";
+$path_new = $path . "/Project-trip/View/page/page_concept.php";
 include($path_new);
 ?>
 

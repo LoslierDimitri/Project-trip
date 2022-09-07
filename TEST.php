@@ -1,12 +1,12 @@
 <?php
 $path = $_SERVER["DOCUMENT_ROOT"];
-$path_new = $path . "/project_trip_redone/Model/Database.php";
+$path_new = $path . "//Project-trip/Model/Database.php";
 require($path_new);
 $database = new Database();
 
 
 $path = $_SERVER["DOCUMENT_ROOT"];
-$path_new = $path . "/project_trip_redone/Model/Api.php";
+$path_new = $path . "//Project-trip/Model/Api.php";
 require($path_new);
 $api = new Api();
 
@@ -35,7 +35,7 @@ $result_fly = "";
 
 /*
 $path = $_SERVER["DOCUMENT_ROOT"];
-$path_new = $path . "/project_trip_redone/BACKUP_API_CALL_PHP.php";
+$path_new = $path . "//Project-trip/BACKUP_API_CALL_PHP.php";
 include($path_new);
 
 $result_hotel = get_api_call_backup_hotel();

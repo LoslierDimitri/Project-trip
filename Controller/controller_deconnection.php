@@ -12,7 +12,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <?php
 //code
 session_destroy();
-header('location: /project_trip_redone/Controller/controller_main.php');
+header('location: /Project-trip/Controller/controller_main.php');
 exit;
 ?>
 

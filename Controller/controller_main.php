@@ -16,7 +16,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <?php
 //view
 $path = $_SERVER["DOCUMENT_ROOT"];
-$path_new = $path . "/project_trip_redone/View/page/page_main.php";
+$path_new = $path . "/Project-trip/View/page/page_main.php";
 include($path_new);
 ?>
 
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION["voyage_nombre_chambre"] = $voyage_nombre_chambre;
     $_SESSION["voyage_hotel_class"] = $voyage_hotel_class;
 
-    echo ("<script>location.href = '/project_trip_redone/Controller/controller_result.php';</script>");
+    echo ("<script>location.href = '/Project-trip/Controller/controller_result.php';</script>");
     exit();
 }
 ?>

@@ -3,7 +3,7 @@
             <div class="inscription">
                 <h2>Inscription</h2>
 
-                <img src="./public/svg/Logo.svg" alt="">
+                <img src="Project-trip/View/svg/Logo.svg" alt="">
 
                 <form action="inscription" method="POST">
                     <div class="sex">
@@ -28,7 +28,7 @@
                         <button type="submit">Envoyer</button><br>
                     </div>
                 </form>
-                <a class="login-link" href="/project_trip_redone/Controller/controller_connection.php">Déjà un compte? Connectez-vous ici</a>
+                <a class="login-link" href="/Project-trip/Controller/controller_connection.php">Déjà un compte? Connectez-vous ici</a>
             </div>
         </div>
     </section>

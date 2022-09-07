@@ -1,17 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand mx-4 my-auto" href="/project_trip_redone/Controller/controller_main.php"><img src="/project_trip_redone/View/svg/Logo.svg" alt=""></a>
+        <a class="navbar-brand mx-4 my-auto" href="/Project-trip/Controller/controller_main.php"><img src="/Project-trip/View/svg/Logo.svg" alt=""></a>
         <button class="navbar-toggler mx-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="bg-none"><img src="/project_trip_redone/View/svg/Picto-menu-burger.svg" alt=""></span>
+            <span class="bg-none"><img src="/Project-trip/View/svg/Picto-menu-burger.svg" alt=""></span>
         </button>
         <div class="collapse navbar-collapse mt-2" id="navbarTogglerDemo01">
 
             <ul class="navbar-nav me-auto mb-2 ml-1 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/project_trip_redone/View/page/page_concept.php">Le concept</a>
+                    <a class="nav-link" href="/Project-trip/Controller/controller_concept.php">Le concept</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/project_trip_redone/View/page/page_destinations.php">Destinations</a>
+                    <a class="nav-link" href="/Project-trip/Controller/controller_concept.php">Destinations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="temoignages">Témoignages</a>
@@ -23,7 +23,7 @@
 
                 <div class="login-logout mx-5 collapsed" style="width: 50px;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
                     <div class="container-login-logout">
-                        <img class="logo-login-logout" style="width: 70px" src="/project_trip_redone/View/svg/Picto-compte.svg" alt="">
+                        <img class="logo-login-logout" style="width: 70px" src="/Project-trip/View/svg/Picto-compte.svg" alt="">
                         <p class="text-login-logout"><?= $_SESSION['pseudo'] ?></p>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                                 </a>
                             </ul>
                             <div class="d-flex justify-content-center">
-                                <a href="logout">
+                                <a href="/Project-trip/Controller/controller_deconnection.php">
                                 <button class="disconnect">
                                     <p class="mb-0 text-white">Deconnexion</p>
                                 </button></a>
@@ -53,7 +53,7 @@
                 <!-- Si la personne n'est pas connecté -->
             <?php else : ?>
                 <div class="login-logout">
-                    <a href="connexion" class="container-login-logout"><img class="logo-login-logout" src="/project_trip_redone/View/svg/Picto-connexion-inscription.svg" alt="">
+                    <a href="connexion" class="container-login-logout"><img class="logo-login-logout" src="/Project-trip/View/svg/Picto-connexion-inscription.svg" alt="">
                         <p class="text-login-logout">Se connecter/S'inscrire</p>
                     </a>
                 </div>

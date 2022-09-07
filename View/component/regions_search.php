@@ -11,7 +11,7 @@
             <div class="row">
                 <?php
                 $path = $_SERVER["DOCUMENT_ROOT"];
-                $path_new = $path . "/project_trip_redone/View/component/map_france.php";
+                $path_new = $path . "/Project-trip/View/component/map_france.php";
                 include($path_new);
 
 
@@ -27,7 +27,7 @@
 
                     <?php
                     $path = $_SERVER["DOCUMENT_ROOT"];
-                    $path_new = $path . "/project_trip_redone/View/script/result_map.php";
+                    $path_new = $path . "/Project-trip/View/script/result_map.php";
                     include($path_new);
 
 
@@ -70,7 +70,7 @@
                                         for ($j = 0; $j < 4; $j++) {
                                         ?>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="/project_trip_redone/View/jpg/<?php if ($result_specialities_images != []) {
+                                                <img class="region_img mt-4" src="/Project-trip/View/jpg/<?php if ($result_specialities_images != []) {
                                                                                                                     echo $result_specialities_images[$j]["images"];
                                                                                                                 } ?>" alt="">
                                             </div>
@@ -97,7 +97,7 @@
                                             for ($j = 0; $j < 4; $j++) {
                                             ?>
                                                 <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                    <img class="region_img mt-4" src="/project_trip_redone/View/jpg/<?php if ($result_visits_images != []) {
+                                                    <img class="region_img mt-4" src="/Project-trip/View/jpg/<?php if ($result_visits_images != []) {
                                                                                                                         echo $result_visits_images[$j]["images"];
                                                                                                                     } ?>" alt="">
                                                 </div>
@@ -145,7 +145,7 @@
             <div class="row">
                 <?php
                 $path = $_SERVER["DOCUMENT_ROOT"];
-                $path_new = $path . "/project_trip_redone/View/component/map_dom-tom.php";
+                $path_new = $path . "/Project-trip/View/component/map_dom-tom.php";
                 include($path_new);
 
 
@@ -161,7 +161,7 @@
 
                     <?php
                     // $path = $_SERVER["DOCUMENT_ROOT"];
-                    // $path_new = $path . "/project_trip_redone/View/script/result_map.php";
+                    // $path_new = $path . "/Project-trip/View/script/result_map.php";
                     // include($path_new);
 
 
@@ -204,7 +204,7 @@
                                         for ($j = 0; $j < 4; $j++) {
                                         ?>
                                             <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                <img class="region_img mt-4" src="/project_trip_redone/View/jpg/<?php if ($result_specialities_images != []) {
+                                                <img class="region_img mt-4" src="/Project-trip/View/jpg/<?php if ($result_specialities_images != []) {
                                                                                                                     echo $result_specialities_images[$j]["images"];
                                                                                                                 } ?>" alt="">
                                             </div>
@@ -231,7 +231,7 @@
                                             for ($j = 0; $j < 4; $j++) {
                                             ?>
                                                 <div class="col-md-12 col-lg-3 d-flex justify-content-center">
-                                                    <img class="region_img mt-4" src="/project_trip_redone/View/jpg/<?php if ($result_visits_images != []) {
+                                                    <img class="region_img mt-4" src="/Project-trip/View/jpg/<?php if ($result_visits_images != []) {
                                                                                                                         echo $result_visits_images[$j]["images"];
                                                                                                                     } ?>" alt="">
                                                 </div>

@@ -1,21 +1,21 @@
 @font-face {
   font-family: Mali-Regular;
-  src: url(/project_trip_redone/View/fonts/Mali-Regular.ttf);
+  src: url(/Project-trip/View/fonts/Mali-Regular.ttf);
 }
 
 @font-face {
   font-family: Mali-SB;
-  src: url(/project_trip_redone/View/fonts/Mali-SemiBold.ttf);
+  src: url(/Project-trip/View/fonts/Mali-SemiBold.ttf);
 }
 
 @font-face {
   font-family: Signika-Regular;
-  src: url(/project_trip_redone/View/fonts/Signika-Regular.ttf);
+  src: url(/Project-trip/View/fonts/Signika-Regular.ttf);
 }
 
 @font-face {
   font-family: Signika-SB;
-  src: url(/project_trip_redone/View/fonts/Signika-SemiBold.ttf);
+  src: url(/Project-trip/View/fonts/Signika-SemiBold.ttf);
 }
 
 form {
@@ -56,7 +56,7 @@ input::after {
 
 .rate p {
   margin: 0 10px;
-  color: white;
+  color: #8cc04e;
 }
 
 .rate_level {
@@ -64,6 +64,10 @@ input::after {
   color: white;
   border-radius: 10px;
   padding: 5px 5px;
+}
+
+.rate_level p {
+  color: white;
 }
 
 .adress img {

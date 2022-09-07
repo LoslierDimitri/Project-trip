@@ -2,7 +2,7 @@
         <div class="container_connection">
             <div class="connexion">
                 <h2>Connexion</h2>
-                <img src="./public/svg/Logo.svg" alt="">
+                <img src="Project-trip/View/svg/Logo.svg" alt="">
                 <?php
                 /*
                     <form action="<?//= $_SERVER['PHP_SELF'] ?>" method="POST">
@@ -15,7 +15,7 @@
                         <button type="submit">Valider</button><br>
                     </div>
                 </form>
-                <a class="register-link" href="/project_trip_redone/Controller/controller_registration.php">
+                <a class="register-link" href="/Project-trip/Controller/controller_registration.php">
                     <p>Pas de compte? Inscrivez-vous ici</p>
                 </a>
             </div>

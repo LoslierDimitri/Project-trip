@@ -13,7 +13,7 @@
                         <a href="#">
                             <li>Mentions légales</li>
                         </a>
-                        <a href="/project_trip_redone/Controller/controller_concept.php">
+                        <a href="/Project-trip/Controller/controller_concept.php">
                             <li>Le concept</li>
                         </a>
                     </ul>
@@ -31,9 +31,9 @@
             <div class="follow links col-lg-4 col-md-12 col-sm-12 mt-4 mb-3">
                 <h3 class="text-center">Suivez-nous :</h3>
                 <div class="logo_reseaux mx-3 d-flex justify-content-center">
-                    <a href="https://www.facebook.com/" class="mx-1"><img src="/project_trip_redone/View/svg/Facebook.svg" alt=""></a>
-                    <a href="https://www.instagram.com/" class="mx-1"><img src="/project_trip_redone/View/svg/Instagram.svg" alt=""></a>
-                    <a href="https://twitter.com/?lang=en" class="mx-2"><img src="/project_trip_redone/View/svg/Twitter.svg" alt=""></a>
+                    <a href="https://www.facebook.com/" class="mx-1"><img src="/Project-trip/View/svg/Facebook.svg" alt=""></a>
+                    <a href="https://www.instagram.com/" class="mx-1"><img src="/Project-trip/View/svg/Instagram.svg" alt=""></a>
+                    <a href="https://twitter.com/?lang=en" class="mx-2"><img src="/Project-trip/View/svg/Twitter.svg" alt=""></a>
                 </div>
             </div>
             <!--Grid column-->

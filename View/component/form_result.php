@@ -1,4 +1,4 @@
-<form action="/project_trip_redone/Controller/controller_result_user.php" method="POST">
+<form action="/Project-trip/Controller/controller_result_user.php" method="POST">
     <h4>Hôtels</h4>
     <?php
     for ($i = 0; $i < count($result_hotel); $i++) {
@@ -42,7 +42,7 @@
                         <?php
                             if (isset($result_hotel[$i]->hotel_address)) {
                             ?>
-                        <img src="/project_trip_redone/View/png/Pointer.png" alt="">
+                        <img src="/Project-trip/View/png/Pointer.png" alt="">
                         <p> <?php
                                     echo $result_hotel[$i]->hotel_address; ?></p>
                         <?php
@@ -142,7 +142,7 @@
                         <?php
                             if (isset($result_restaurant[$i]->restaurant_address)) {
                             ?>
-                        <img src="/project_trip_redone/View/png/Pointer.png" alt="">
+                        <img src="/Project-trip/View/png/Pointer.png" alt="">
                         <p> <?php
                                     echo $result_restaurant[$i]->restaurant_address; ?></p>
                         <?php
@@ -306,7 +306,6 @@
                     </div>
                 </label>
             </div>
-            <input type="checkbox" id="result_hotel" name="" value="">
         </div>
         </label>
         <input type="checkbox" name="result_user_fly_departure_arrival[]"

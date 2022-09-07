@@ -13,11 +13,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <link rel="stylesheet" href="/project_trip_redone/View/css/navbar.css">
-  <link rel="stylesheet" href="/project_trip_redone/View/css/footer.css">
+  <link rel="stylesheet" href="/Project-trip/View/css/navbar.css">
+  <link rel="stylesheet" href="/Project-trip/View/css/footer.css">
   <!-- <link rel="stylesheet" href="./public/css/page-404.css"> -->
-  <link rel="stylesheet" href="/project_trip_redone/View/css/destinations.css">
-  <link rel="shortcut icon" type="image/png" href="/project_trip_redone/View/public/svg/pointer.svg" />
+  <link rel="stylesheet" href="/Project-trip/View/css/destinations.css">
+  <link rel="shortcut icon" type="image/png" href="/Project-trip/View/public/svg/pointer.svg" />
   <title>Culin'Air - Destinations</title>
 </head>
 
@@ -25,17 +25,17 @@
 
 <?php
     $path = $_SERVER["DOCUMENT_ROOT"];
-    $path_new = $path . "/project_trip_redone/View/component/navbar.php";
+    $path_new = $path . "/Project-trip/View/component/navbar.php";
     include($path_new);
     ?>
 
 <?php
     $path = $_SERVER["DOCUMENT_ROOT"];
-    $path_new = $path . "/project_trip_redone/View/component/all_controller.php";
+    $path_new = $path . "/Project-trip/View/component/all_controller.php";
     include($path_new);
     ?>
 
-  <img class="banner my-4" src="/project_trip_redone/View/svg/banner_destinations.svg" alt="">
+  <img class="banner my-4" src="/Project-trip/View/svg/banner_destinations.svg" alt="">
 
 
   <h2 class="mx-4">En France</h2>
@@ -45,7 +45,7 @@
         <div class="carousel-item active">
           <div class="row">
             <div class="col-lg-6">
-              <img src="/project_trip_redone/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
+              <img src="/Project-trip/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
             </div>
             <div class="col-lg-6">
               <h4>La Bretagne</h4>
@@ -56,7 +56,7 @@
         <div class="carousel-item">
           <div class="row">
             <div class="col-lg-6">
-              <img src="/project_trip_redone/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
+              <img src="/Project-trip/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
             </div>
             <div class="col-lg-6">
               <h4>La Bretagne</h4>
@@ -67,7 +67,7 @@
         <div class="carousel-item">
           <div class="row">
             <div class="col-lg-6">
-              <img src="/project_trip_redone/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
+              <img src="/Project-trip/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
             </div>
             <div class="col-lg-6">
               <h4>La Bretagne</h4>
@@ -77,12 +77,12 @@
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <img src="/project_trip_redone/View/svg/button_prev.svg" alt="">
+        <img src="/Project-trip/View/svg/button_prev.svg" alt="">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <img src="/project_trip_redone/View/svg/button_next.svg" alt="">
+        <img src="/Project-trip/View/svg/button_next.svg" alt="">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -96,7 +96,7 @@
         <div class="carousel-item active">
           <div class="row">
             <div class="col-lg-6">
-              <img src="/project_trip_redone/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
+              <img src="/Project-trip/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
             </div>
             <div class="col-lg-6">
               <h4>La Bretagne</h4>
@@ -107,7 +107,7 @@
         <div class="carousel-item">
           <div class="row">
             <div class="col-lg-6">
-              <img src="/project_trip_redone/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
+              <img src="/Project-trip/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
             </div>
             <div class="col-lg-6">
               <h4>La Bretagne</h4>
@@ -118,7 +118,7 @@
         <div class="carousel-item">
           <div class="row">
             <div class="col-lg-6">
-              <img src="/project_trip_redone/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
+              <img src="/Project-trip/View/jpg/Bretagne.jpg" class="d-block w-100 mb-3" alt="paysage">
             </div>
             <div class="col-lg-6">
               <h4>La Bretagne</h4>
@@ -128,12 +128,12 @@
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
-        <img src="/project_trip_redone/View/svg/button_prev.svg" alt="">
+        <img src="/Project-trip/View/svg/button_prev.svg" alt="">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
-        <img src="/project_trip_redone/View/svg/button_next.svg" alt="">
+        <img src="/Project-trip/View/svg/button_next.svg" alt="">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -143,7 +143,7 @@
 
   <?php
     $path = $_SERVER["DOCUMENT_ROOT"];
-    $path_new = $path . "/project_trip_redone/View/component/footer.php";
+    $path_new = $path . "/Project-trip/View/component/footer.php";
     include($path_new);
     ?>
 </body>

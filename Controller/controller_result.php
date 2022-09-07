@@ -15,7 +15,7 @@ ini_set('max_execution_time', '300');
 set_time_limit(300);
 
 $path = $_SERVER["DOCUMENT_ROOT"];
-$path_new = $path . "/project_trip_redone/Model/Api.php";
+$path_new = $path . "/Project-trip/Model/Api.php";
 require($path_new);
 $api = new Api();
 
@@ -54,7 +54,7 @@ $result_fly = $api->api_call_priceline($voyage_lieu_depart, $voyage_lieu_arrive,
 
 //----------------------------------------backup call
 $path = $_SERVER["DOCUMENT_ROOT"];
-$path_new = $path . "/project_trip_redone/BACKUP_API_CALL_PHP.php";
+$path_new = $path . "/Project-trip/BACKUP_API_CALL_PHP.php";
 include($path_new);
 
 $result_hotel = get_api_call_backup_hotel();
@@ -65,7 +65,7 @@ $result_fly = get_api_call_backup_fly();
 <?php
 //view
 $path = $_SERVER["DOCUMENT_ROOT"];
-$path_new = $path . "/project_trip_redone/View/page/page_result.php";
+$path_new = $path . "/Project-trip/View/page/page_result.php";
 include($path_new);
 ?>
 

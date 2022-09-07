@@ -16,7 +16,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <?php
 //view
 $path = $_SERVER["DOCUMENT_ROOT"];
-$path_new = $path . "/project_trip_redone/View/page/page_connection.php";
+$path_new = $path . "/Project-trip/View/page/page_connection.php";
 include($path_new);
 ?>
 
@@ -25,7 +25,7 @@ include($path_new);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //connection
     $path = $_SERVER["DOCUMENT_ROOT"];
-    $path_new = $path . "/project_trip_redone/Model/Database.php";
+    $path_new = $path . "/Project-trip/Model/Database.php";
     require($path_new);
     $database = new Database();
 
@@ -36,11 +36,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION["type"] = $database->get_user_information("type", "pseudo", $_POST["connexion_pseudo"])[0]["type"];
         $_SESSION["id"] = $database->get_user_information("id", "pseudo", $_POST["connexion_pseudo"])[0]["id"];
 
-        echo ("<script>location.href = '/project_trip_redone/Controller/controller_main.php';</script>");
+        echo ("<script>location.href = '/Project-trip/Controller/controller_main.php';</script>");
         exit();
     }
 
-    echo ("<script>location.href = '/project_trip_redone/Controller/controller_connection.php';</script>");
+    echo ("<script>location.href = '/Project-trip/Controller/controller_connection.php';</script>");
     exit();
 }
 ?>
