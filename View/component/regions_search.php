@@ -1,7 +1,7 @@
 <section class="region_search">
     <div class="title mt-5 mb-5">
         <div class="column w-100">
-            <h2 class="text-center mb-4">Recherche par région</h2>
+            <h2 class="text-center mb-4">Aide à la recherche</h2>
             <h3 class="text-center mb-4">France</h3>
         </div>
         <div id="panel">
