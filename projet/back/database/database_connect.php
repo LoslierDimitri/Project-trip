@@ -49,7 +49,7 @@ $database_name = "mysql:host=localhost;dbname=projet_trip";
 
     // echo "connect to database: [" . $database_name . "]... <br>";
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=projet_trip', 'root', 'root',[
+    $pdo = new PDO('mysql:host=localhost;dbname=projet_trip;charset=utf8mb4', 'root', 'root',[
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
     
