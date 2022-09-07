@@ -5,7 +5,7 @@
 
                 <img src="Project-trip/View/svg/Logo.svg" alt="">
 
-                <form action="inscription" method="POST">
+                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
                     <div class="sex">
                         <input type="radio" name="inscription_sexe" id="H" value="H">
                         <label for="H">Homme</label>
@@ -32,5 +32,3 @@
             </div>
         </div>
     </section>
-
-    <a href="accueil">menu</a>

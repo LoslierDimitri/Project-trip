@@ -36,6 +36,7 @@
   border: 5px solid #0fabdf;
   border-radius: 30px;
   padding: 40px 100px 40px 100px;
+  margin-bottom: 20px;
 }
 
 .inscription h2 {
@@ -101,4 +102,9 @@ img {
 
 .login-link:hover {
   color: rgba(15, 171, 223, 0.2);
+}
+
+.sex > input,
+label {
+  margin-right: 5px;
 }

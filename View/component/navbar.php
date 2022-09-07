@@ -11,14 +11,14 @@
                     <a class="nav-link" href="/Project-trip/Controller/controller_concept.php">Le concept</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Project-trip/Controller/controller_concept.php">Destinations</a>
+                    <a class="nav-link" href="/Project-trip/Controller/controller_destinations.php">Destinations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="temoignages">Témoignages</a>
+                    <a class="nav-link" href="#">Témoignages</a>
                 </li>
             </ul>
             <!-- Si la personne est connecté -->
-            <?php if (isset($_SESSION['pseudo']) && isset($_SESSION["mot_de_passe"])) : ?>
+            <?php if (isset($_SESSION['type']) && isset($_SESSION["id"])) : ?>
                 <p>
 
                 <div class="login-logout mx-5 collapsed" style="width: 50px;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
@@ -53,7 +53,7 @@
                 <!-- Si la personne n'est pas connecté -->
             <?php else : ?>
                 <div class="login-logout">
-                    <a href="connexion" class="container-login-logout"><img class="logo-login-logout" src="/Project-trip/View/svg/Picto-connexion-inscription.svg" alt="">
+                    <a href="/Project-trip/Controller/controller_connection.php" class="container-login-logout"><img class="logo-login-logout" src="/Project-trip/View/svg/Picto-connexion-inscription.svg" alt="">
                         <p class="text-login-logout">Se connecter/S'inscrire</p>
                     </a>
                 </div>

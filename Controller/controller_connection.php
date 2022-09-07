@@ -35,7 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (($result_password[0]["mot_de_passe"] != []) && (password_verify($_POST["connexion_mot_de_passe"], $result_password[0]["mot_de_passe"]))) {
         $_SESSION["type"] = $database->get_user_information("type", "pseudo", $_POST["connexion_pseudo"])[0]["type"];
         $_SESSION["id"] = $database->get_user_information("id", "pseudo", $_POST["connexion_pseudo"])[0]["id"];
-
+        $_SESSION["pseudo"] = $database->get_user_information("pseudo", "pseudo", $_POST["connexion_pseudo"])[0]["pseudo"];
+        
         echo ("<script>location.href = '/Project-trip/Controller/controller_main.php';</script>");
         exit();
     }
