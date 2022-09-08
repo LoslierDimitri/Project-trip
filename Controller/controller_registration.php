@@ -52,8 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             $_SESSION["type"] = $database->get_user_information("type", "nom", $_POST["inscription_name"]);
             $_SESSION["id"] = $database->get_user_information("id", "nom", $_POST["inscription_name"]);
-            $_SESSION["pseudo"] = $database->get_user_information("pseudo", "pseudo", $_POST["connexion_pseudo"])[0]["pseudo"];
-            
+            $_SESSION["pseudo"] = $database->get_user_information("pseudo", "pseudo", $_POST["inscription_pseudo"])[0]["pseudo"];
+
             echo ("<script>location.href = '/Project-trip/Controller/controller_main.php';</script>");
             exit();
         }
