@@ -21,9 +21,9 @@
     ?>
 
     <?php
-    $path = $_SERVER["DOCUMENT_ROOT"];
-    $path_new = $path . "/Project-trip/View/component/all_controller.php";
-    include($path_new);
+    // $path = $_SERVER["DOCUMENT_ROOT"];
+    // $path_new = $path . "/Project-trip/View/component/all_controller.php";
+    // include($path_new);
     ?>
 
     <?php
