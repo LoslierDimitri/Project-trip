@@ -36,7 +36,7 @@
 
     <section>
         <div class="advantages mb-4">
-            <div class="title mt-5 mb-5 d-flex">
+            <div class="title title_advantages mt-5 mb-5 d-flex">
                 <h2>Pourquoi partir avec <span class="title_name">Culin'Air</span></h2>
                 <img src="/Project-trip/View/svg/Logo-simple.svg" class="mx-3 pb-2" alt="">
                 <h2>?</h2>
