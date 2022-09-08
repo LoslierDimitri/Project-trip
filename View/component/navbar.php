@@ -33,7 +33,7 @@
                     <div class="collapse collapse-horizontal" id="collapseWidthExample">
                         <div class="card card-body" style="width: 200px;">
                             <ul>
-                                <a class="list-collapse" href="my_account">
+                                <a class="list-collapse" href="/Project-trip/Controller/controller_account.php">
                                     <li>Mon compte</li>
                                 </a>
                                 <a class="list-collapse" href="my_trips">

@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .title img {
   width: 150px;
 }

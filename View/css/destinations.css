@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .ext-border {
   border: 2px solid #0fabdf;
   border-radius: 20px;

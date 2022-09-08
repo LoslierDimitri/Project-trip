@@ -18,9 +18,9 @@ $database = new Database();
 
 $result_user = $database->get_user_all_information($_SESSION["id"])[0];
 
-echo "<pre>";
-print_r($result_user);
-echo "</pre>";
+// echo "<pre>";
+// print_r($result_user);
+// echo "</pre>";
 
 /*
 get user information
