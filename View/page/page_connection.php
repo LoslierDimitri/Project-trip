@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/Project-trip/View/css/footer.css">
     <link rel="stylesheet" href="/Project-trip/View/css/page_connection.css">
     <link rel="stylesheet" href="/Project-trip/View/css/page_registration.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../View/ico/favicon.ico" />
     <title>Page connection</title>
 </head>
 

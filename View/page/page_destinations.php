@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/Project-trip/View/css/footer.css">
     <!-- <link rel="stylesheet" href="./public/css/page-404.css"> -->
     <link rel="stylesheet" href="/Project-trip/View/css/destinations.css">
-    <link rel="shortcut icon" type="image/png" href="/Project-trip/View/public/svg/pointer.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="../View/ico/favicon.ico" />
     <title>Culin'Air - Destinations</title>
 </head>
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/Project-trip/View/css/footer.css">
     <link rel="stylesheet" href="/Project-trip/View/css/page_account.css">
     <link rel="stylesheet" href="/Project-trip/View/css/page_account_sm.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../View/ico/favicon.ico" />
     <title>Page account</title>
 </head>
 

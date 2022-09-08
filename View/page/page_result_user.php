@@ -9,6 +9,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="/Project-trip/View/css/navbar.css">
     <link rel="stylesheet" href="/Project-trip/View/css/footer.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../View/ico/favicon.ico" />
     <title>Page result user</title>
 </head>
 

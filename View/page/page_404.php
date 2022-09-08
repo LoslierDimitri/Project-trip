@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../View/css/navbar.css">
     <link rel="stylesheet" href="../View/css/footer.css">
     <link rel="stylesheet" href="../View/css/page_404.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../View/ico/favicon.ico" />
     <title>Page 404</title>
 </head>
 
