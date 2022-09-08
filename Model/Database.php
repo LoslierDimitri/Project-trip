@@ -5,7 +5,7 @@ in your file where you need to call a database request:
 
 ------------------------------------------------------------------
 $path = $_SERVER["DOCUMENT_ROOT"];
-$path_new = $path . "/Project_trip/Model/Database.php";
+$path_new = $path . "/Project-trip/Model/Database.php";
 require($path_new);
 $database = new Database();
 ------------------------------------------------------------------
@@ -69,8 +69,9 @@ class Database
         $this->connection = $this->set_connection();
 
         if ($this->connection != null) {
-            $req = "select * from users where id=" . $id_user . ";";
+            $req = "select * from users where id=:id_user;";
             $stmt = $this->connection->prepare($req);
+            $stmt->bindValue(":id_user", $id_user);
             $stmt->execute();
             $result = $stmt->fetchAll();
 
