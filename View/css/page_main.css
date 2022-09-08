@@ -47,7 +47,7 @@ body {
 form {
   background-color: #8cc04e;
   border-radius: 20px;
-  margin: 0 200px;
+  margin: 0 10%;
 }
 
 .formule {
@@ -72,7 +72,7 @@ form {
 input {
   color: #8cc04e;
   font-family: Signika-Regular;
-  width: 100%;
+  width: 90%;
   height: 35px;
 }
 

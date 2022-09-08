@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../View/css/navbar.css">
     <link rel="stylesheet" href="../View/css/footer.css">
     <link rel="stylesheet" href="../View/css/page_main.css">
+    <link rel="stylesheet" href="../View/css/page_main_sm.css">
     <link rel="shortcut icon" type="image/x-icon" href="../View/ico/favicon.ico" />
     <title>Page main</title>
 </head>

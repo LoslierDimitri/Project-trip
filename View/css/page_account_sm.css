@@ -1,0 +1,13 @@
+@media (max-width: 1250px) {
+  .photo {
+    display: none;
+  }
+
+  .all_info {
+    border: none;
+  }
+
+  .content {
+    margin: 11% 0;
+  }
+}

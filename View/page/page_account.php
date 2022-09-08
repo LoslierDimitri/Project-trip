@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/Project-trip/View/css/navbar.css">
     <link rel="stylesheet" href="/Project-trip/View/css/footer.css">
     <link rel="stylesheet" href="/Project-trip/View/css/page_account.css">
+    <link rel="stylesheet" href="/Project-trip/View/css/page_account_sm.css">
     <title>Page account</title>
 </head>
 
