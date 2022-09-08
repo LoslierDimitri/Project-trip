@@ -4,11 +4,11 @@
     for ($i = 0; $i < count($result_hotel); $i++) {
     ?>
 
-        <div class="form_content">
-            <div class="form_info">
-                <label for="result_hotel" class="w-100">
-                    <div class="name_class">
-                        <?php
+    <div class="form_content">
+        <div class="form_info">
+            <label for="result_hotel" class="w-100">
+                <div class="name_class">
+                    <?php
                         if (isset($result_hotel[$i]->hotel_name)) {
                         ?>
                     <p><?php echo $result_hotel[$i]->hotel_name; ?>
@@ -73,14 +73,14 @@
                         <?php
                             if (isset($result_hotel[$i]->hotel_price)) {
                             ?>
-                                <p>Tarif dès</p>
-                                <span class="price_level">
-                                    <p><?php
+                        <p>Tarif dès</p>
+                        <span class="price_level">
+                            <p><?php
                                         echo $result_hotel[$i]->hotel_price;
                                         ?></p>
-                                </span>
-                                <p>par nuit</p>
-                            <?php
+                        </span>
+                        <p>par nuit</p>
+                        <?php
                             }
                             ?>
                     </div>
@@ -103,7 +103,7 @@
                                                                         print_r($var_result_hotel_user); ?>">
     </div>
     <?php
-        print_r($result_hotel[$i]);
+        // print_r($result_hotel[$i]);
     }
     ?>
 
@@ -113,11 +113,11 @@
     for ($i = 0; $i < count($result_restaurant); $i++) {
     ?>
 
-        <div class="form_content">
-            <div class="form_info">
-                <label for="result_restaurant" class="w-100">
-                    <div class="name_class">
-                        <?php
+    <div class="form_content">
+        <div class="form_info">
+            <label for="result_restaurant" class="w-100">
+                <div class="name_class">
+                    <?php
                         if (isset($result_restaurant[$i]->restaurant_name)) {
                         ?>
                     <p><?php echo $result_restaurant[$i]->restaurant_name; ?></p>
@@ -164,15 +164,15 @@
                         <?php
                             if (isset($result_restaurant[$i]->restaurant_price)) {
                             ?>
-                                <p>Tarif dès</p>
-                                <span class="price_level">
-                                    <p>$<?php
+                        <p>Tarif dès</p>
+                        <span class="price_level">
+                            <p>$<?php
                                         echo $result_restaurant[$i]->restaurant_price;
                                         ?>
-                                    </p>
-                                </span>
-                                <p>par nuit</p>
-                            <?php
+                            </p>
+                        </span>
+                        <p>par nuit</p>
+                        <?php
                             }
                             ?>
                     </div>
@@ -201,18 +201,18 @@
     <?php
     for ($i = 0; $i < count($result_fly[0]); $i++) {
     ?>
-        <div class="form_content">
-            <div class="form_info_fly">
-                <label class="fly_content" for="result_fly_goings">
-                    <div class="fly">
-                        <div class="airline">
-                            <?php
+    <div class="form_content">
+        <div class="form_info_fly">
+            <label class="fly_content" for="result_fly_goings">
+                <div class="fly">
+                    <div class="airline">
+                        <?php
                             if (isset($result_fly[0][$i]->fly_airline_logo)) {
                             ?>
-                                <div>
-                                    <img class="airline_logo" src="<?php echo $result_fly[0][$i]->fly_airline_logo; ?>" alt="">
-                                </div>
-                            <?php
+                        <div>
+                            <img class="airline_logo" src="<?php echo $result_fly[0][$i]->fly_airline_logo; ?>" alt="">
+                        </div>
+                        <?php
                             }
                             ?>
                         <?php
@@ -304,26 +304,26 @@
                                 ?>
                         </div>
                     </div>
-                </label>
-            </div>
+            </label>
         </div>
-        </label>
-        <input type="checkbox" name="result_user_fly_departure_arrival[]"
-            value="<?php
-                                                                                        $var_result_fly_departure_arrival_user = [
-                                                                                            "fly_airline_logo" => $result_fly[0][$i]->fly_airline_logo,
-                                                                                            "fly_airline_name" => $result_fly[0][$i]->fly_airline_name,
-                                                                                            "fly_airport_departure_date" => $result_fly[0][$i]->fly_airport_departure_date,
-                                                                                            "fly_airport_departure_time" => $result_fly[0][$i]->fly_airport_departure_time,
-                                                                                            "fly_airport_departure_name" => $result_fly[0][$i]->fly_airport_departure_name,
-                                                                                            "fly_airport_arrival_date" => $result_fly[0][$i]->fly_airport_arrival_date,
-                                                                                            "fly_airport_arrival_time" => $result_fly[0][$i]->fly_airport_arrival_time,
-                                                                                            "fly_airport_arrival_name" => $result_fly[0][$i]->fly_airport_arrival_name,
-                                                                                            "fly_duration" => $result_fly[0][$i]->fly_duration,
-                                                                                            "fly_price" => $result_fly[0][$i]->fly_price
-                                                                                        ];
-                                                                                        // $var = $result_hotel[$i]->hotel_price;
-                                                                                        print_r($var_result_fly_departure_arrival_user); ?>">
+    </div>
+    </label>
+    <input type="checkbox" name="result_user_fly_departure_arrival[]"
+        value="<?php
+                                                                                    $var_result_fly_departure_arrival_user = [
+                                                                                        "fly_airline_logo" => $result_fly[0][$i]->fly_airline_logo,
+                                                                                        "fly_airline_name" => $result_fly[0][$i]->fly_airline_name,
+                                                                                        "fly_airport_departure_date" => $result_fly[0][$i]->fly_airport_departure_date,
+                                                                                        "fly_airport_departure_time" => $result_fly[0][$i]->fly_airport_departure_time,
+                                                                                        "fly_airport_departure_name" => $result_fly[0][$i]->fly_airport_departure_name,
+                                                                                        "fly_airport_arrival_date" => $result_fly[0][$i]->fly_airport_arrival_date,
+                                                                                        "fly_airport_arrival_time" => $result_fly[0][$i]->fly_airport_arrival_time,
+                                                                                        "fly_airport_arrival_name" => $result_fly[0][$i]->fly_airport_arrival_name,
+                                                                                        "fly_duration" => $result_fly[0][$i]->fly_duration,
+                                                                                        "fly_price" => $result_fly[0][$i]->fly_price
+                                                                                    ];
+                                                                                    // $var = $result_hotel[$i]->hotel_price;
+                                                                                    print_r($var_result_fly_departure_arrival_user); ?>">
     </div>
     <?php
     }
@@ -334,12 +334,12 @@
     <?php
     for ($i = 0; $i < count($result_fly[1]); $i++) {
     ?>
-        <div class="form_content">
-            <div class="form_info_fly">
-                <label class="fly_content" for="result_fly_goings">
-                    <div class="fly">
-                        <div class="airline">
-                            <?php
+    <div class="form_content">
+        <div class="form_info_fly">
+            <label class="fly_content" for="result_fly_goings">
+                <div class="fly">
+                    <div class="airline">
+                        <?php
                             if (isset($result_fly[1][$i]->fly_airline_logo)) {
                             ?>
                         <img class="airline_logo" src="<?php echo $result_fly[1][$i]->fly_airline_logo; ?>" alt="">
