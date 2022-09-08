@@ -126,7 +126,8 @@ class Fly_information
 class Api
 {
     //api key
-    private $key = "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a";
+    // private $key = "X-RapidAPI-Key: dc778f2d12msh7c92a95ca152ca5p1cdb13jsnbf43ea02095a";
+    private $key = "X-RapidAPI-Key: 4e77b9233emsh6aeb63a02146de2p18a33bjsnba4a8dcd11c3";
     private $api_number_of_hotel = 10;
     private $api_number_of_fly_departure_arrival = 5;
     private $api_number_of_fly_arrival_departure = 5;
