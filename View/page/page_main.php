@@ -9,8 +9,11 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../View/css/navbar.css">
     <link rel="stylesheet" href="../View/css/footer.css">
+    <link rel="stylesheet" href="../View/css/footer_sm.css">
     <link rel="stylesheet" href="../View/css/page_main.css">
     <link rel="stylesheet" href="../View/css/page_main_sm.css">
+    <link rel="stylesheet" href="../View/css/slideshow.css">
+    <link rel="stylesheet" href="../View/css/slideshow_sm.css">
     <link rel="shortcut icon" type="image/x-icon" href="../View/ico/favicon.ico" />
     <title>Page main</title>
 </head>

@@ -1,0 +1,8 @@
+@media (min-width: 1223px) {
+  .advantages .title_name {
+    display: none;
+  }
+  .title img {
+    display: block;
+  }
+}
