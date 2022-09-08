@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand mx-4 my-auto" href="/Project-trip/Controller/controller_main.php"><img src="/Project-trip/View/svg/Logo.svg" alt=""></a>
+        <a class="navbar-brand mx-4 my-auto" href="./"><img src="/Project-trip/View/svg/Logo.svg" alt=""></a>
         <button class="navbar-toggler mx-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="bg-none"><img src="/Project-trip/View/svg/Picto-menu-burger.svg" alt=""></span>
         </button>
@@ -8,10 +8,10 @@
 
             <ul class="navbar-nav me-auto mb-2 ml-1 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="/Project-trip/Controller/controller_concept.php">Le concept</a>
+                    <a class="nav-link" href="concept">Le concept</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Project-trip/Controller/controller_destinations.php">Destinations</a>
+                    <a class="nav-link" href="destinations">Destinations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Témoignages</a>
@@ -53,7 +53,7 @@
                 <!-- Si la personne n'est pas connecté -->
             <?php else : ?>
                 <div class="login-logout">
-                    <a href="/Project-trip/Controller/controller_connection.php" class="container-login-logout"><img class="logo-login-logout" src="/Project-trip/View/svg/Picto-connexion-inscription.svg" alt="">
+                    <a href="login" class="container-login-logout"><img class="logo-login-logout" src="/Project-trip/View/svg/Picto-connexion-inscription.svg" alt="">
                         <p class="text-login-logout">Se connecter/S'inscrire</p>
                     </a>
                 </div>

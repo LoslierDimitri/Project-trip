@@ -37,11 +37,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION["id"] = $database->get_user_information("id", "pseudo", $_POST["connexion_pseudo"])[0]["id"];
         $_SESSION["pseudo"] = $database->get_user_information("pseudo", "pseudo", $_POST["connexion_pseudo"])[0]["pseudo"];
         
-        echo ("<script>location.href = '/Project-trip/Controller/controller_main.php';</script>");
+        // echo ("<script>location.href = './';</script>");
+        header("Location: login" );
         exit();
     }
 
-    echo ("<script>location.href = '/Project-trip/Controller/controller_connection.php';</script>");
+    header("Location: login" );
     exit();
 }
 ?>

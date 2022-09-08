@@ -28,7 +28,7 @@
                         <button type="submit">Envoyer</button><br>
                     </div>
                 </form>
-                <a class="login-link" href="/Project-trip/Controller/controller_connection.php">Déjà un compte? Connectez-vous ici</a>
+                <a class="login-link" href="login">Déjà un compte? Connectez-vous ici</a>
             </div>
         </div>
     </section>

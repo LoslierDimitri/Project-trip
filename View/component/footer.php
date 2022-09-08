@@ -13,7 +13,7 @@
                         <a href="#">
                             <li>Mentions légales</li>
                         </a>
-                        <a href="/Project-trip/Controller/controller_concept.php">
+                        <a href="concept">
                             <li>Le concept</li>
                         </a>
                     </ul>
