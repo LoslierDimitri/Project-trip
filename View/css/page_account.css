@@ -5,9 +5,36 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  margin: 20px 0 0 10%;
 }
 
 .content h2 {
   margin-bottom: 30px;
+}
+
+.banner {
+  margin-top: 20px;
+}
+
+.content h2 {
+  font-family: Mali-Regular;
+  color: #ed6e38;
+  display: flex;
+  justify-content: center;
+}
+
+.content p {
+  font-family: Signika-Regular;
+  color: black;
+}
+
+.photo {
+  width: 150px;
+  padding: 20px;
+  border: 2px solid #0fabdf;
+  border-radius: 50px;
+}
+
+.all_info {
+  display: flex;
+  justify-content: space-evenly;
 }

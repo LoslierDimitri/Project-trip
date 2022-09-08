@@ -26,15 +26,23 @@
     // include($path_new);
     ?>
 
+
+    <img class="banner" src="/Project-trip/View/svg/banner_account.svg" alt="">
+
     <div class="content">
         <h2>Mes informations personnelles</h2>
-        <div class="content_info">
-            <p>Civilité : <?php echo $result_user["sexe"]; ?></p>
-            <p>Nom : <?php echo $result_user["nom"]; ?></p>
-            <p>Prénom : <?php echo $result_user["prenom"]; ?></p>
-            <p>Pseudo : <?php echo $result_user["pseudo"]; ?></p>
-            <p>Téléphone : <?php echo $result_user["telephone"]; ?></p>
-            <p>Email : <?php echo $result_user["email"]; ?></p>
+        <div class="all_info">
+            <div class="photo_account">
+                <img class="photo" src="/Project-trip/View/svg/photo_account.svg" alt="">
+            </div>
+            <div class="content_info">
+                <p>Civilité : <?php echo $result_user["sexe"]; ?></p>
+                <p>Nom : <?php echo $result_user["nom"]; ?></p>
+                <p>Prénom : <?php echo $result_user["prenom"]; ?></p>
+                <p>Pseudo : <?php echo $result_user["pseudo"]; ?></p>
+                <p>Téléphone : <?php echo $result_user["telephone"]; ?></p>
+                <p>Email : <?php echo $result_user["email"]; ?></p>
+            </div>
         </div>
     </div>
 
