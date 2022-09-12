@@ -150,4 +150,17 @@ class Database
 
         $this->connection = $this->del_connection();
     }
+
+
+    //-------------------------------------------------------------------------------- destinations function
+
+
+    public function get_informations(){
+
+        $this->connection = $this->set_connection();
+
+        if($this->connection != null){
+
+        }
+    }
 }

@@ -93,3 +93,7 @@ button {
   padding: 5px 15px 5px 15px;
   font-family: Signika-Regular;
 }
+
+.button:hover {
+  opacity: 0.5;
+}
