@@ -72,10 +72,10 @@
                             $result_region_name = get_regions("noms", "images", "descriptions", "prix");
 
                             for ($i = 1; $i < count($result_region_name); $i++) {
-                                $result_region_images = get_regions("images", "noms", $i);
+                                $result_region_images = get_informations("images", "noms", $i);
                             }
 
-                            print_r($result_region_images)
+                            // print_r($result_region_name)
                             ?>
 
                             <img src="/Project-trip/View/jpg<?php if($result_region_name != []){
