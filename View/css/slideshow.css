@@ -6,3 +6,7 @@
     display: block;
   }
 }
+
+.card-body p {
+  font-weight: bold;
+}

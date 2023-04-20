@@ -17,7 +17,7 @@
                     <a class="nav-link" href="/Project-trip/Controller/controller_destinations.php">Destinations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Témoignages</a>
+                    <a class="nav-link" href="/Project-trip/Controller/controller_temoignages.php">Témoignages</a>
                 </li>
             </ul>
             <!-- Si la personne est connecté -->

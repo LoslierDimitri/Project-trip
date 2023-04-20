@@ -1,0 +1,76 @@
+.panel {
+  width: 70vw;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  border: 2px solid #0fabdf;
+  border-radius: 20px;
+  padding: 2vh 2vw;
+}
+
+.collapse_title {
+  width: 100%;
+}
+
+.collapse_title a {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #0fabdf;
+}
+
+.collapse_title a:hover {
+  background-color: transparent;
+  color: #0fabdf;
+}
+
+.collapse_title a:active {
+  background-color: transparent;
+  color: #0fabdf;
+  border: none;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: Mali-SB;
+}
+
+h4 {
+  font-family: Mali-Regular;
+  color: #ed6e38;
+  margin: 3vh 0;
+}
+
+.panel p {
+  font-family: Signika-Regular;
+  color: black;
+}
+
+.panel li {
+  font-family: Signika-Regular;
+  color: black;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title img {
+  width: 2vw;
+  height: 3vh;
+  margin-top: 2vh;
+  animation: bump 0.2s;
+}
+
+.collapse_title img:hover {
+  animation: bump 0.8s infinite linear;
+}
+
+@keyframes bump {
+  0% {
+    margin-top: 2vh;
+  }
+  100% {
+    margin-top: 3vh;
+  }
+}

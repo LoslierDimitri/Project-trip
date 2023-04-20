@@ -4,7 +4,7 @@
 
 function get_regions($name, $informations, $i){
     $path = $_SERVER["DOCUMENT_ROOT"];
-    $path_new = $path . "//Project-trip/Model/Database.php";
+    $path_new = $path . "/Project-trip/Model/Database.php";
     require_once($path_new);
     $database = new Database();
     
@@ -32,7 +32,7 @@ function get_regions($name, $informations, $i){
 
 function get_informations($panel, $informations, $i){
     $path = $_SERVER["DOCUMENT_ROOT"];
-    $path_new = $path . "//Project-trip/Model/Database.php";
+    $path_new = $path . "/Project-trip/Model/Database.php";
     require_once($path_new);
     $database = new Database();
 

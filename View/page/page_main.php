@@ -27,12 +27,6 @@
     ?>
 
     <?php
-    // $path = $_SERVER["DOCUMENT_ROOT"];
-    // $path_new = $path . "/Project-trip/View/component/all_controller.php";
-    // include($path_new);
-    ?>
-
-    <?php
     $path = $_SERVER["DOCUMENT_ROOT"];
     $path_new = $path . "/Project-trip/View/component/form_search.php";
     include($path_new);
@@ -56,7 +50,6 @@
     $path_new = $path . "/Project-trip/View/component/footer.php";
     include($path_new);
     ?>
-
 
     <script src="/Project-trip/View/script/script.js"></script>
 

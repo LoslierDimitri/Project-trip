@@ -1,13 +1,6 @@
 <section class="advanced_search py-4 mt-4">
     <h1>Et si le voyage de votre vie était aussi délicieux <br> qu'un plat régional?</h1>
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
-        <div class="formule">
-            <label for="voyage_formule">Formules</label>
-            <select id="voyage_formule" name="voyage_formule">
-                <option value="voyage_formule_gastronomique">Gastronomique</option>
-                <option value="voyage_formule_touristique">Touristique</option>
-                <select><br>
-        </div>
         <input type="text" name="type_search" value="france" hidden>
         <div class="icons-form">
             <div class="row">
